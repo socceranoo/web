@@ -9,14 +9,15 @@
 		<link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css">
 	</head>
 	<body>
+		<div id='other'>
 		<div id='fg_membersite_content'>
-			<h2>Add User's Page</h2>
+			<h2><br><br><br>Add User's Page</h2>
 			<p>Add User(s) from the drop down menu below.</p>
 			<?PHP
 				$result = $fgmembersite->RunQuery("SELECT * FROM regusers");
 			?>
 			<form action=process.php name=form1 method=post>
-				<select name="jumpmenu[]" multiple="multiple" >
+				<select name="jumpmenu[]" multiple="multiple">
 				<? 
 					while($row = mysql_fetch_array( $result )) 
 					{
@@ -34,6 +35,7 @@
 				<input type="submit" />
 			</form>
 			<p><a href='access-controlled.php'>Back</a></p>
+		</div>
 		</div>
 	</body>
 </html>

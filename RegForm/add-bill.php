@@ -24,8 +24,9 @@
 		<script type='text/javascript' src='scripts/myscripts.js'> </script>
 	</head>
 	<body>
+		<div id='other'>
 		<div id='fg_membersite_content'>
-			<h2>Add bill</h2>
+			<h2><br><br><br>Add bill</h2>
 			<?PHP
 				$result = $fgmembersite->RunQuery("SELECT * FROM $uname");
 				$stack = array();
@@ -38,18 +39,17 @@
 				<p>Select Date: <input type="text" name="date" id="date" />
 				<script type="text/javascript"> calendar.set("date"); </script></p> 
 				<p>Amount: <input type="text" name="amount" id="amount"/></p>
-				<p>Who paid ? <br/>
+				<p>Who paid ? <br/></p>
 					<select name="paid">
 						<? paste_select_menu($uname, $stack); ?>	
 					</select>
-				</p>
-				<p>Who participated ? <br>
+				<p>Who participated ? <br> </p>
 					<select name="participants[]" multiple="multiple">
 						<?paste_select_menu($uname, $stack); ?>	
 					</select>
-				</p>
 				<input type="submit" />
 			</form>
+		</div>
 		</div>
 	</body>
 </html>

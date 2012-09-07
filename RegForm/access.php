@@ -24,7 +24,7 @@
 				right:0;
 				width:400px;
 				/*give it some background and border*/
-				background:#eee;
+				/*background:#eee;
 				border:1px solid #eee;
 				*/
 			}
