@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><head>
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Membership Website Sample</title>
+  
+
+  
+  
+  <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css" /></head><body style="background-color: black; color: rgb(0, 0, 0);" alink="#ee0000" link="#ff0000" vlink="#00ffff">
+<div id="fg_membersite_content">
+<h1 style="color: white;"><big><big>Membership website</big></big></h1>
+<br />
+<br />
+<br />
+<big><big><big><a href="../home2.html">About the Webmaster</a><br />
+<br />
+<br />
+<a href="register.php">Register</a></big></big></big><br />
+
+<br />
+<br />
+<br />
+<big><big><big><a href="confirmreg.php">Confirm
+registration</a><br />
+<br />
+<br />
+<br />
+</big></big></big>
+<big><big><big><a href="login.php">Login</a></big></big></big><br />
+<br />
+<br />
+</div>
+
+</body></html>
