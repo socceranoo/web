@@ -39,7 +39,7 @@
 						<span id='login_password_errorloc' class='error'></span>
 					</div>
 					<div class='container'>
-						<input type='submit' name='Submit' value='Submit' />
+						<input type='submit' name='Submit' value='Login' />
 					</div>
 					<div class='short_explanation'><a href='reset-pwd-req.php'>Forgot Password?</a></div>
 					<div class='short_explanation'><a href='register.php'>New User?</a></div>

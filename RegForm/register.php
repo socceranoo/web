@@ -19,6 +19,7 @@ if(isset($_POST['submitted']))
 <body>
 
 <!-- Form Code Start -->
+<div id='loginpage'>
 <div id='fg_membersite'>
 <form id='register' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
 <fieldset >
@@ -87,6 +88,6 @@ Uses the excellent form validation script from JavaScript-coder.com-->
 <!--
 Form Code End (see html-form-guide.com for more info.)
 -->
-
+</div>
 </body>
 </html>

@@ -35,9 +35,9 @@
 					array_push($stack, $row['user2']);	
 				}
 			?>
+			<div id='bill' >
 			<div id='fg_membersite'>
 			<form id='add-bill' action=process_bill.php name='add-bill' method=post align=left>
-				<div id='bill'>
 					<input type='hidden' name='submitted' id='submitted' value='1'/>
 					<div class='short_explanation'>* required fields</div>
 					<div class='container'>
@@ -75,8 +75,8 @@
 					<div class='container'>
 						<input type="submit" />
 					</div>
-				</div>
 			</form>
+			</div>
 			</div>
 			<!-- client-side Form Validations:
 			Uses the excellent form validation script from JavaScript-coder.com-->

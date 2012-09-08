@@ -9,12 +9,25 @@ html
 body 
 {
 	height:100%; margin:0; padding:0;
+	
+}
+a:link
+{
+	color:blue;
+}
+a:visited
+{
+	color:maroon;
+}
+a:active
+{
+	color:green;
 }
 #fg_membersite fieldset
 {
 	width: 230px;
 	padding:20px;
-	border:1px solid #ccc;
+	border:2px solid #000;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-khtml-border-radius: 10px;
@@ -29,11 +42,11 @@ body
 
 #fg_membersite legend, #fg_membersite h2
 {
-   font-family : Arial, sans-serif;
-   font-size: 1.3em;
-   font-weight:bold;
+	font-family : Arial, sans-serif;
+	font-size: 1.3em;
+	font-weight:bold;
 	text-decoration:underline;
-   color:#333;
+	color:#333;
 }
 
 #fg_membersite label
@@ -74,9 +87,11 @@ body
 
 #fg_membersite input[type="submit"]
 {
-   width:100px;
-   height:30px;
-   padding-left:0px;
+	width:100px;
+	height:30px;
+	padding-left:0px;
+	border:1px solid #444;
+	background-color:transparent;
 }
 
 #fg_membersite textarea
@@ -134,7 +149,7 @@ body
 #fg_membersite .short_explanation
 {
    font-family : Arial, sans-serif;
-   font-size: 0.6em;
+   font-size: 0.8em;
    color:#333;   
 }
 
@@ -239,14 +254,16 @@ padding-bottom:10px;
 	cursor:pointer;
 	background-color:transparent;
 	font-size: 1em;
-	border:2px;
+	border:1px solid #222;
 	padding:2px;
 }
+
 #fg_membersite_content textarea
 {
-  height:50px;
-  width:250px;
+	height:50px;
+	width:250px;
 }
+
 #operations
 {
 	width: 200px;
@@ -342,15 +359,3 @@ padding-bottom:10px;
 	font-weight:bold;
 	font-size:1.9em;
 }
-/*
-div.topright
-{
-	display:block;
-	position:absolute;
-	top:0;
-	right:0;
-	width:400px;
-	/*background:#eee;
-	border:1px solid #eee;
-}
-*/

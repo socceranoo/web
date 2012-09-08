@@ -16,6 +16,7 @@
 }
 .calendar-box .calendar-cancel {
 	background-color:transparent;
+	border:1px solid #444;
 	width:100%;
 }
 .calendar-box table td {
