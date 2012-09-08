@@ -724,6 +724,12 @@ function validateInput(strValidateStr,objValue,strError)
                   objValue.name+": Only alphabetic characters and space allowed ");
                 break; 
            }
+	case "date": 
+           { 
+                ret = TestInputType(objValue,"[^(19|20)[0-9][0-9][- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$]",strError, 
+                  objValue.name+": enter in yyyy-mm-dd");
+                break; 
+           }
         case "email": 
           { 
             ret = TestEmail(objValue,strError);

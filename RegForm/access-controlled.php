@@ -4,39 +4,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 	<head>
-		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<?require_once("includes.php");?>
 		<!--<meta http-equiv="refresh" content="60"/>-->
 		<title>Welcome!!</title>
-		<link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css">
-		<script src="scripts/jquery.js"></script>
-		<script> 
-			function loadContent() 
-			{ 
-				$("#includedContent").load("tux.php"); 
-			} 
+		<script>
 			window.setTimeout("updateTime()", 0);// start immediately
 			window.setInterval("updateTime()", 1000);// update every second
 			window.setInterval("loadContent()", 60000);// update every second
-			function updateTime() 
-			{
-				document.getElementById("theTimer").firstChild.nodeValue =
-				new Date().toTimeString().substring(0, 8);
-			}
 		</script>
-
 	</head>
 	<body>
 		<div id='homepage'>
 		<div id='fg_membersite_content'>
 			<h1><br><br><br>Welcome to Bill _____</h1>
-			<div id='operations'>
-			<p><a href='add-friend.php'>Add Friend(s)</a></p>
-			<p><a href='add-bill.php'>Add Bill</a></p>
-			<p><a href='add-friend.php'>View Transaction(s)</a></p>
-			<p><a href='add-bill.php'>Edit Transactions</a></p>
-			<p><a href='add-friend.php'>View Friend(s)</a></p>
-			<p><a href='add-bill.php'>Edit Friends</a></p>
-			</div>
+			<?require_once("operations.php");?>
 			<table border='2'  cellpadding='20' align=center>
 			<caption></caption>
 			<tr><th>Who ???</th><th>How much ???</th><th>Status</th> </tr>
