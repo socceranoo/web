@@ -42,7 +42,7 @@
 	<body>
 		<div id='other'>
 		<div id='fg_membersite_content'>
-			<h2><br><br><br>Add bill</h2>
+			<br>
 			<?PHP
 				require_once("operations.php");
 				$flag = $_REQUEST["flag"];
@@ -67,7 +67,7 @@
 		</div>
 			<div id='bill'>
 			<div id='fg_membersite'>
-			<form id='add-bill' action="process_bill.php?flag=" name='add-bill' method=post align=left>
+			<form id='add-bill' action="process_bill.php" name='add-bill' method=post onsubmit="return confirm('Are you sure');" align=left>
 				<fieldset>
 					<legend>Add-bill</legend>
 					<input type='hidden' name='submitted' id='submitted' value='1'/>
@@ -97,7 +97,7 @@
 					</div>
 					<div class='container'>
 						<label for='paid'>Who paid?*</label><br/>
-						<select name="paid[]"><?paste_select_menu($uname, $stack, 0);?></select><br/>
+						<select name="paid[]" multiple="multiple"><?paste_select_menu($uname, $stack, 0);?></select><br/>
 						<span id='add-bill_paid_errorloc' class='error'></span>
 					</div>
 					<div class='container'>
@@ -107,10 +107,7 @@
 						<span id='add-bill_participants_errorloc' class='error'></span>
 					</div>
 					<div class='container'>
-						<!--<input type="submit" onclick=loadContent('dummy', 'process_bill.php'/>-->
 						<input type="submit"/>
-					</div>
-					<div id='dummy'>
 					</div>
 				</fieldset>
 			</form>

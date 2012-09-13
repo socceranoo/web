@@ -42,7 +42,7 @@ a:active
 	right:10px; 
 	z-index:10;*/
 	margin:0px; 
-	margin-top:28px;
+	margin-top:20px;
 }
 
 #fg_membersite legend, #fg_membersite h2
@@ -263,6 +263,7 @@ padding-bottom:10px;
 #fg_membersite option
 {
 	font-family : Arial, sans-serif;
+	/*background-color : #ffff99;*/
 	background-color:transparent;
 	/*background-image:url('../../images/images2.jpg');*/
 	width:200px;
@@ -293,9 +294,10 @@ padding-bottom:10px;
 
 #operations
 {
-	width: 180px;
+	width: 130px;
 	padding:20px;
 	border:1px solid black;
+	font-size: 0.8em;
 	/*background-image:url('../../images/panel-blue.jpg');
 	background-repeat:no-repeat;*/
 	-moz-border-radius: 10px;
@@ -370,8 +372,8 @@ padding-bottom:10px;
 	margin-left: auto ;
 	margin-right: auto ;
 	/*margin-left:30%;
-	margin-bottom:20px;
-	margin-top:28px; */
+	margin-bottom:20px;*/
+	margin-top:28px; 
 }
 
 #title 
@@ -402,8 +404,9 @@ div.topright
 	position:absolute;
 	top:0;
 	right:0;
-	width:400px;
+	width:100%;
 	font-family:stylewars;
+	text-align:right;
 	/*give it some background and border*/
 	/*background:#eee;
 	border:1px solid #eee;

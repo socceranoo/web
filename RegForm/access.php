@@ -6,10 +6,12 @@
 	    exit;
 	}
 	$uname = $fgmembersite->UserName();
-	$moneytable = $fgmembersite->MoneyTable();
+	//$moneytable = $fgmembersite->MoneyTable();
+	$moneytable ="money";
+	$deletedtable ="deleted";
 	// Make a MySQL Connection
 	//mysql_connect("localhost", "root", "Orange") or die(mysql_error());
 	//mysql_select_db("Main") or die(mysql_error());
 	require_once("topright.php");
+	require_once("db_functions.php");
 ?>
-
