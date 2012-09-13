@@ -3,8 +3,9 @@
 	background-color:transparent;
 	/*border:1px solid #444;*/
 	position:absolute;
-	width:250px;
-	padding: 0 5px;
+	width:230px;
+	margin-left:30px;
+	margin-top:-10px;
 }
 .calendar-box select.calendar-month {
 	background-color:transparent;

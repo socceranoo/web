@@ -20,6 +20,7 @@ if(isset($_POST['submitted']))
 
 <!-- Form Code Start -->
 <div id='loginpage'>
+<div id='posRight'>
 <div id='fg_membersite'>
 <form id='register' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
 <fieldset >
@@ -59,6 +60,7 @@ if(isset($_POST['submitted']))
     <input type='submit' name='Submit' value='Submit' />
 </div>
 
+<div class='short_explanation'><a href='login.php'>Already a member?</a></div>
 </fieldset>
 </form>
 <!-- client-side Form Validations:
@@ -88,6 +90,7 @@ Uses the excellent form validation script from JavaScript-coder.com-->
 <!--
 Form Code End (see html-form-guide.com for more info.)
 -->
+</div>
 </div>
 </body>
 </html>

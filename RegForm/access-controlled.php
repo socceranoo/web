@@ -10,19 +10,19 @@
 		<script>
 			window.setTimeout("updateTime()", 0);// start immediately
 			window.setInterval("updateTime()", 1000);// update every second
-			window.setInterval("loadContent()", 60000);// update every second
+			window.setInterval("loadContent('#includedContent', 'tux.php')", 30000);// update every second
 		</script>
 	</head>
 	<body>
 		<div id='homepage'>
 		<div id='fg_membersite_content'>
-			<h1><br><br><br>Welcome to Bill _____</h1>
+			<h1><br><br><br>money Matters</h1>
 			<?require_once("operations.php");?>
-			<table border='2'  cellpadding='20' align=center>
+			<table class="imagetable" align=center>
 			<caption></caption>
 			<tr><th>Who ???</th><th>How much ???</th><th>Status</th> </tr>
 			<?PHP
-				require_once("table-exists.php");
+				//require_once("table-exists.php");
 				$result = $fgmembersite->RunQuery("SELECT * FROM $uname");
 				// Get all the data from the "example" table
 				// keeps getting the next row until there are no more to get
@@ -47,8 +47,8 @@
 			<div id='tuxcorner'>
 				<div bold align=center id="theTimer">00:00:00</div>
 				<div id="includedContent"></div>
-				<script>loadContent()</script>
-				<button onclick="loadContent()">Change my thought</button>
+				<script>loadContent('#includedContent', 'tux.php')</script>
+				<button onclick="loadContent('#includedContent', 'tux.php')">change</button>
 			</div>
 		</div>
 

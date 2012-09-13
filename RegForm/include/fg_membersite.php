@@ -33,7 +33,7 @@ class FGMembersite
     var $connection;
     var $connection2;
     var $rand_key;
-    
+    var $transaction_table;
     var $error_message;
     
     //-----Initialization -------
@@ -43,16 +43,15 @@ class FGMembersite
         $this->rand_key = '0iQx5oBk66oVZep';
     }
     
-    function InitDB($host,$uname,$pwd,$database,$tablename)
+    function InitDB($host,$uname,$pwd,$database,$tablename,$moneytable)
     {
         $this->db_host  = $host;
         $this->username = $uname;
         $this->pwd  = $pwd;
         $this->database  = $database;
         $this->tablename = $tablename;
+        $this->transaction_table = $moneytable;
 	$this->DBLogin();
-        //$this->connection = mysql_connect($this->db_host,$this->username,$this->pwd);
-        
     }
     function SetAdminEmail($email)
     {
@@ -170,6 +169,11 @@ class FGMembersite
     function UserName()
     {
         return isset($_SESSION['username'])?$_SESSION['username']:'';
+    }
+
+    function MoneyTable()
+    {
+        return $this->transaction_table;
     }
 
     function UserEmail()

@@ -20,6 +20,7 @@
 	</head>
 	<body>
 		<div id='loginpage'>
+		<div id='posRight'>
 		<!-- Form Code Start >-->
 		<div id='fg_membersite'>
 			<form id='login' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8' align=left>
@@ -63,6 +64,7 @@
 		<!--
 		Form Code End (see html-form-guide.com for more info.)
 		-->
+	</div>
 	</div>
 	</body>
 </html>

@@ -4,15 +4,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 	<head>
-		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<?require_once("includes.php");?>
 		<title>Done</title>
-		<link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css">
 	</head>
 	<body>
+		<div id='other'>
 		<div id='fg_membersite_content'>
-			<h2>Done!</h2>
+			<br><br><br>
+			<h3>Done!</h3>
 			<?php 
-				if(!mysql_query("DESCRIBE `$uname`")) 
+				if(!$fgmembersite->RunQuery("DESCRIBE `$uname`")) 
 				{
 					$qry = "Create Table $uname (".
 					"id INT NOT NULL AUTO_INCREMENT ,".
@@ -22,12 +23,12 @@
 					"flag VARCHAR(10) NOT NULL ,".
 					"PRIMARY KEY ( id )".
 					")";
-					mysql_query($qry) or die(mysql_error());
+					$fgmembersite->RunQuery($qry);
 				}
 				foreach ($_POST["jumpmenu"] as $k)
 				{	
 					$qry = "select id from $uname where user2='$k'";
-					$result = mysql_query($qry);
+					$result =$fgmembersite->RunQuery($qry);
 					$row = mysql_fetch_array( $result );
 					if ($row['id'] > 0)
 					{
@@ -37,12 +38,13 @@
 					{
 						$qry = "INSERT INTO $uname (user1, user2, amount, flag) ".
 						"VALUES('$uname','$k','0','y')"; 
-						mysql_query($qry) or die(mysql_error());
+						$fgmembersite->RunQuery($qry);
 						print "User $k is added to your profile\n";
 					}
 					print "<br>";
 				}
 			?>
+		</div>
 		</div>
 	</body>
 </html>
