@@ -92,10 +92,23 @@
 	}
 	function update_user_tables($loaner, $loanee, $amount)
 	{
-		global $fgmembersite;
-		$qry = "UPDATE $loaner SET amount=amount+'$amount' WHERE user2='$loanee'";
-		$fgmembersite->RunQuery($qry);
-		$qry = "UPDATE $loanee SET amount=amount-'$amount' WHERE user2='$loaner'";
+		global $fgmembersite, $pairtable;
+		if ($loaner < $loanee)
+		{
+			$qry = "SELECT * FROM $pairtable WHERE user1='$loaner' and user2='$loanee'";
+			$result = $fgmembersite->RunQuery($qry);
+			if (mysql_num_rows($result) <= 0)
+				create_entry_in_pair_table($loaner, $loanee);
+			$qry = "UPDATE $pairtable SET amount=amount+'$amount' WHERE user1='$loaner' and user2='$loanee'";
+		}
+		else
+		{
+			$qry = "SELECT * FROM $pairtable where user1='$loanee' and user2='$loaner'";
+			$result = $fgmembersite->RunQuery($qry);
+			if (mysql_num_rows($result) <= 0)
+				create_entry_in_pair_table($loanee, $loaner);
+			$qry = "UPDATE $pairtable SET amount=amount-'$amount' WHERE user1='$loanee' and user2='$loaner'";
+		}
 		$fgmembersite->RunQuery($qry);
 	}
 	function check_and_create_money_table($table)
@@ -122,5 +135,28 @@
 		$args ="flag=".$flag."&id=".$row['id']."&event=".$row['event']."&desc=".$row['description']."&date=".$row['date']."&paid=".$row['paid']
 		."&participants=".$row['participants']."&amount=".$row['amount'];
 		return $args;
+	}
+	function check_and_add_user_table($usertable)
+	{
+		global $fgmembersite;
+		if(!$fgmembersite->RunQuery("DESCRIBE `$usertable`"))
+		{
+			$qry = "Create Table $usertable (".
+			"id INT NOT NULL AUTO_INCREMENT ,".
+			"user1 VARCHAR( 16 ) NOT NULL ,".
+			"user2 VARCHAR( 16 ) NOT NULL ,".
+			"amount INT NOT NULL ,".
+			"PRIMARY KEY ( id )".
+			")";
+			$fgmembersite->RunQuery($qry);
+		}
+	}
+
+	function create_entry_in_pair_table($user1, $user2)
+	{
+		global $fgmembersite, $pairtable;
+		$qry = "INSERT INTO $pairtable (user1, user2, amount)".
+		"VALUES('$user1','$user2','0')";
+		$fgmembersite->RunQuery($qry);
 	}
 ?>

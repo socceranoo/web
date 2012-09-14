@@ -18,6 +18,7 @@ $fgmembersite->InitDB(/*hostname*/'localhost',
                       /*password*/'Orange',
                       /*database name*/'Main',
                       /*table name*/'regusers',
+                      /*user table name*/'userpair',
                       /*transaction table name*/'money');
 
 //For better security. Get a random string from this link: http://tinyurl.com/randstr

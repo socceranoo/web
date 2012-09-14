@@ -12,5 +12,3 @@
 	$qry = "UPDATE $loanee SET amount=amount+'$amount' WHERE user2='$loaner'";
 	mysql_query($qry) or die(mysql_error());
 ?>
-
-

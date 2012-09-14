@@ -5,10 +5,14 @@
 	    $fgmembersite->RedirectToURL("login.php");
 	    exit;
 	}
+	$regusertable = $fgmembersite->RegUserTable();
 	$uname = $fgmembersite->UserName();
+	//$pairtable = $fgmembersite->UserTable();
 	//$moneytable = $fgmembersite->MoneyTable();
+	//$deletedtable = $fgmembersite->DeletedTable();
 	$moneytable ="money";
 	$deletedtable ="deleted";
+	$pairtable ="userpair";
 	// Make a MySQL Connection
 	//mysql_connect("localhost", "root", "Orange") or die(mysql_error());
 	//mysql_select_db("Main") or die(mysql_error());

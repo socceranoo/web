@@ -57,12 +57,16 @@
 							"amount" => $_REQUEST['amount'],
 							);
 				}
-				$result = $fgmembersite->RunQuery("SELECT * FROM $uname");
+				$result = $fgmembersite->RunQuery("SELECT * FROM $pairtable WHERE user1='$uname' or user2='$uname'");
 				$stack = array();
-				while($row = mysql_fetch_array($result)) 
+				while($row = mysql_fetch_array($result))
 				{
-					array_push($stack, $row['user2']);	
+					if ($row['user1'] == $uname)
+						array_push($stack, $row['user2']);
+					else if($row['user2'] == $uname)
+						array_push($stack, $row['user1']);
 				}
+
 			?>
 		</div>
 			<div id='bill'>

@@ -16,34 +16,45 @@
 		<!--<script type="text/javascript" src="scripts/tumblr.js" ></script>-->
 	</head>
 	<body>
-	<!--	<object width=100% height="50" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsPlaylist529016272" name="gsPlaylist529016272"><param name="movie" value="http://grooveshark.com/widget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=cowbell.grooveshark.com&playlistID=52901627&bbg=FFFFFF&bth=FFFFFF&pfg=FFFFFF&lfg=FFFFFF&bt=377D9F&pbg=377D9F&pfgh=377D9F&si=377D9F&lbg=377D9F&lfgh=377D9F&sb=377D9F&bfg=F6D61F&pbgh=F6D61F&lbgh=F6D61F&sbh=F6D61F&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/widget.swf" width="250" height="250"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=cowbell.grooveshark.com&playlistID=52901627&bbg=FFFFFF&bth=FFFFFF&pfg=FFFFFF&lfg=FFFFFF&bt=377D9F&pbg=377D9F&pfgh=377D9F&si=377D9F&lbg=377D9F&lfgh=377D9F&sb=377D9F&bfg=F6D61F&pbgh=F6D61F&lbgh=F6D61F&sbh=F6D61F&p=0" /><span><a href="http://grooveshark.com/playlist/Coldplay/52901627" title="Coldplay by Anoop on Grooveshark">Coldplay by Anoop on Grooveshark</a></span></object></object>
--->
 		<div id='homepage'>
 		<div id='fg_membersite_content'>
 			<h1><br><br><br>money Matters</h1>
 			<?require_once("operations.php");?>
 			<table class="imagetable" align=center>
 			<caption></caption>
-			<tr><th>Who ???</th><th>How much ???</th><th>Status</th> </tr>
 			<?PHP
-				//require_once("table-exists.php");
-				$result = $fgmembersite->RunQuery("SELECT * FROM $uname");
-				// Get all the data from the "example" table
-				// keeps getting the next row until there are no more to get
+				$result = $fgmembersite->RunQuery("SELECT * FROM $pairtable WHERE user1='$uname' or user2='$uname'");
+				if (mysql_num_rows($result) > 0)
+					echo "<tr><th>Who ???</th><th>How much ???</th><th>Status</th></tr>";
 				while($row = mysql_fetch_array( $result )) 
 				{
-					// Print out the contents of each row into a table
 					echo "<tr><td>";
-					echo $row['user2'];
+					if ($row['user1'] == $uname)
+						$user2=$row['user2'];
+					else if($row['user2'] == $uname)
+						$user2=$row['user1'];
+					echo $user2;
 					echo "</td><td>";
 					echo abs($row['amount']);
 					echo "</td><td>";
-					if ($row['amount'] > 0 )
-						echo "Owes you";
-					else if ($row['amount'] < 0 )
-						echo "You owe";
+					if ($uname < $user2)	
+					{
+						if ($row['amount'] > 0 )
+							echo "Owes you";
+						else if ($row['amount'] < 0 )
+							echo "You owe";
+						else
+							echo "Even";
+					}
 					else
-						echo "Even";
+					{
+						if ($row['amount'] > 0 )
+							echo "You owe";
+						else if ($row['amount'] < 0 )
+							echo "Owes you";
+						else
+							echo "Even";
+					}	
 					echo "</td> </tr>";
 				}
 			?>

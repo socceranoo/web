@@ -30,6 +30,7 @@ class FGMembersite
     var $pwd;
     var $database;
     var $tablename;
+    var $usertable;
     var $connection;
     var $connection2;
     var $rand_key;
@@ -43,13 +44,14 @@ class FGMembersite
         $this->rand_key = '0iQx5oBk66oVZep';
     }
     
-    function InitDB($host,$uname,$pwd,$database,$tablename,$moneytable)
+    function InitDB($host,$uname,$pwd,$database,$tablename,$user_table,$moneytable)
     {
         $this->db_host  = $host;
         $this->username = $uname;
         $this->pwd  = $pwd;
         $this->database  = $database;
         $this->tablename = $tablename;
+        $this->usertable = $user_table;
         $this->transaction_table = $moneytable;
 	$this->DBLogin();
     }
@@ -176,6 +178,15 @@ class FGMembersite
         return $this->transaction_table;
     }
 
+    function UserTable()
+    {
+        return $this->usertable;
+    }
+
+    function RegUserTable()
+    {
+        return $this->tablename;
+    }
     function UserEmail()
     {
         return isset($_SESSION['email_of_user'])?$_SESSION['email_of_user']:'';
@@ -712,6 +723,10 @@ class FGMembersite
         {
             return false;
         }
+	if(!$this->EnsureUserTable())
+        {
+            return false;
+        }
         if(!$this->IsFieldUnique($formvars,'email'))
         {
             $this->HandleError("This email is already registered");
@@ -771,7 +786,7 @@ class FGMembersite
         $result = mysql_query("SHOW COLUMNS FROM $this->tablename");   
         if(!$result || mysql_num_rows($result) <= 0)
         {
-            return $this->CreateTable();
+            return $this->CreateTable($this->tablename);
         }
         return true;
     }
@@ -794,9 +809,35 @@ class FGMembersite
             $this->HandleDBError("Error creating the table \nquery was\n $qry");
             return false;
         }
+	
+        return true;
+    }
+    function EnsureUserTable()
+    {
+	$result = mysql_query("SHOW COLUMNS FROM $this->usertable");   
+        if(!$result || mysql_num_rows($result) <= 0)
+        {
+            return $this->CreateUserTable();
+        }
         return true;
     }
     
+    function CreateUserTable()
+    {
+	$qry = "Create Table $this->usertable (".
+                        "id INT NOT NULL AUTO_INCREMENT ,".
+                        "user1 VARCHAR( 16 ) NOT NULL ,".
+                        "user2 VARCHAR( 16 ) NOT NULL ,".
+                        "amount INT NOT NULL ,".
+                        "PRIMARY KEY ( id )".
+                        ")";
+        if(!mysql_query($qry,$this->connection))
+        {
+            $this->HandleDBError("Error creating the user table \nquery was\n $qry");
+            return false;
+        }
+        return true;
+    }
     function InsertIntoDB(&$formvars)
     {
     

@@ -13,21 +13,19 @@
 			<br><br><br>
 			<h3>Done!</h3>
 			<?php 
-				if(!$fgmembersite->RunQuery("DESCRIBE `$uname`")) 
-				{
-					$qry = "Create Table $uname (".
-					"id INT NOT NULL AUTO_INCREMENT ,".
-					"user1 VARCHAR( 16 ) NOT NULL ,".
-					"user2 VARCHAR( 16 ) NOT NULL ,".
-					"amount INT NOT NULL ,".
-					"flag VARCHAR(10) NOT NULL ,".
-					"PRIMARY KEY ( id )".
-					")";
-					$fgmembersite->RunQuery($qry);
-				}
 				foreach ($_POST["jumpmenu"] as $k)
 				{	
-					$qry = "select id from $uname where user2='$k'";
+					if ($uname < $k)
+					{
+						$user1=$uname;
+						$user2=$k;
+					}
+					else
+					{
+						$user2=$uname;
+						$user1=$k;
+					}
+					$qry = "select id from $pairtable where user1='$user1' and user2='$user2'";
 					$result =$fgmembersite->RunQuery($qry);
 					$row = mysql_fetch_array( $result );
 					if ($row['id'] > 0)
@@ -36,13 +34,12 @@
 					}
 					else
 					{
-						$qry = "INSERT INTO $uname (user1, user2, amount, flag) ".
-						"VALUES('$uname','$k','0','y')"; 
-						$fgmembersite->RunQuery($qry);
+						create_entry_in_pair_table($user1, $user2);
 						print "User $k is added to your profile\n";
 					}
 					print "<br>";
 				}
+				$fgmembersite->RedirectToURL("login-home.php");
 			?>
 		</div>
 		</div>
