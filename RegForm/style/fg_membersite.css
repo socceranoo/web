@@ -341,22 +341,6 @@ padding-bottom:10px;
 {
 	color:orange;
 }
-#tuxcorner
-{
-	width: 300px;
-	padding:20px;
-	border:1px solid #ccc;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-khtml-border-radius: 10px;
-	border-radius: 10px;   
-	position:absolute; 
-	top:100px; 
-	right:10px; 
-	z-index:10;
-	margin:0px; 
-	margin-top:28px;
-}
 
 #bill
 {
@@ -407,6 +391,7 @@ div.topright
 	width:100%;
 	font-family:stylewars;
 	text-align:right;
+	padding-right:10px;
 	/*give it some background and border*/
 	/*background:#eee;
 	border:1px solid #eee;
@@ -438,5 +423,167 @@ table.imagetable td {
 	border-style: solid;
 	border-color: #999999;
 	text-align:center;
+}
+
+div#container {
+	margin: 0px auto 0px auto; /* centered */
+	position:absolute;
+	top:100px;
+	right:30px;
+	width: 300px;
+}
+#container h2
+{
+	margin:0;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 1.2em;
+}
+.menu {
+	position: relative;
+	top:3px;
+	left: 0px;
+	z-index: 80; /* the stack order: displayed under bubble (90) */
+}
+
+.menu ul li {
+	-webkit-transform: rotate(-45deg); /* rotate the list item */
+	-moz-transform: rotate(-45deg); /* rotate the list item */
+	width: 60px;
+	overflow: hidden;	
+	margin: 0px 0px;
+	padding: 5px 5px 5px 18px;
+	float: left;
+	background: #7f9db9;
+	text-align: right;
+}
+
+.menu ul li a {
+	color: #fff;
+	text-decoration: none;
+	display:block;
+}
+
+.menu ul li.l1 {
+	background: rgba(131,178,51,0.65);
+}
+
+.menu ul li.l1:hover {
+	background: rgb(131,178,51);
+}
+
+.menu ul li.l2 {
+	background: rgba(196,89,30,0.65);
+}
+
+.menu ul li.l2:hover {
+	background: rgb(196,89,30);
+}
+
+.menu ul li.l3 {
+	background: rgba(65,117,160,0.65);
+}
+
+.menu ul li.l3:hover {
+	background: rgb(65,117,160);
+}
+
+.menu span {
+	margin: 15px 80px 0px 0px;
+	float:right;
+}
+
+.bubble {
+	clear: both;
+	margin: 0px auto;
+	width: 270px;
+	background: #fff;
+	background: url(../../images/minaret3.jpg);
+	-moz-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+	-khtml-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);	
+	position: relative; 
+	z-index: 90; /* the stack order: displayed under ribbon rectangle (100) */
+}
+
+.rectangle {
+	background: #7f9db9;
+	background: #9f8f19; 
+	background: #B18904; 
+	height: 50px;
+	width: 300px;
+	position: relative;
+	left:-15px;
+	top: 30px;
+	float: left;
+	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	z-index: 100; /* the stack order: foreground */
+}
+
+.rectangle h2 {
+	margin:0;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 1.2em;
+	font-size: 30px;
+	color: #fff;
+	padding-top: 6px;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+	text-align: center;
+}
+
+.triangle-l {
+	border-color: transparent #B18904 transparent transparent;
+	border-style:solid;
+	border-width:15px;
+	height:0px;
+	width:0px;
+	position: relative;
+	left: -30px;
+	top: 65px;
+	z-index: -1; /* displayed under bubble */
+}
+
+.triangle-r {
+	border-color: transparent transparent transparent #B18904;
+	border-style:solid;
+	border-width:15px;
+	height:0px;
+	width:0px;
+	position: relative;
+	left: 270px;
+	top: 35px;
+	z-index: -1; /* displayed under bubble */
+}
+
+.info {
+	padding: 60px 25px 35px 25px;
+}
+
+.info h2 {
+	font-size: 20px;
+}
+
+.info p {
+	padding-top: 10px;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.info p a {
+	color: #c4591e;
+	text-decoration: none;
+}
+
+.info p a:hover {
+	text-decoration: underline;
+}
+
+div#theTimer {
 }
 
