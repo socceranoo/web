@@ -4,7 +4,6 @@
 		<link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css" />
 	</head>
 	<body>
-
 	<div class="topright">
 	<p>
 	logged in (<?= $fgmembersite->UserName() ?>)

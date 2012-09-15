@@ -19,6 +19,7 @@
 			<h1><br><br><br><?if ($page == "cur")print "Transactions";else print "Deleted Transactions";?></h1>
 			<?require_once("operations.php");?>
 			<table class=imagetable align=center>
+			<table id="gradient-style" align=center>
 			<caption></caption>
 			<?PHP
 				$result = $fgmembersite->RunQuery("SELECT * FROM $table WHERE 

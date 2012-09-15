@@ -17,6 +17,7 @@
 	<head>
 		<title>Login</title>
 		<?require_once("includes.php");?>
+		<?//require_once("topbar.php");?>
 	</head>
 	<body>
 		<div id='loginpage'>

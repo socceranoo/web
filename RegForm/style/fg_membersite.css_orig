@@ -214,10 +214,30 @@ padding-bottom:10px;
    font-size: 3.9em;
 	text-align:center;
    color:#333;
-	/*
-	margin-top:20px;
-	*/
 }
+/*
+#fg_membersite_content table
+{
+	font-family : Arial, sans-serif;
+	font-size: 1em;
+	border: 2px dotted;
+	color:#000;
+	padding:20px;
+	border-radius: 10px;   
+	margin-top:50px;
+	border-color:red green blue black;
+}
+#fg_membersite_content td, th
+{
+	font-family : Arial, sans-serif;
+	font-size: 1em;
+	border: 2px outset;
+	padding:10px;
+	border-radius: 2px;   
+	border-color:maroon;
+	text-align:center;
+}
+*/
 #fg_membersite_content p 
 {
    font-family : Arial, sans-serif;
@@ -229,7 +249,7 @@ padding-bottom:10px;
 {
 	font-family : Arial, sans-serif;
 	background-color:transparent;
-	/*background-image:url('../../images/bck.jpg');*/
+	/*background-image:url('../../images/images2.jpg');*/
 	width:200px;
 	margin-bottom:20px;
 	font-size: 0.9em;
@@ -244,7 +264,7 @@ padding-bottom:10px;
 	font-family : Arial, sans-serif;
 	/*background-color : #ffff99;*/
 	background-color:transparent;
-	/*background-image:url('../../images/bck.jpg');*/
+	/*background-image:url('../../images/images2.jpg');*/
 	width:200px;
 	margin-bottom:20px;
 	font-size: 1em;
@@ -275,10 +295,9 @@ padding-bottom:10px;
 {
 	width: 130px;
 	padding:20px;
-	border:20px solid red;
-	font-size: 1.0em;
-	/*background-image:url('../../images/panel-blue.jpg');
-	background-repeat:no-repeat;*/
+	border:1px solid black;
+	font-size: 0.8em;
+	background-image:url('../../images/bck.jpg');
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-khtml-border-radius: 10px;
@@ -301,8 +320,12 @@ padding-bottom:10px;
 
 #homepage 
 { 
-	height:100%; margin:0; padding:0;
+	height:150%; margin:0; padding:0;
 	background-image:url('../../images/bck.jpg');
+	/*
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+	*/
 }
 
 #other 
@@ -366,13 +389,13 @@ div.topright
 	top:0;
 	right:0;
 	width:100%;
-	color:#fff;
 	font-family:stylewars;
 	text-align:right;
 	padding-right:10px;
-	/*give it some background and border
-	background:#000;
-	border:1px solid #eee;*/
+	/*give it some background and border*/
+	/*background:#eee;
+	border:1px solid #eee;
+	*/
 }
 
 table.imagetable {
@@ -411,7 +434,7 @@ div#container {
 }
 #container h2
 {
-	margin:0;
+	margin-top:5px;
 	font-style: italic;
 	font-weight: normal;
 	line-height: 1.2em;
@@ -426,7 +449,7 @@ div#container {
 .menu ul li {
 	-webkit-transform: rotate(-45deg); /* rotate the list item */
 	-moz-transform: rotate(-45deg); /* rotate the list item */
-	width: 60px;
+	width: 24%;
 	overflow: hidden;	
 	margin: 0px 0px;
 	padding: 5px 5px 5px 18px;
@@ -509,7 +532,7 @@ div#container {
 	line-height: 1.2em;
 	font-size: 30px;
 	color: #fff;
-	padding-top: 13px;
+	padding-top: 6px;
 	text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 	text-align: center;
 }
@@ -560,7 +583,3 @@ div#container {
 .info p a:hover {
 	text-decoration: underline;
 }
-
-div#theTimer {
-}
-

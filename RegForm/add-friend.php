@@ -64,7 +64,6 @@
 			//frmvalidator.addValidation("participants","req","Please provide who participants");
 			// ]]>
 		</script>
-
 		</div>
 		</div>
 	</body>

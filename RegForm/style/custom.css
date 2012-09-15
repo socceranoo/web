@@ -1,0 +1,80 @@
+.container_12 
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:960px;
+}
+ul#topbar
+{
+	margin-left:auto;
+	margin-right:auto;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	background-image:url("../../images/bck.jpg");
+}
+ul#topbar li
+{
+	float:left;
+}
+ul#topbar li a:link, ul#topbar li a:visited
+{
+	display:block;
+	width:120px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#98bf21;
+	text-align:center;
+	padding:4px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+ul#topbar li a:hover, ul#topbar li a:active
+{
+	background-color:#7A991A;
+}
+
+#gradient-style
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 1.3em;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:100px;
+	width: 480px;
+	text-align: left;
+	border-collapse: collapse;
+}
+#gradient-style th
+{
+	font-size: 1.0em;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe url('../../images/table-images/gradhead.png') repeat-x;
+	border-top: 2px solid #d3ddff;
+	border-bottom: 1px solid #fff;
+	color: #039;
+}
+
+#gradient-style td
+{
+	padding: 8px; 
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid #fff;
+	background: #e8edff url('../../images/table-images/gradback.png') repeat-x;
+}
+
+#gradient-style tfoot tr td
+{
+	background: #e8edff;
+	font-size: 12px;
+	color: #99c;
+}
+
+#gradient-style tbody tr:hover td
+{
+	background: #d0dafd url('../../images/table-images/gradhover.png') repeat-x;
+	color: #339;
+}

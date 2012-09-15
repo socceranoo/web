@@ -8,3 +8,4 @@
 <a href='view-transaction.php?page=del'>Deleted Transaction(s)</a>
 <br>
 </div>
+<?require_once("tuxcorner.php");?>
