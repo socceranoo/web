@@ -6,6 +6,7 @@
 	<head>
 		<?require_once("includes.php");?>
 		<title>Add friends</title>
+		<script type="text/javascript">var friendarray = new Array();</script>
 	</head>
 	<body>
 		<div id='other'>
@@ -19,10 +20,18 @@
 				<legend>Add-friends</legend>		
 				<div class='short_explanation'>* required fields</div>
 				<div class='container'>
+					<label for='list'>Enter the email*</label><br/>
+					<!--
 					<label for='list'>Add from the list?*</label><br/>
-					<select name="jumpmenu[]" multiple="multiple">
+					-->
+					<div id="dummy"></div>
+					<input type=text id='email'/>
+					<input type="button" value="Add" onclick="addToArray(friendarray, 'dummy', 'email', 'frlist', 'load.php')"/>
+					<input type="hidden" name="frlist" id="frlist" value=""/>
 					<? 
 						check_and_add_user_table($pairtable);
+						/*
+						echo "<select name='jumpmenu[]' multiple='multiple'>";
 						$result = $fgmembersite->RunQuery("SELECT * FROM $pairtable WHERE user1='$uname' or user2='$uname'");
 						$stack = array();
 						while($row = mysql_fetch_array($result))
@@ -44,8 +53,9 @@
 								echo "</option>";
 							}
 						}
+						echo "</select>";
+						*/
 					?>	
-					</select>
 					<span id='form_jumpmenu_errorloc' class='error'></span>
 				</div>
 				<div class='container'>

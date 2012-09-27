@@ -7,7 +7,9 @@
 		<?require_once("includes.php");?>
 		<!--<meta http-equiv="refresh" content="60"/>-->
 		<title>Welcome!!</title>
-		<!--<script type="text/javascript" src="scripts/tumblr.js" ></script>-->
+		<!--
+		<script type="text/javascript" src="scripts/tumblr.js" ></script>
+		-->
 	</head>
 	<body>
 		<div id='homepage'>
@@ -18,7 +20,7 @@
 			<table id="gradient-style" align=center>
 			<caption></caption>
 			<?PHP
-				$result = $fgmembersite->RunQuery("SELECT * FROM $pairtable WHERE user1='$uname' or user2='$uname'");
+				$result = $fgmembersite->RunQuery("SELECT * FROM $pairtable WHERE user1='$uname' or user2='$uname' ORDER BY user1");
 				if (mysql_num_rows($result) > 0)
 					echo "<tr><th>Who</th><th>How much</th><th>Status</th></tr>";
 				while($row = mysql_fetch_array( $result )) 
@@ -28,7 +30,9 @@
 						$user2=$row['user2'];
 					else if($row['user2'] == $uname)
 						$user2=$row['user1'];
+					echo "<a href=view-transaction.php?page=cur&user=$user2>";
 					echo $user2;
+					echo "</a>";
 					echo "</td><td>";
 					echo abs($row['amount']);
 					echo "</td><td>";

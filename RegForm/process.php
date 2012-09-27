@@ -13,8 +13,19 @@
 			<br><br><br>
 			<h3>Done!</h3>
 			<?php 
-				foreach ($_POST["jumpmenu"] as $k)
+				$emailarray = unserialize($_POST['frlist']);
+				//foreach ($_POST["jumpmenu"] as $k)
+				foreach ($emailarray as $k)
 				{	
+					$qry = "select username from $regusertable where email='$k'";
+					$result =$fgmembersite->RunQuery($qry);
+					$row = mysql_fetch_array( $result );
+					if ($row == "" || $row['username'] == $uname)
+					{
+						print "User $k is not registered with weshall.servebeer.com\n";
+						continue;
+					}
+					$k = $row['username'];
 					if ($uname < $k)
 					{
 						$user1=$uname;
@@ -39,7 +50,7 @@
 					}
 					print "<br>";
 				}
-				$fgmembersite->RedirectToURL("login-home.php");
+				//$fgmembersite->RedirectToURL("login-home.php");
 			?>
 		</div>
 		</div>

@@ -8,9 +8,18 @@
 <link href="../style/fg_membersite.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../scripts/jquery.js"></script>
 <script type="text/javascript" src="../scripts/time.js"></script>
+<script type="text/javascript">var friendarray = new Array();</script>
 </head>
 <body>
 
+<div id="dummy"></div>
+
+<form action="load1.php" id="myForm" name="myForm" method="post" >
+<input type=text id='email'/>
+<input type="button" value="Add" onclick="addArray('dummy', 'email', 'hidArray', 'load.php')"/>
+    <input type="hidden" name="hidArray"id="hidArray" value=""/>
+<input type="submit" id="submit"/>
+</form>
 <div id="container">
 <div class="menu">
 <ul>
@@ -34,7 +43,6 @@
 <button onclick="loadContent('#includedContent', 'tux2.php')">change</button>
 </div>
 </div>
-
 
 </body>
 </html>

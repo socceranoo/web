@@ -22,8 +22,18 @@
 			<table id="gradient-style" align=center>
 			<caption></caption>
 			<?PHP
-				$result = $fgmembersite->RunQuery("SELECT * FROM $table WHERE 
+				if (isset($_REQUEST['user']))
+				{
+					$user = $_REQUEST['user'];
+					$qry ="SELECT * FROM $table WHERE (paid LIKE '%$uname%' AND participants LIKE '%$user') OR ".
+					"(paid LIKE '%$user%' AND participants LIKE '%$uname%')";
+					$result = $fgmembersite->RunQuery($qry);
+				}
+				else
+				{
+					$result = $fgmembersite->RunQuery("SELECT * FROM $table WHERE 
 						(paid LIKE '%$uname%' OR participants LIKE '%$uname%')");
+				}
 				if (mysql_num_rows($result) > 0)
 					echo "<tr><th>Event</th><th>Description</th><th>Date</th><th>Paid</th><th>Participants</th><th>Amount</th></tr>";
 				while($row = mysql_fetch_array( $result )) 

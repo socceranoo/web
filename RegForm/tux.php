@@ -1,3 +1,10 @@
 <div id='IncludedContent'>
-<?system("/usr/games/fortune");?>
+<?
+$str=`/usr/games/fortune`;
+while (strlen($str) > 800)
+{
+	$str=`/usr/games/fortune`;
+}
+echo $str;
+?>
 </div>

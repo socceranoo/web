@@ -21,8 +21,8 @@
 			<div id="includedContent"></div>
 			<script>loadContent('#includedContent', 'tux.php')</script>
 			<p align="center">
-			<img src="../images/brewani0.gif" width="96" height="107">
-			<img src="../images/brewani1.gif" width="96" height="107">
+			<img src="../images/brewani0.gif" width="96" height="127">
+			<img src="../images/brewani1.gif" width="96" height="127">
 			<button onclick="loadContent('#includedContent', 'tux.php')">change</button>
 			<br/>
 		<div align=center id="theTimer">00:00:00</div>

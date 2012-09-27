@@ -21,6 +21,21 @@
 	</head>
 	<body>
 		<div id='loginpage'>
+				<!--
+				<div class="box morphing-glowing">
+					<img src="../images/img.png">
+					<img src="../images/image-2.jpg">
+					<img src="../images/image-3.jpg">
+					<img src="../images/image-4.jpg">
+				</div>
+				<div class="box reflection">
+					<img src="../images/img.png"><br/>
+					<img src="../images/image-2.jpg"><br/>
+					<img src="../images/image-3.jpg"><br/>
+					<img src="../images/image-4.jpg"><br/>
+				</div>
+				-->	
+
 		<div id='posRight'>
 		<!-- Form Code Start >-->
 		<div id='fg_membersite'>
