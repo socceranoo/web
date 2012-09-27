@@ -25,8 +25,8 @@
 				if (isset($_REQUEST['user']))
 				{
 					$user = $_REQUEST['user'];
-					$qry ="SELECT * FROM $table WHERE (paid LIKE '%$uname%' AND participants LIKE '%$user') OR ".
-					"(paid LIKE '%$user%' AND participants LIKE '%$uname%')";
+					$qry ="SELECT * FROM $table WHERE (paid LIKE '%$uname%' AND participants LIKE '%$user%')"
+					."OR (paid LIKE '%$user%' AND participants LIKE '%$uname%')";
 					$result = $fgmembersite->RunQuery($qry);
 				}
 				else
