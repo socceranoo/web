@@ -1,0 +1,253 @@
+/* comment to test GIT push */
+
+body.gameroom
+{
+	height:100%;
+	margin-top:0%;
+	margin-left:2%;
+	padding:0;
+	background-image:url("../images/bck3.jpg");
+	/*
+	background-color:#000;
+	*/
+	width:95%;
+	height:95%;
+	position:relative;
+	border:2px solid #7F9DB9; 
+}
+
+.gameroom h3 {
+	-webkit-transition:all .5s ease-in-out;
+	-moz-transition:all 1s ease-in-out;
+	-o-transition:all 1s ease-in-out;
+	transition:all 1s ease-in-out;
+	font-size:2em;
+	z-index:70;
+	text-align:center;
+	margin-top:30px;
+	color:#000;
+}
+
+.gameroom h3:hover {
+	font-size:2.5em;
+	color:#7f9db9;
+}
+
+.gameroom div.chatroom 
+{
+	position:absolute;
+	bottom:-2px;
+	right:-2px;
+}
+.gameroom div.teamchat {
+	position:absolute;
+	bottom:-2px;
+	left:-2px;
+}
+.gameroom div.chatbox
+{
+	width:200px; 
+	height:260px; 
+	border:2px solid #7F9DB9; 
+}
+.gameroom div.chatbox:hover
+{
+	-webkit-box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
+	-moz-box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
+	box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
+}
+
+.gameroom .chatbox textarea.chat{
+	width:100%; 
+	height:90%; 
+	font-size:12px;
+	font-weight:bold;
+	resize:none;
+	border:none;
+	background:transparent;
+}
+.gameroom .chatbox input.msg {
+	width:100%;
+	height:10%; 
+}
+
+.msg:focus {
+	color:#009;
+	background-color : #ffff99;
+	font-size:12px;
+}
+.gameroom .chatbox button.b1 {
+	font-size:0.6em;
+	width:63px;
+}
+
+.gameroom .card img {
+/*
+	width:111px;
+	height:148px;
+*/
+	width:90px;
+	height:120px;
+	visibility:hidden;
+	opacity:0;
+	-webkit-transition:all 0.7s ease-in-out;
+	-moz-transition:all 0.7s ease-in-out;
+	-o-transition:all 0.7s ease-in-out;
+	transition:all 0.7s ease-in-out;
+	/*
+	-webkit-transition: .7s;
+	-moz-transition: 0.7s;
+	transition: 0.7s;
+	-webkit-transition: visibility 1s linear, opacity 0.5s linear;
+	-moz-transition: visibility 1s linear, opacity 0.5s linear;
+	transition: visibility 1s linear, opacity 0.5s linear;
+	-webkit-transition:all 1s ease-in-out;
+	-moz-transition:all 1s ease-in-out;
+	-o-transition:all 1s ease-in-out;
+	-webkit-transition:opacity 1s ease-in-out;
+	-moz-transition:opacity 1s ease-in-out;
+	-o-transition:opacity 1s ease-in-out;
+	transition:opacity 1s ease-in-out;
+	*/
+}
+.gameroom .card img:hover {
+	width:111px;
+	height:148px;
+/*
+	width:90px;
+	height:120px;
+	z-index:-20;
+*/
+	position: relative;
+	-webkit-box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
+	-moz-box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
+	box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
+
+}
+.gameroom .card img.pos {
+	width:80px;
+	height:80px;
+	z-index:40;
+	-webkit-border-radius: 60px;
+	-webkit-transition:all 1s ease-in-out;
+	-moz-transition:all 1s ease-in-out;
+	-o-transition:all 1s ease-in-out;
+	transition:all 1s ease-in-out;
+}
+.gameroom .card img.pos:hover {
+	width:100px;
+	height:100px;
+	-webkit-border-radius: 60px;
+	-webkit-box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
+	-moz-box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
+	box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
+}
+
+.gameroom div.bottomnum {
+	position:absolute;
+	bottom:190px;
+	left:47%;
+}
+.gameroom div.topnum {
+	position:absolute;
+	top:100px;
+	left:47%;
+}
+.gameroom div.leftnum {
+	position:absolute;
+	left:370px;
+	top:36%;
+}
+.gameroom div.rightnum {
+	position:absolute;
+	right:370px;
+	top:36%;
+}
+
+.gameroom div.bottomref {
+	width:80px;
+	height:80px;
+	position:absolute;
+	z-index:3;
+	bottom:140px;
+	left:51%;
+}
+.gameroom div.topref {
+	width:80px;
+	height:80px;
+	position:absolute;
+	z-index:3;
+	top:75px;
+	left:51%;
+}
+.gameroom div.leftref {
+	width:80px;
+	height:80px;
+	z-index:3;
+	position:absolute;
+	left:240px;
+	top:46%;
+}
+.gameroom div.rightref {
+	width:80px;
+	height:80px;
+	position:absolute;
+	z-index:3;
+	right:254px;
+	top:46%;
+	/*margin-right:20px;*/
+}
+.gameroom div.centerref {
+	width:80px;
+	height:80px;
+	position:absolute;
+	z-index:3;
+	left:46%;
+	top:38.5%;
+	/*margin-right:20px;*/
+}
+/*
+.gameroom .topref img:hover {
+	position: relative;
+	top: 20px;
+}
+.gameroom .bottomref img:hover {
+	position: relative;
+	top: -20px;
+}
+.gameroom .leftref img:hover {
+	position: relative;
+	left: 20px;
+}
+.gameroom .rightref img:hover {
+	position: relative;
+	left: -20px;
+}
+*/
+
+/************************************************************************************
+MORPHING + GLOWING
+.morphing-glowing {
+	padding: 20px 40px 50px;
+	color: #fff;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+.morphing-glowing .image-wrap {
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+.morphing-glowing .image-wrap:hover {
+	-webkit-box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+	-moz-box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+	box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+	-webkit-border-radius: 60em;
+	-moz-border-radius: 60em;
+	border-radius: 60em;
+}
+*************************************************************************************/
