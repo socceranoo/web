@@ -188,6 +188,8 @@ class Trump {
 	public $setArr;
 	public static $PLAYERS;
 	public static $CARDPERUSER;
+	public static $token;
+	public static $round;
 	function __construct()
 	{
 		$this->PLAYERS=4;
@@ -197,8 +199,10 @@ class Trump {
 		$this->playerArr=array();
 		$this->setArr=array();
 		//$this->deckobj->printCardIndices();
-		//$deckobj->deckShuffle();
+		$this->deckobj->deckShuffle();
 		//$deckobj->printValues();
+		$this->token=0;
+		$this->round=0;
 	}
 	public function generatePlayerHand($player)
 	{
@@ -304,7 +308,25 @@ class Trump {
 		//print "GET PLAYER POS:$player->position\n";
 		return $pos;
 	}
-
+	public function getTakenPositions()
+	{
+		$str="TAKEN: ";
+		//$str="TAKEN:100 ";
+		foreach($this->playerArr as $player)
+		{
+			if ($player->position != 100)
+				$str= $str.$player->position." ";
+		}
+		return $str;
+	}
+	
+	public function playerCountReached()
+	{
+		if (count($this->playerArr) == $this->PLAYERS)
+			return true;
+		else
+			return false;
+	}
 }
 
 ?>

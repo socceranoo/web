@@ -6,7 +6,13 @@ body.gameroom
 	margin-top:0%;
 	margin-left:2%;
 	padding:0;
+	background:#98bf21;
+	/*
 	background-image:url("../images/bck3.jpg");
+	background-repeat:no-repeat;
+	background-image:url("../images/background.gif");
+	background-image:url("../../images/teal2.jpg");
+	*/
 	/*
 	background-color:#000;
 	*/
@@ -133,6 +139,7 @@ body.gameroom
 	-moz-transition:all 1s ease-in-out;
 	-o-transition:all 1s ease-in-out;
 	transition:all 1s ease-in-out;
+	visibility:hidden;
 }
 .gameroom .card img.pos:hover {
 	width:100px;
@@ -143,6 +150,48 @@ body.gameroom
 	box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
 }
 
+.gameroom div.bbid {
+	position:absolute;
+	bottom:40%;
+	left:45%;
+}
+.gameroom div.rbid {
+	position:absolute;
+	top:37%;
+	left:65%;
+}
+.gameroom div.lbid {
+	position:absolute;
+	top:37%;
+	left:20%;
+}
+.gameroom div.tbid {
+	position:absolute;
+	top:10%;
+	left:45%;
+}
+.gameroom .card img.bidimg {
+	width:150px;
+	height:150px;
+	z-index:10;
+	visibility:hidden;
+	/*
+	-webkit-border-radius: 60px;
+	*/
+	-webkit-transition:all .4s ease-in-out;
+	-moz-transition:all .4s ease-in-out;
+	-o-transition:all .4s ease-in-out;
+	transition:all .4s ease-in-out;
+}
+
+.gameroom .card button.bidbutton {
+	width:75px;
+	height:40px;
+	z:index:60;
+	visibility:hidden;
+	position:relative;
+	top:160px;
+}
 .gameroom div.bottomnum {
 	position:absolute;
 	bottom:190px;
@@ -204,9 +253,7 @@ body.gameroom
 	z-index:3;
 	left:46%;
 	top:38.5%;
-	/*margin-right:20px;*/
 }
-/*
 .gameroom .topref img:hover {
 	position: relative;
 	top: 20px;
@@ -223,7 +270,6 @@ body.gameroom
 	position: relative;
 	left: -20px;
 }
-*/
 
 /************************************************************************************
 MORPHING + GLOWING

@@ -14,29 +14,96 @@ class echoServer extends WebSocketServer {
 		{
 			$user->username = $matches['name'];	
 			$message = $user->username." joined the conference room";
-			$userCardStr = $this->gameobj->addUser($user->username, array_search($user, $this->users), $user->id);
-			$this->send($user, $userCardStr);
-			$position=$this->gameobj->isPlayerPositionSet($user->username, $user->id);
-			//print "$position\n";
-			if ($position !=100) {
-				$posmsg="POS:".$position;
-				$this->send($user, $posmsg);
+			$takenPosStr = $this->gameobj->getTakenPositions();			
+			$this->send($user, $takenPosStr);
+			if ($this->gameobj->getPlayerIndexById($user->username, $user->id)!= -1)
+			{
+				$position=$this->gameobj->isPlayerPositionSet($user->username, $user->id);
+				if ($position !=100) {
+					$dupmsg="DUPLICATE:DONE";
+					$this->send($user, $dupmsg);
+					/*	
+					$userCardStr = $this->gameobj->addUser($user->username, array_search($user, $this->users), $user->id);
+					$this->send($user, $userCardStr);
+					$posmsg="POS:".$position;
+					$this->send($user, $posmsg);
+					*/
+				}
 			}
+			
 		}
 		else if(preg_match('/(?<CLICK>CLICK):(?<id>\d+)/', $message, $matches))
 		{
-			$id=$matches['id'];
-			$message = "CLICK:".$id;
-			$this->broadcast_to_multiple_signins($user, $message);
+			$this->broadcast_except_sender($user, $message);
+			$this->send($user, $message);
+			$this->gameobj->token++;
+			$this->gameobj->token%=$this->gameobj->PLAYERS;
+			
+			$this->gameobj->round++;
+			if ($this->gameobj->round == $this->gameobj->PLAYERS)
+			{
+				$this->gameobj->round=0;	
+				$roundmsg ="ROUND:OVER";
+				$this->broadcast_except_sender($user, $roundmsg);
+				$this->send($user, $roundmsg);
+			}
+			$tokenmsg="TOKEN:".$this->gameobj->token;
+			$this->broadcast_except_sender($user, $tokenmsg);
+			$this->send($user, $tokenmsg);
 			return;
 		}
 		else if(preg_match('/(?<pos>POS):(?<id>\d+)/', $message, $matches))
 		{
+			$userCardStr = $this->gameobj->addUser($user->username, array_search($user, $this->users), $user->id);
+			$this->send($user, $userCardStr);
 			$id=$matches['id'];
 			$this->gameobj->setUserPosition($user->username, $id);
 			$posmsg = "POS:".$id;
 			$this->send($user, $posmsg);
-			$this->broadcast_to_multiple_signins($user, $posmsg);
+			$dupmsg="DUPLICATE:DONE";
+			$this->broadcast_to_multiple_signins($user, $dupmsg);
+			//$this->broadcast_to_multiple_signins($user, $posmsg);
+			$takenPosStr = $this->gameobj->getTakenPositions();			
+			$this->broadcast_except_sender($user, $takenPosStr);
+			
+			if ($this->gameobj->playerCountReached())
+			{
+				$tokenmsg="TOKEN:".$this->gameobj->token;
+				$this->broadcast_except_sender($user, $tokenmsg);
+				$this->send($user, $tokenmsg);
+				$bidmsg = "BID:140 ".$this->gameobj->token;;
+				$this->broadcast_except_sender($user, $bidmsg);
+				$this->send($user, $bidmsg);
+			}
+			return;
+		}
+		else if(preg_match('/(?<pos>BID):(?<id>\d+) (?<ppos>\d+)/', $message, $matches))
+		{
+			$this->gameobj->token++;
+			if ($this->gameobj->token == $this->gameobj->PLAYERS)
+			{
+				$bidmsg="BIDOVER:FIRST";
+				$this->send($user, $bidmsg);
+				$this->broadcast_except_sender($user, $bidmsg);
+				$tokenmsg="TOKEN:".$this->gameobj->token;
+				$this->broadcast_except_sender($user, $tokenmsg);
+				$this->send($user, $tokenmsg);
+			}
+			else if ($this->gameobj->token == 2 * $this->gameobj->PLAYERS)
+			{
+				$this->gameobj->token=0;
+				$bidmsg="BIDOVER:SECOND";
+				$this->send($user, $bidmsg);
+				$this->broadcast_except_sender($user, $bidmsg);
+				$tokenmsg="TOKEN:".$this->gameobj->token;
+				$this->broadcast_except_sender($user, $tokenmsg);
+				$this->send($user, $tokenmsg);
+				return;
+			}	
+			$bidmsg="BID:".$matches['id']." ".($this->gameobj->token%$this->gameobj->PLAYERS);
+			$this->send($user, $bidmsg);
+			$this->broadcast_except_sender($user, $bidmsg);
+			print $matches['id']."\n";
 			return;
 		}
 		else
