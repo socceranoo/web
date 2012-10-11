@@ -4,12 +4,19 @@ var deck=52;
 var rankArr = new Array("a1", "2", "3", "4", "5", "6", "7", "8", "9", "t", "j", "q", "k");
 var suitArr = new Array("c", "d", "h", "s");
 var myArray = new Array("bottom", "right", "top", "left");
+var arrowimages = new Array("abottom.png", "aright.png", "atop.png", "aleft.png");
 var player_pos=100;
 var user;
 var cardArr = new Array();
-var cardArr1;
+var cardArr1 = new Array();
 var current_bid;
 var bidDone=false;
+var trump_holder=false;
+var trump_revealed=false;
+var roundinprogress=false;
+var lead_card;
+var trump_index;
+var trump_id;
 
 function checkRefresh()
 {
@@ -31,11 +38,13 @@ function checkRefresh()
 }
 function init() {
 	hideElem("noserver");
+	hideElem("gradient-style");
 	//checkRefresh();
 	//var host = "ws://10.180.157.222:9000/GIT/PHP-Websockets/testwebsock.php"; // SET THIS TO YOUR SERVER
 	//var host = "ws://98.234.216.9:9000/github/PHP-Websockets/testwebsock.php"; // SET THIS TO YOUR SERVER
-	var host = "ws://98.234.216.9:9000/Gameroom/testwebsock.php"; // SET THIS TO YOUR SERVER
+	var host = "ws://98.234.216.9:9000/RegForm/testwebsock.php"; // SET THIS TO YOUR SERVER
 	//alert("INIT");
+	getid('team2').value="60"
 	try {
 		deck = 52;
 		socket = new WebSocket(host);
@@ -62,6 +71,7 @@ function init() {
 								cardperplayer=(totalcards/totalplayers);
 								curopencount = totalcards;
 								showpositions();
+								//showcentercards();
 								var user_msg = "USER:"+user;
 								socket.send(user_msg); 
 						   };
@@ -75,6 +85,10 @@ function init() {
 							   hidecardimages();
 							   hidecentercards();
 							   hidepositions();
+							   hideprofiles();
+							   hideElem("gradient-style");
+							   hideElem("trump");
+							   hideElem("revealtrump");
 							   log("Disconnected"); 
 							   //log2("Disconnected"); 
 							   //log("Disconnected - status "+this.readyState); 
@@ -102,7 +116,7 @@ function process(msg)
 		str = match[1].trim();
 		var arr = str.split(" ");
 		cardArr = arr;
-		cardArr1 = arr;
+		cardArr1 = cardArr.slice();
 		return;
 	}
 	match = /DUPLICATE:(.*)/i.exec(msg);
@@ -110,7 +124,7 @@ function process(msg)
 	{
 		hidepositions();
 		showElem('dup');	
-		setTimeout("top.location.href = 'login-home.php'",5000);
+		setTimeout("top.location.href = 'login-home.php'",3000);
 	//	setTimeout("window.location='login-home.php'",5000);
 		return;
 	}
@@ -121,6 +135,12 @@ function process(msg)
 		position=carddetail[0];
 		id=parseInt(carddetail[1]);
 		cardindex=parseInt(carddetail[2]);
+		if (roundinprogress == false)
+		{
+			hideElem('gradient-style');
+			roundinprogress=true;
+			lead_card=cardindex;	
+		}
 		hideElem(id);
 		centerid=position+"center";
 		setimgsrc(centerid, imagesrcforindex(cardindex));
@@ -133,8 +153,23 @@ function process(msg)
 	{
 		position=parseInt(match[1]);
 		player_pos=position;
-		//hideElem(position+"num");
-		hidepositions();
+		hideElem(position+"num");
+		disablepositionclick();
+		return;
+	}
+	match = /JOINED:(.*)/i.exec(msg);
+	if (match && match[1])
+	{
+		var joinedArr = match[1].split(" ");
+		userpos = joinedArr[0];
+		fbusr = joinedArr[1];
+		username = joinedArr[2];
+		span="#"+userpos+"span";
+		imgsrc="http://graph.facebook.com/"+fbusr+"/picture";
+		imgid = userpos+"profile";
+		setimgsrc(imgid, imgsrc);
+		$(span).text(username);
+		showElem(imgid);
 		return;
 	}
 	match = /TAKEN:(.*)/i.exec(msg);
@@ -159,13 +194,64 @@ function process(msg)
 			playsound();	
 			if (bidDone)
 				enableonclickrow(player_pos);
+			if (bidDone && roundinprogress && !trump_revealed)	
+				showElem("revealtrump");
 		}
+		id = token+"center";
+		src="images/"+arrowimages[token];
+		setimgsrc(id, src);
+		showElem(id);
 		return;
+	}
+	match = /TRUMPSET:(.*)/i.exec(msg);
+	if(match && match[1])
+	{
+		id = match[1];
+		hideElem(id);
+		trump_id=id;
+		showElem("trump");
+		return;
+	}
+	match = /REVEALTRUMP:(.*)/i.exec(msg);
+	if(match && match[1])
+	{
+		index = match[1];
+		showElem(trump_id);
+		trump_revealed = true;
+		src = imagesrcforindex(index);
+		setimgsrc("trump", src);
+		hideElem("revealtrump");
+		return;
+		
 	}
 	match = /ROUND:(.*)/i.exec(msg);
 	if(match && match[1])
 	{
+		var scoreArr = match[1].split(" ");
+		team1=scoreArr[0];
+		team2=scoreArr[1];
+		setvaluejq("#team1", team1);
+		setvaluejq("#team2", team2);
+		roundinprogress = false;
 		hidecentercards();
+		showElem('gradient-style');
+		return;
+	}
+	match = /BIDSTART:(.*)/i.exec(msg);
+	if(match && match[1])
+	{
+		setusercardrow(1);
+		showcardimages(1);
+		return;
+	}
+	match = /SETTRUMP:(.*)/i.exec(msg);
+	if(match && match[1])
+	{
+		if (player_pos == match[1])
+		{
+			trump_holder=true;
+			enableonclickrow(player_pos);	
+		}
 		return;
 	}
 	match = /BIDOVER:(.*)/i.exec(msg);
@@ -173,14 +259,14 @@ function process(msg)
 	{
 		if (match[1] == "FIRST")
 		{
-			setusercardrow(player_pos, cardArr);
-			showcardimages(1);
+			setusercardrow(2);
+			showcardimages(2);
 		}
 		if (match[1] == "SECOND")
 		{
 			bidDone=true;
-			showcardimages(2);
 		}
+		return;
 	}
 	match = /BID:(.*)/i.exec(msg);
 	if(match && match[1])
@@ -196,6 +282,7 @@ function process(msg)
 			showElem(pos+"bid");	
 			showElem(pos+"pass");	
 		}
+		return;
 	}
 	log(msg);
 }
@@ -299,9 +386,20 @@ function onkey2(event)
 function cardclick(event)
 {
 	id = event.target.id;
-	//msg = "clicked "+id;
-	//msg = "CLICK:"+indexforid(id);
-	msg = "CLICK:"+player_pos+" "+id+" "+indexforid(id);
+	if (bidDone) {
+		if(isvalidcard(id) == false)
+		{
+			alert("NOT a valid card");
+			return;
+		}	
+		msg = "CLICK:"+player_pos+" "+id+" "+indexforid(id);
+		var index = cardArr1.indexOf(indexforid(id));
+		cardArr1.splice(index, 1);
+	}
+	else {
+		msg = "TRUMPSET:"+id+" "+player_pos+" "+indexforid(id);
+		trump_index = indexforid(id);
+	}
 	socket.send(msg);	
 	disableonclickrow(player_pos);
 }
@@ -333,7 +431,7 @@ function showcardimages(bidnum)
 {
 	for(i=0; i<myArray.length; i++) 
 	{
-		showcardrow(i,bidnum);
+		showcardrow(i, bidnum);
 	}
 }
 
@@ -381,32 +479,38 @@ function enableonclickrow(row)
 
 }
 
-function setusercardrow(pos, index)
+function setusercardrow(bidnum)
 {
-	for(j=0;j<index.length; j++)
+	pos = player_pos;
+	if (bidnum == 1) {
+		start = 0;	
+		end = parseInt(cardArr.length/2);
+	}
+	else {
+		start = parseInt(cardArr.length/2);
+		end = cardArr.length;
+	}
+	for(j=start;j<end; j++)
 	{
-		id = pos*rankArr.length +j;
-		src=imagesrcforindex(index[j]);
-		//showElem(id);
+		id = pos*cardArr.length +j;
+		src=imagesrcforindex(cardArr[j]);
 		setimgsrc(id, src);
 	}
 }
 
 function showcardrow(pos, bidnum)
 {
-	if (bidnum == 1)
-	{
+	if (bidnum == 1) {
 		start = 0;	
-		end = parseInt(rankArr.length/2);
+		end = parseInt(cardArr.length/2);
 	}
-	else
-	{
-		start = parseInt(rankArr.length/2);
-		end = rankArr.length;
+	else {
+		start = parseInt(cardArr.length/2);
+		end = cardArr.length;
 	}
 	for(j=start;j<end; j++)
 	{
-		id = pos*rankArr.length +j;
+		id = pos*cardArr.length +j;
 		showElem(id);
 	}
 }
@@ -425,7 +529,14 @@ function hidepositions()
 	for(i=0; i<myArray.length; i++) {
 		hideElem(i+"num");
 	}
+}
 
+function hideprofiles()
+{
+	for(i=0; i<myArray.length; i++) {
+		hideElem(i+"profile");
+		hideElem(i+"span");
+	}
 }
 function imagesrcforindex(index)
 {
@@ -479,10 +590,12 @@ function bid_pass(choice)
 {
 	id = event.target.id;
 	pos = parseInt(id)%10;
-	//alert(pos);
-	msg="BID:"+current_bid+" "+pos;
+	var match = /\d(.*)/i.exec(id);
+	if (match[1]=="pass")
+		msg="BID:"+current_bid+" "+pos+" pass";
+	else
+		msg="BID:"+current_bid+" "+pos+" bid";
 	hideElem(id);
-	//alert(current_bid);
 	previd=current_bid + parseInt(pos);
 	hideElem(previd);
 	hideElem(pos+"bid");	
@@ -490,6 +603,74 @@ function bid_pass(choice)
 	socket.send(msg);
 }
 
+function disablepositionclick()
+{
+	for(i=0; i<myArray.length; i++) {
+		disableonclick(i+"num");
+	}
+}
+
+function isvalidcard(id)
+{
+	index = indexforid(id);
+	persuit = rankArr.length;
+	if (roundinprogress) {
+		cur_suit = parseInt(index/persuit);
+		lead_suit_found=false;
+		lead_suit = parseInt(lead_card/persuit);
+		//alert("INDEX:"+index+"LEAD_CARD:"+lead_card+"Lead Suit"+lead_suit+"CUR SUIT:"+cur_suit+"CARD ARRAY LENGTH:"+cardArr1.length);
+		for(i=0; i<cardArr1.length; i++) {
+			if (lead_suit == parseInt(cardArr1[i]/persuit))
+				lead_suit_found=true;
+		}
+		if (!lead_suit_found)
+			return true;
+		if (lead_suit_found && cur_suit==lead_suit)
+			return true;
+	}
+	else
+		return true;
+
+	return false;
+}
+function setvaluejq(id, val)
+{
+	$(id).html(val);
+}
+
+
+function revealtrump()
+{
+	lead_suit_found=false;
+	lead_suit = parseInt(lead_card/persuit);
+	for(i=0; i<cardArr1.length; i++) {
+		if (lead_suit == parseInt(cardArr1[i]/persuit))
+			lead_suit_found=true;
+	}
+	
+	if (lead_suit_found)
+		return;	
+	
+	r=confirm("Are you sure you want to reveal the trump?");
+	if (r)
+	{
+		msg="REVEALTRUMP:DONE";
+		socket.send(msg);
+	}
+
+}
+
+function sleep(milliseconds) 
+{
+	var start = new Date().getTime();
+	for (var i = 0; i < 1e7; i++) 
+	{
+		if ((new Date().getTime() - start) > milliseconds)
+		{
+			break;
+		}
+	}
+}
 /*
 function bidding(pos)
 {

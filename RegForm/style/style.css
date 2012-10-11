@@ -130,9 +130,30 @@ body.gameroom
 	box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
 
 }
+
+.gameroom .card img.trump {
+
+	position:absolute;
+	top:0px;
+	left:0px;
+	margin:20px;
+}
+.gameroom .card img.trump:hover {
+
+}
+.gameroom .card button.revealtrump {
+	width:90px;
+	height:30px;
+	position:absolute;
+	top:120px;
+	margin:20px;
+	font-size:0.7em;
+	visibility:hidden;
+}
+
 .gameroom .card img.pos {
-	width:80px;
-	height:80px;
+	width:60px;
+	height:60px;
 	z-index:40;
 	-webkit-border-radius: 60px;
 	-webkit-transition:all 1s ease-in-out;
@@ -142,37 +163,84 @@ body.gameroom
 	visibility:hidden;
 }
 .gameroom .card img.pos:hover {
-	width:100px;
-	height:100px;
+	width:80px;
+	height:80px;
 	-webkit-border-radius: 60px;
 	-webkit-box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
 	-moz-box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
 	box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
 }
+.gameroom .card img.profile {
+	width:60px;
+	height:60px;
+	/*	
+	-webkit-border-radius: 60px;
+	*/
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	visibility:hidden;
+}
+.gameroom .card img.profile:hover {
+	width:80px;
+	height:80px;
+	-webkit-border-radius: 60px;
+	/*
+	-webkit-box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
+	-moz-box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
+	box-shadow: 0 0 40px rgba(0,0,0,1), inset 0 0 40px rgba(0,0,0,1);
+	*/
+}
+.gameroom span {
+	font-size:15px;
+	float:center;
+	position:relative;
+	top:20px;
+}
+.gameroom div.bottomprof {
+	position:absolute;
+	bottom:3%;
+	left:47%;
+}
+.gameroom div.topprof {
+	position:absolute;
+	top:15%;
+	left:30%;
+}
+.gameroom div.leftprof {
+	position:absolute;
+	left:5%;
+	top:36%;
+}
+.gameroom div.rightprof {
+	position:absolute;
+	right:10%;
+	top:36%;
+}
 
 .gameroom div.bbid {
 	position:absolute;
-	bottom:40%;
-	left:45%;
+	bottom:17%;
+	left:30%;
 }
 .gameroom div.rbid {
 	position:absolute;
-	top:37%;
-	left:65%;
+	top:40%;
+	right:8%;
 }
 .gameroom div.lbid {
 	position:absolute;
-	top:37%;
-	left:20%;
+	top:43%;
+	left:4%;
 }
 .gameroom div.tbid {
 	position:absolute;
-	top:10%;
-	left:45%;
+	top:7%;
+	left:20%;
 }
 .gameroom .card img.bidimg {
-	width:150px;
-	height:150px;
+	width:90px;
+	height:90px;
 	z-index:10;
 	visibility:hidden;
 	/*
@@ -185,31 +253,32 @@ body.gameroom
 }
 
 .gameroom .card button.bidbutton {
-	width:75px;
-	height:40px;
-	z:index:60;
+	width:45px;
+	height:30px;
+	z-index:60;
+	font-size:10px;
 	visibility:hidden;
 	position:relative;
-	top:160px;
+	top:90px;
 }
 .gameroom div.bottomnum {
 	position:absolute;
-	bottom:190px;
+	bottom:15%;
 	left:47%;
 }
 .gameroom div.topnum {
 	position:absolute;
-	top:100px;
+	top:15%;
 	left:47%;
 }
 .gameroom div.leftnum {
 	position:absolute;
-	left:370px;
+	left:15%;
 	top:36%;
 }
 .gameroom div.rightnum {
 	position:absolute;
-	right:370px;
+	right:15%;
 	top:36%;
 }
 
@@ -234,7 +303,7 @@ body.gameroom
 	height:80px;
 	z-index:3;
 	position:absolute;
-	left:240px;
+	left:13%;
 	top:46%;
 }
 .gameroom div.rightref {

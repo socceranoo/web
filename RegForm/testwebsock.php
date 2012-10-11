@@ -16,6 +16,15 @@ class echoServer extends WebSocketServer {
 			$message = $user->username." joined the conference room";
 			$takenPosStr = $this->gameobj->getTakenPositions();			
 			$this->send($user, $takenPosStr);
+			foreach ($this->gameobj->playerArr as $player) {
+				if ($player->position !=100) {
+					
+					$result=$this->runquery("select fbusername from regusers where username='$player->player_name'");
+					$row = mysql_fetch_array($result);
+					$joinedmsg ="JOINED:".$player->position." ".$row['fbusername']." ".$player->player_name;
+					$this->send($user, $joinedmsg);
+				}
+			}
 			if ($this->gameobj->getPlayerIndexById($user->username, $user->id)!= -1)
 			{
 				$position=$this->gameobj->isPlayerPositionSet($user->username, $user->id);
@@ -32,22 +41,28 @@ class echoServer extends WebSocketServer {
 			}
 			
 		}
-		else if(preg_match('/(?<CLICK>CLICK):(?<id>\d+)/', $message, $matches))
+		else if(preg_match('/(?<CLICK>CLICK):(?<pos>\d+) (?<id>\d+) (?<index>\d+)/', $message, $matches))
 		{
 			$this->broadcast_except_sender($user, $message);
 			$this->send($user, $message);
 			$this->gameobj->token++;
-			$this->gameobj->token%=$this->gameobj->PLAYERS;
-			
 			$this->gameobj->round++;
+			$this->gameobj->cur_player++;
+			$this->gameobj->cur_player%=$this->gameobj->PLAYERS;
+			$player_pos = $matches['pos'];	
+			$id = $matches['id'];
+			$index = $matches['index'];
+			$this->gameobj->addCardToRound($player_pos, $id, $index);
 			if ($this->gameobj->round == $this->gameobj->PLAYERS)
 			{
 				$this->gameobj->round=0;	
-				$roundmsg ="ROUND:OVER";
+				$this->gameobj->token=0;	
+				$this->gameobj->setNextPlayer();	
+				$roundmsg = $this->gameobj->getScore();
 				$this->broadcast_except_sender($user, $roundmsg);
 				$this->send($user, $roundmsg);
 			}
-			$tokenmsg="TOKEN:".$this->gameobj->token;
+			$tokenmsg="TOKEN:".$this->gameobj->cur_player;
 			$this->broadcast_except_sender($user, $tokenmsg);
 			$this->send($user, $tokenmsg);
 			return;
@@ -65,45 +80,106 @@ class echoServer extends WebSocketServer {
 			//$this->broadcast_to_multiple_signins($user, $posmsg);
 			$takenPosStr = $this->gameobj->getTakenPositions();			
 			$this->broadcast_except_sender($user, $takenPosStr);
-			
+			$result=$this->runquery("select fbusername from regusers where username='$user->username'");
+			$row = mysql_fetch_array($result);
+			$joinedmsg ="JOINED:".$id." ".$row['fbusername']." ".$user->username;
+			//print $joinedmsg."\n";
+			$this->broadcast_except_sender($user, $joinedmsg);
+			$this->send($user, $joinedmsg);
 			if ($this->gameobj->playerCountReached())
 			{
-				$tokenmsg="TOKEN:".$this->gameobj->token;
+				$this->gameobj->token=0;
+				$this->gameobj->cur_player=0;
+				$bidmsg="BIDSTART:DONE";
+				$this->send($user, $bidmsg);
+				$this->broadcast_except_sender($user, $bidmsg);
+				/*
+				$tokenmsg="TOKEN:".$this->gameobj->cur_player;
 				$this->broadcast_except_sender($user, $tokenmsg);
 				$this->send($user, $tokenmsg);
-				$bidmsg = "BID:140 ".$this->gameobj->token;;
+				$this->gameobj->setPlayerBid(140, 0);
+				$bidmsg = "BID:140 ".$this->gameobj->cur_player;
 				$this->broadcast_except_sender($user, $bidmsg);
 				$this->send($user, $bidmsg);
-			}
-			return;
-		}
-		else if(preg_match('/(?<pos>BID):(?<id>\d+) (?<ppos>\d+)/', $message, $matches))
-		{
-			$this->gameobj->token++;
-			if ($this->gameobj->token == $this->gameobj->PLAYERS)
-			{
+				*/
 				$bidmsg="BIDOVER:FIRST";
 				$this->send($user, $bidmsg);
 				$this->broadcast_except_sender($user, $bidmsg);
-				$tokenmsg="TOKEN:".$this->gameobj->token;
+				$bidmsg="BIDOVER:SECOND";
+				$this->send($user, $bidmsg);
+				$this->broadcast_except_sender($user, $bidmsg);
+				$trumpset ="TRUMPSET:51";	
+				$this->send($user, $trumpset);
+				$this->broadcast_except_sender($user, $trumpset);
+				$tokenmsg="TOKEN:".$this->gameobj->cur_player;
 				$this->broadcast_except_sender($user, $tokenmsg);
 				$this->send($user, $tokenmsg);
+				$this->gameobj->token=0;
+			}
+			return;
+		}
+		else if(preg_match('/(?<pos>BID):(?<id>\d+) (?<ppos>\d+) (?<bidpass>\w+)/', $message, $matches))
+		{
+			$this->gameobj->token++;
+			$this->gameobj->cur_player++;
+			$this->gameobj->cur_player=$this->gameobj->cur_player % $this->gameobj->PLAYERS;
+			if ($this->gameobj->token == $this->gameobj->PLAYERS)
+			{
+				$pos=$this->gameobj->trump_holder->position;
+				$bidmsg="SETTRUMP:$pos";
+				$this->send($user, $bidmsg);
+				$this->broadcast_except_sender($user, $bidmsg);
+				print $bidmsg."\n";
+				return;
 			}
 			else if ($this->gameobj->token == 2 * $this->gameobj->PLAYERS)
 			{
 				$this->gameobj->token=0;
+				$this->gameobj->cur_player=0;
 				$bidmsg="BIDOVER:SECOND";
 				$this->send($user, $bidmsg);
 				$this->broadcast_except_sender($user, $bidmsg);
-				$tokenmsg="TOKEN:".$this->gameobj->token;
+				$tokenmsg="TOKEN:".$this->gameobj->cur_player;
 				$this->broadcast_except_sender($user, $tokenmsg);
 				$this->send($user, $tokenmsg);
 				return;
 			}	
-			$bidmsg="BID:".$matches['id']." ".($this->gameobj->token%$this->gameobj->PLAYERS);
+			if ($matches['bidpass']=="bid")
+				$this->gameobj->setplayerBid($matches['id'], $matches['ppos']);
+			$bidmsg="BID:".$matches['id']." ".($this->gameobj->cur_player);
 			$this->send($user, $bidmsg);
 			$this->broadcast_except_sender($user, $bidmsg);
-			print $matches['id']."\n";
+			//print $matches['id']."\n";
+			return;
+		}
+		else if(preg_match('/(?<pos>TRUMPSET):(?<id>\d+) (?<ppos>\d+) (?<index>\d+)/', $message, $matches))
+		{
+			$this->gameobj->trump=$matches['index'];
+			print "TRUMPINDEX:".$this->gameobj->trump."\n";
+			print "TRUMP HOLDER".$this->gameobj->trump_holder->player_name."\n";
+			$trumpset ="TRUMPSET:".$matches['id'];	
+			$this->send($user, $trumpset);
+			$this->broadcast_except_sender($user, $trumpset);
+
+			$bidmsg="BIDOVER:FIRST";
+			$this->send($user, $bidmsg);
+			$this->broadcast_except_sender($user, $bidmsg);
+			$tokenmsg="TOKEN:".$this->gameobj->cur_player;
+			$this->broadcast_except_sender($user, $tokenmsg);
+			$this->send($user, $tokenmsg);
+			$bid=max(200, $this->gameobj->current_bid);
+			$bidmsg = "BID:".$bid." ".($this->gameobj->cur_player);
+			$this->broadcast_except_sender($user, $bidmsg);
+			$this->send($user, $bidmsg);
+			return;
+		}
+		else if(preg_match('/(?<pos>REVEALTRUMP):(?<id>\w+)/', $message, $matches))
+		{
+			$trumpindex = $this->gameobj->trump->index;
+			$revtrump ="REVEALTRUMP:".$trumpindex;
+			$this->gameobj->trump_revealed=true;
+			$this->send($user, $revtrump);
+			$this->broadcast_except_sender($user, $revtrump);
 			return;
 		}
 		else

@@ -9,12 +9,18 @@ abstract class WebSocketServer {
 	protected $maxBufferSize;        
 	protected $master;
 	protected $gameobj;
+	protected $video_started=false;
 	protected $sockets                              = array();
 	protected $users                                = array();
 	protected $interactive                          = true;
 	protected $headerOriginRequired                 = false;
 	protected $headerSecWebSocketProtocolRequired   = false;
 	protected $headerSecWebSocketExtensionsRequired = false;
+	protected $connection;
+	protected $db_host='localhost';
+	protected $db_name='Main';
+	protected $db_user='root';
+	protected $db_pwd='Orange';
 
 	function __construct($addr, $port, $obj, $bufferLength = 2048) {
 		$this->maxBufferSize = $bufferLength;
@@ -25,7 +31,7 @@ abstract class WebSocketServer {
 		$this->sockets[] = $this->master;
 		$this->stdout("Server started\nListening on: $addr:$port\nMaster socket: ".$this->master);
 		$this->gameobj=$obj;
-
+		$this->dblogin();
 		while(true) {
 			if (empty($this->sockets)) {
 				$this->sockets[] = $master;
@@ -80,6 +86,30 @@ abstract class WebSocketServer {
 	abstract protected function process($user,$message); // Calked immediately when the data is recieved. 
 	abstract protected function connected($user);        // Called after the handshake response is sent to the client.
 	abstract protected function closed($user);           // Called after the connection is closed.
+
+	protected function runquery($qry)
+	{
+		$result = mysql_query($qry,$this->connection);
+		return $result;
+	}
+	protected function dblogin()
+	{
+
+		$this->connection = mysql_connect($this->db_host,$this->db_user,$this->db_pwd);
+		if(!$this->connection)
+		{
+			return false;
+		}
+		if(!mysql_select_db($this->db_name, $this->connection))
+		{
+			return false;
+		}
+		if(!mysql_query("SET NAMES 'UTF8'",$this->connection))
+		{
+			return false;
+		}
+		return true;
+	}
 
 	protected function connecting($user) {
     // Override to handle a connecting user, after the instance of the User is created, but before
@@ -145,7 +175,7 @@ abstract class WebSocketServer {
 				if ($k->username==$user->username)
 					$multiple=true;	
 			}
-			if (!$multiple)
+			if (!$multiple && $this->gameobj)
 				$this->gameobj->removeUser($user->username, $foundUser, $user->id);
 		}
 		foreach ($this->sockets as $key => $sock) {

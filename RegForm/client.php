@@ -41,13 +41,17 @@
 		</div>
 		-->
 			<div class="card">
-				
+					
 				<div id="bbid" class="bbid">
 					<?setbidimages(0)?>
 					<button id="0bid" class="bidbutton" onclick="bid_pass('bidb')">BID</button><button id="0pass" class="bidbutton" onclick="bid_pass('passb')">PASS</button>
 				</div>
 				<div id="botpos" class="bottomnum">
 					<img id="0num" class="pos" alt="NUMBER 1" src="images/number-1.jpg" onclick="selectposition(0);">
+				</div>
+				<div id="botprof" class="bottomprof">
+					<img id="0profile" class="profile" alt="USER 1">
+					<span id="0span" class="profilespan" ></span>
 				</div>
 				<div class="bottomref">
 					<?generatecards(0);?>
@@ -59,6 +63,10 @@
 				<div id="rightpos" class="rightnum">
 					<img id="1num" class="pos" alt="NUMBER 2" src="images/number-2.jpg" onclick="selectposition(1);">
 				</div>
+				<div id="rightprof" class="rightprof">
+					<img id="1profile" class="profile" alt="USER 2">
+					<span id="1span" class="profilespan" ></span>
+				</div>
 				<div class="rightref">
 					<?generatecards(1);?>
 				</div>
@@ -68,6 +76,10 @@
 				</div>
 				<div id="toppos" class="topnum">
 					<img id="2num" class="pos" alt="NUMBER 3" src="images/number-3.jpg" onclick="selectposition(2);">
+				</div>
+				<div id="topprof" class="topprof">
+					<img id="2profile" class="profile" alt="USER 3">
+					<span id="2span" class="profilespan" ></span>
 				</div>
 				<div class="topref">
 					<?generatecards(2);?>
@@ -79,12 +91,27 @@
 				<div id="leftpos" class="leftnum">
 					<img id="3num" class="pos" alt="NUMBER 4" src="images/number-4.jpg" onclick="selectposition(3);">
 				</div>
+				<div id="leftprof" class="leftprof">
+					<img id="3profile" class="profile" alt="USER 4">
+					<span id="3span" class="profilespan" ></span>
+				</div>
 				<div class="leftref">
 					<?generatecards(3);?>
 				</div>
 				<div class="centerref">
 					<?initcentercards();?>
 				</div>
+				
+				<div id="reveal">	
+				<img id="trump" class="trump" src="images/b2fv.gif">
+				<button id="revealtrump" class="revealtrump" onclick="revealtrump()">REVEAL TRUMP</button>
+				</div>
+				
+				<table id='gradient-style' align='center'>
+				<tr><th>Team #</th><th>Points</th></tr>
+				<tr><td>Team 1</td><td id="team1"></td></tr>
+				<tr><td>Team 2</td><td id="team2"></td></tr>
+				</table>
 			</div>
 	</body>
 </html>

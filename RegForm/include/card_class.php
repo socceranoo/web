@@ -14,15 +14,17 @@ class Suit {
 class Rank {
 
 	public $face;
-	public $value_n;
+	public $symbol;
 	public $value_28;
+	public $value_n;
 	public $index;
 	function __construct($namestr, $val, $offset, $val_28) 
 	{
 		$this->value_28 = $val_28;
+		$this->value_n = $offset+1;
 		$this->index = $offset;
 		$this->face = $namestr;
-		$this->value = $val;
+		$this->symbol = $val;
 	}
 }
 
@@ -38,6 +40,12 @@ class Card {
 		$this->index = ($suitobj->index * $CARDPERSUIT) + $rankobj->index;
 	}
 	
+	function display()
+	{
+		print $this->rank->face;
+		print $this->suit->suit;
+		print "\n";
+	}
 }
 
 class Player {
@@ -48,6 +56,8 @@ class Player {
 	public $position;
 	public $teamid;
 	public $setid;
+	public $points;
+	public $bid;
 	function __construct($name, $id, $unqid) 
 	{
 		$this->player_name = $name;
@@ -56,6 +66,7 @@ class Player {
 		$this->cardset = array();
 		$this->position =100;
 		//print "Player:$name with ID:$id joined";
+		$this->points=0;
 	}
 	public function addToPlayerHand($card)
 	{
@@ -86,6 +97,16 @@ class Player {
 		}
 		print "\n";
 	}
+	public function getCardByIndex($index)
+	{
+		foreach($this->cardset as $k)
+		{
+			if ($k->index == $index)
+				return $k;
+		}
+		return null;
+	}
+
 }
 class Deck {
 
@@ -186,10 +207,15 @@ class Trump {
 	public $playerArr;
 	public $trump;
 	public $setArr;
+	public $roundArr;
 	public static $PLAYERS;
 	public static $CARDPERUSER;
 	public static $token;
+	public static $cur_player;
 	public static $round;
+	public $current_bid=0;
+	public $trump_holder;	
+	public $trump_revealed;	
 	function __construct()
 	{
 		$this->PLAYERS=4;
@@ -198,11 +224,15 @@ class Trump {
 		$this->deckobj->generateCardDeck();
 		$this->playerArr=array();
 		$this->setArr=array();
+		$this->roundArr=array();
 		//$this->deckobj->printCardIndices();
 		$this->deckobj->deckShuffle();
 		//$deckobj->printValues();
+		$this->trump=$this->deckobj->cardArr[51];
 		$this->token=0;
+		$this->cur_player=0;
 		$this->round=0;
+		$this->trump_revealed = false;	
 	}
 	public function generatePlayerHand($player)
 	{
@@ -326,6 +356,94 @@ class Trump {
 			return true;
 		else
 			return false;
+	}
+
+	public function getPlayerByPosition($position)	
+	{
+		foreach($this->playerArr as $player)
+		{
+			if ($player->position == $position)
+				return $player;
+		}
+		return null;
+	}
+	public function setPlayerBid($bid, $pos)
+	{
+		if ($bid > $this->current_bid)
+		{
+			$this->current_bid=$bid;
+			$this->trump_holder=$this->getPlayerByPosition($pos);
+			$this->trump_holder->bid=$bid;
+		}
+	}
+	
+	public function addCardToRound($player_pos, $id, $index)
+	{
+		$player = $this->getPlayerByPosition($player_pos);
+		$card = $player->getCardByIndex($index);		
+		array_push($this->roundArr, $card);
+	}
+	
+	public function setNextPlayer()
+	{
+		$topcard = $this->roundArr[0];
+		$highest = $topcard->rank->value_n;
+		$i=0;
+		$totalroundvalue=0;
+		$highsuit = $topcard->suit;
+		foreach ($this->roundArr as $cur) {
+			$cursuit = $cur->suit;
+			$currank = $cur->rank->value_n;
+			if ($cursuit == $highsuit) {
+				if ($currank >= $highest) {
+					print "HIGHEST: $highest \n";
+					$highest = $currank;
+					$highindex = $i;		
+					$highsuit = $cursuit;
+				}
+				print "Current=";
+				$cur->display();
+				print "\t Highest:";
+				$this->roundArr[$highindex]->display();
+			}
+			else {
+				if ($this->trump_revealed) {	
+					if ($cursuit == $this->trump->suit)
+					{
+						$highest = $currank;
+						$highindex = $i;		
+						$highsuit = $cursuit;
+					}	
+				}
+			}
+			$totalroundvalue += $currank;
+			$i++;
+		}
+		print "ROUND VALUE:$totalroundvalue\n";
+		$temp = ($highindex+$this->cur_player)% $this->PLAYERS;
+		print "NEXT PLAYER = $temp";
+		$this->cur_player = $temp;
+		
+		
+		for($j=0; $j<$this->PLAYERS; $j++)
+			array_pop($this->roundArr);
+
+		$player = $this->getPlayerByPosition($this->cur_player);		
+		$player->points+=$totalroundvalue;
+	}
+	
+	public function getScore()
+	{
+		$team1=0;
+		$team2=0;
+		foreach($this->playerArr as $player) {
+			if ($player->position %2 == 0)
+				$team1 +=$player->points;
+			else
+				$team2 +=$player->points;
+		}
+		return "ROUND:".$team1." ".$team2;
+
 	}
 }
 

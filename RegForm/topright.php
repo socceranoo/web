@@ -10,8 +10,9 @@
 	&nbsp;
 	<a href='login-home.php'>home</a>
 	&nbsp;
-	<a href='client.php'>Gameroom</a>
+	<!--<a href='client.php'>Gameroom</a>
 	&nbsp;
+	-->
 	<a href='logout.php'>logout</a>
 	&nbsp;
 	<a href='change-pwd.php'>change password</a>
