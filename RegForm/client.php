@@ -7,7 +7,7 @@
 		<title>Gameroom</title>
 		<?require_once("card.php");?>
 	</head>
-	<body class='gameroom' onload="init()">
+	<body id='roomid' class='gameroom' onload="init()">
 		<h3>Gameroom v2.00</h3>
 		<h3 id='noserver' style='visibility:hidden;'>SERVER NOT FOUND</h3>
 		<h3 id='dup' style='visibility:hidden;'>DUPLICATE LOGIN FOUND YOU WILL BE REDIRECTED IN 5 Seconds...</h3>

@@ -22,11 +22,21 @@ body.gameroom
 	border:2px solid #7F9DB9; 
 }
 
+#synctube {
+	background-image:url("../../images/bcko.jpg");
+}
+
+#synctube h3 {
+
+	font-size:2em;
+
+}
 .gameroom h3 {
 	-webkit-transition:all .5s ease-in-out;
 	-moz-transition:all 1s ease-in-out;
 	-o-transition:all 1s ease-in-out;
 	transition:all 1s ease-in-out;
+	font-family : stylewars;
 	font-size:2em;
 	z-index:70;
 	text-align:center;
@@ -39,6 +49,14 @@ body.gameroom
 	color:#7f9db9;
 }
 
+.gameroom h4 {
+	font-size:1.0em;
+	text-align:center;
+}
+.gameroom h4:hover {
+	font-size:1.0em;
+	color:#7f9db9;
+}
 .gameroom div.chatroom 
 {
 	position:absolute;
@@ -55,6 +73,7 @@ body.gameroom
 	width:200px; 
 	height:260px; 
 	border:2px solid #7F9DB9; 
+	z-index:20;
 }
 .gameroom div.chatbox:hover
 {
@@ -340,6 +359,42 @@ body.gameroom
 	left: -20px;
 }
 
+.gameroom .main{
+	width:640;
+	border:4px solid red; 
+	text-align:center;
+	position:absolute;
+	z-index:30;
+	top:22%;
+	left:25%;
+}
+
+.gameroom .main p {
+	font-family:stylewars;
+	font-size:1.3em;
+}
+.gameroom .main input {
+	width:50px;
+	height:25px;
+}
+.gameroom .main span {
+	margin:auto;
+}
+.gameroom .ytbox button{
+	width:50px;	
+	font-size=0.8em;
+}
+
+.gameroom div.ytbox {
+	position:absolute;	
+	top:50%;
+	right:2px;
+	border:4px solid red; 
+}
+.gameroom .ytbox input {
+	width:200px;
+	height:25px;
+}
 /************************************************************************************
 MORPHING + GLOWING
 .morphing-glowing {

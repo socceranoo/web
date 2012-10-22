@@ -40,7 +40,7 @@
 		<script type='text/javascript' src='scripts/calendar.js'></script>
 		<script type='text/javascript'>var hpaidarr = new Array(); var hpart = new Array(); </script>
 	</head>
-	<body>
+	<body class='transactions'>
 		<div id='other'>
 		<div id='fg_membersite_content'>
 			<br>

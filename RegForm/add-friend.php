@@ -8,7 +8,7 @@
 		<title>Add friends</title>
 		<script type="text/javascript">var friendarray = new Array();</script>
 	</head>
-	<body>
+	<body class='transactions'>
 		<div id='other'>
 		<div id='fg_membersite_content'>
 		<div id='fg_membersite'>

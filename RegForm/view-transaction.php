@@ -13,7 +13,7 @@
 		<!--<meta http-equiv="refresh" content="60"/>-->
 		<title>Transactions!!</title>
 	</head>
-	<body>
+	<body class='transactions'>
 		<div id='other'>
 		<div id='fg_membersite_content'>
 			<h1><br><br><br><?if ($page == "cur")print "Transactions";else print "Deleted Transactions";?></h1>

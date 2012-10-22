@@ -17,6 +17,7 @@ abstract class WebSocketServer {
 	protected $headerSecWebSocketProtocolRequired   = false;
 	protected $headerSecWebSocketExtensionsRequired = false;
 	protected $connection;
+	protected $uniqueUserCount;
 	protected $db_host='localhost';
 	protected $db_name='Main';
 	protected $db_user='root';
@@ -24,6 +25,7 @@ abstract class WebSocketServer {
 
 	function __construct($addr, $port, $obj, $bufferLength = 2048) {
 		$this->maxBufferSize = $bufferLength;
+		$this->uniqueUserCount =0;
 		$this->master = socket_create(AF_INET, SOCK_STREAM, SOL_TCP)  or die("Failed: socket_create()");
 		socket_set_option($this->master, SOL_SOCKET, SO_REUSEADDR, 1) or die("Failed: socket_option()");
 		socket_bind($this->master, $addr, $port)                      or die("Failed: socket_bind()");
@@ -138,7 +140,13 @@ abstract class WebSocketServer {
 			}
 		}
 	}
-
+	protected function isUniqueUser($name) {
+		foreach ($this->users as $k) {
+			if ($k->username == $name)
+				return false;
+		}
+		return true;
+	}
 	protected function send($user,$message) {
 		//$this->stdout("> $message");
 		$message = $this->frame($message,$user);
@@ -148,7 +156,7 @@ abstract class WebSocketServer {
 	protected function connect($socket) {
 		$id = uniqid();
 		$user = new $this->userClass($id,$socket);
-		//$user->username="user".$id;
+		$user->username="null";
 		array_push($this->users,$user);
 		array_push($this->sockets,$socket);
 		//print "$user->socket\n";

@@ -1,0 +1,81 @@
+/* comment to test GIT push */
+
+body.recipes
+{
+	margin-left:15%;
+	/*
+	margin-top:0%;
+	margin-left:auto;
+	margin-right:auto;
+	background-image:url("../../images/bckblack1.jpg");
+	background-image:url("../../images/bckbrown.jpg");
+	background-repeat:no-repeat;
+	background:#98bf21;
+	background-image:url("../images/background.gif");
+	background-image:url("../../images/teal2.jpg");
+	*/
+	background-color:#000;
+	/*
+	*/
+	width:55%;
+	position:relative;
+	color:#FFF;
+}
+.recipes a:link
+{
+	color:white;
+	text-decoration:none;
+}
+.recipes a:visited
+{
+	color:white;
+	text-decoration:none;
+}
+.recipes a:active
+{
+        color:green;
+        text-decoration:none;
+}
+.recipes h3 {
+	-webkit-transition:all .5s ease-in-out;
+	-moz-transition:all 1s ease-in-out;
+	-o-transition:all 1s ease-in-out;
+	transition:all 1s ease-in-out;
+	font-family : stylewars;
+	font-size:2em;
+	z-index:70;
+	text-align:center;
+	margin-top:30px;
+	color:#FFF;
+}
+
+.recipes h3:hover {
+	font-size:2.5em;
+	color:#7f9db9;
+}
+
+.recipes h4 {
+	font-size:1.0em;
+	text-align:center;
+}
+.recipes h4:hover {
+	font-size:1.0em;
+	color:#7f9db9;
+}
+
+.recipes .image-text {
+
+	width:300px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:30px;
+}
+.recipes .image-text img {
+	width:200px;
+	height:200px;
+	margin-left:20px;
+}
+
+.recipes a {
+	margin-bottom:30px;
+}

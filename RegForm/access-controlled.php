@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="scripts/tumblr.js" ></script>
 		-->
 	</head>
-	<body>
+	<body class='transactions'>
 		<div id='homepage'>
 		<div id='fg_membersite_content'>
 			<h1><br><br><br>money Matters</h1>
@@ -20,6 +20,8 @@
 			<table id="gradient-style" align=center>
 			<caption></caption>
 			<?PHP
+				$owesyou=0;
+				$youowe=0;
 				$result = $fgmembersite->RunQuery("SELECT * FROM $pairtable WHERE user1='$uname' or user2='$uname' ORDER BY user1");
 				if (mysql_num_rows($result) > 0)
 					echo "<tr><th>Who</th><th>How much</th><th>Status</th></tr>";
@@ -34,23 +36,35 @@
 					echo $user2;
 					echo "</a>";
 					echo "</td><td>";
-					echo abs($row['amount']);
+					echo "$".abs($row['amount']);
 					echo "</td><td>";
 					if ($uname < $user2)	
 					{
 						if ($row['amount'] > 0 )
+						{
+							$owesyou+=$row['amount'];
 							echo "Owes you";
+						}
 						else if ($row['amount'] < 0 )
+						{
+							$youowe+=abs($row['amount']);
 							echo "You owe";
+						}
 						else
 							echo "Even";
 					}
 					else
 					{
 						if ($row['amount'] > 0 )
+						{
+							$youowe+=$row['amount'];
 							echo "You owe";
+						}
 						else if ($row['amount'] < 0 )
+						{
+							$owesyou+=abs($row['amount']);
 							echo "Owes you";
+						}
 						else
 							echo "Even";
 					}	
@@ -58,6 +72,9 @@
 				}
 				echo "</table>";
 			?>
+			<p align='center'>TOTAL<br/>
+			OTHERS OWE: $<?echo $owesyou?><br/>
+			YOU OWE: $<?echo $youowe?></p>
 		</div>
 		</div>
 	</body>

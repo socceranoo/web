@@ -37,6 +37,7 @@ function checkRefresh()
 	}
 }
 function init() {
+	hideElem("roomid");
 	hideElem("noserver");
 	hideElem("gradient-style");
 	//checkRefresh();
@@ -61,6 +62,7 @@ function init() {
 		//log2('Connecting to the server ...');
 
 		socket.onopen    = function(msg) { 
+								showElem("roomid");
 								//log("Welcome - status "+this.readyState); 
 								log("Connected"); 
 								log('You joined the conference room'); 
@@ -81,6 +83,7 @@ function init() {
 							   //log2(msg.data); 
 						   };
 		socket.onclose   = function(msg) { 
+							   showElem("roomid");
 							   showElem("noserver");
 							   hidecardimages();
 							   hidecentercards();
