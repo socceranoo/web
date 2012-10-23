@@ -1,4 +1,8 @@
-<div id='operations2'>
+<div class='leftsideboxes' id='operations2'>
+<a href='login-home.php'>Home</a>
+<br>
+<a href='money-matters.php'>Money Matters</a>
+<br>
 <a href='client.php'>Gameroom</a>
 <br>
 <a href='synctube-home.php'>SyncTube</a>

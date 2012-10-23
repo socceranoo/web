@@ -13,7 +13,7 @@
 		<div id='fg_membersite_content'>
 		<div id='fg_membersite'>
 			<h1><br><br><br>Add Friend's</h1>
-			<?require_once("operations.php");?>
+			<?require_once("rest-elements.php");?>
 			<div id='bill'>
 			<form action=process.php name=form1 method=post>
 				<fieldset>	

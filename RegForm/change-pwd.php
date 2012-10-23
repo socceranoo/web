@@ -1,4 +1,6 @@
 <?PHP
+require_once("access.php");
+/*
 require_once("./include/membersite_config.php");
 
 if(!$fgmembersite->CheckLogin())
@@ -6,15 +8,7 @@ if(!$fgmembersite->CheckLogin())
     $fgmembersite->RedirectToURL("login.php");
     exit;
 }
-
-if(isset($_POST['submitted']))
-{
-   if($fgmembersite->ChangePassword())
-   {
-        $fgmembersite->RedirectToURL("changed-pwd.html");
-   }
-}
-
+*/
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
@@ -26,16 +20,18 @@ if(isset($_POST['submitted']))
       <link rel="STYLESHEET" type="text/css" href="style/pwdwidget.css" />
       <script src="scripts/pwdwidget.js" type="text/javascript"></script>       
 </head>
-<body>
-
+<body class='transactions'>
+<div id='fg_membersite_content'>
+	<h1><br><br><br>Change password</h1>
+</div>
+<?require_once("operations2.php");?>
+<div id='posRight'>
 <!-- Form Code Start -->
 <div id='fg_membersite'>
 <form id='changepwd' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
 <fieldset >
 <legend>Change Password</legend>
-
 <input type='hidden' name='submitted' id='submitted' value='1'/>
-
 <div class='short_explanation'>* required fields</div>
 
 <div><span class='error'><?php echo $fgmembersite->GetErrorMessage(); ?></span></div>
@@ -90,10 +86,7 @@ Uses the excellent form validation script from JavaScript-coder.com-->
 // ]]>
 </script>
 
-<p>
-<a href='login-home.php'>Home</a>
-</p>
-
+</div>
 </div>
 <!--
 Form Code End (see html-form-guide.com for more info.)

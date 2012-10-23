@@ -35,7 +35,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 	<head>
 		<?require_once("includes.php");?>
-		<title>Add bill</title>
+		<title>Add Payment</title>
 		<link rel="STYLESHEET" type="text/css" href="style/calendar.css">
 		<script type='text/javascript' src='scripts/calendar.js'></script>
 		<script type='text/javascript'>var hpaidarr = new Array(); var hpart = new Array(); </script>
@@ -72,9 +72,10 @@
 		</div>
 			<div id='bill' onclick="calendar.hide()">
 			<div id='fg_membersite'>
-			<form id='add-bill' action="process_bill.php" name='add-bill' method=post onsubmit="return confirm('Are you sure');" align=left>
+			THIS PAGE IS UNDER CONSTRUCTION. DO NOT ADD YOUR PAYMENTS YET .....
+			<form id='add-settlement' action="process_bill.php" name='add-settlement' method=post onsubmit="return confirm('Are you sure');" align=left>
 				<fieldset>
-					<legend>Add-bill</legend>
+					<legend>Add-Payment</legend>
 					<input type='hidden' name='submitted' id='submitted' value='1'/>
 					<input type='hidden' name='flag' id='flag' value="<?print $flag?>"/>
 					<input type='hidden' name='id' id='id' value="<?print $values['id']?>"/>
@@ -84,45 +85,37 @@
 					<div class='container'>
 						<label for='event'>Event*: </label><br/>
 						<input type='text' id="event" name="event" value="<?print $values['event'];?>"/><br/>
-						<span id='add-bill_event_errorloc' class='error'></span>
+						<span id='add-settlement_event_errorloc' class='error'></span>
 					</div>
 					<div class='container'>
 						<label for='desc'>Description: </label><br/>
 						<textarea name="desc" id="desc" maxlength="150"><?print $values['desc'];?></textarea><br/>
-						<span id='add-bill_desc_errorloc' class='error'></span>
+						<span id='add-settlement_desc_errorloc' class='error'></span>
 					</div>
 					<div class='container'>
 						<label for='date'>Date*:</label><br/>
 						<input type="text" name="date" id="date"value="<?print $values['date'];?>"/><br/>
 						<script type="text/javascript"> calendar.set("date"); </script> 
-						<span id='add-bill_date_errorloc' class='error'></span>
+						<span id='add-settlement_date_errorloc' class='error'></span>
 					</div>
 					<div class='container'>
 						<label for='amount'>Amount:* </label><br/>
 						<input type="text" name="amount" id="amount" value="<?print $values['amount'];?>"/><br/>
-						<span id='add-bill_amount_errorloc' class='error'></span>
-					</div>
-					<!--
-					<div class='container'>
-						<label for='paid2'>Who paid2?*</label><br/>
-						<p><div id='dummy'></div></p>
-						<select name="paid2" id="paid2" onchange="addToArray(hpaidarr, 'dummy', 'paid2', 'hpaid', 'load.php')"><?paste_select_menu($uname, $stack, 2);?></select><br/>
-						<span id='add-bill_paid2_errorloc' class='error'></span>
-					</div>
-					-->
-					<div class='container'>
-						<label for='paid'>Who paid?*</label><br/>
-						<select name="paid[]" multiple="multiple"><?paste_select_menu($uname, $stack, 0);?></select><br/>
-						<span id='add-bill_paid_errorloc' class='error'></span>
+						<span id='add-settlement_amount_errorloc' class='error'></span>
 					</div>
 					<div class='container'>
-						<label for='participants'>Who participated?*</label><br>
-						<select name="participants[]" multiple="multiple"><?paste_select_menu($uname, $stack, 1);?>
+						<label for='paid'>Who Settled?*</label><br/>
+						<select name="paid[]" multiple="multiple" disabled="disabled"><?paste_select_menu($uname, $stack, 0);?></select><br/>
+						<span id='add-settlement_paid_errorloc' class='error'></span>
+					</div>
+					<div class='container'>
+						<label for='participants'>Who was settled?*</label><br>
+						<select name="participants[]" multiple="multiple" disabled="disabled"><?paste_select_menu($uname, $stack, 1);?>
 						</select>
-						<span id='add-bill_participants_errorloc' class='error'></span>
+						<span id='add-settlement_participants_errorloc' class='error'></span>
 					</div>
 					<div class='container'>
-						<input type="submit"/>
+						<input type="submit" disabled="disabled"/>
 					</div>
 				</fieldset>
 			</form>
@@ -133,7 +126,7 @@
 
 			<script type='text/javascript'>
 			// <![CDATA[
-				var frmvalidator  = new Validator("add-bill");
+				var frmvalidator  = new Validator("add-settlement");
 				frmvalidator.EnableOnPageErrorDisplay();
 				frmvalidator.EnableMsgsTogether();
 				frmvalidator.addValidation("event","req","Please provide an event");

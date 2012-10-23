@@ -17,7 +17,7 @@
 		<div id='other'>
 		<div id='fg_membersite_content'>
 			<h1><br><br><br><?if ($page == "cur")print "Transactions";else print "Deleted Transactions";?></h1>
-			<?require_once("operations.php");?>
+			<?require_once("rest-elements.php");?>
 			<table class=imagetable align=center>
 			<table id="gradient-style" align=center>
 			<caption></caption>
@@ -26,13 +26,13 @@
 				{
 					$user = $_REQUEST['user'];
 					$qry ="SELECT * FROM $table WHERE (paid LIKE '%$uname%' AND participants LIKE '%$user%')"
-					."OR (paid LIKE '%$user%' AND participants LIKE '%$uname%')";
+					."OR (paid LIKE '%$user%' AND participants LIKE '%$uname%') ORDER BY date DESC";
 					$result = $fgmembersite->RunQuery($qry);
 				}
 				else
 				{
 					$result = $fgmembersite->RunQuery("SELECT * FROM $table WHERE 
-						(paid LIKE '%$uname%' OR participants LIKE '%$uname%')");
+						(paid LIKE '%$uname%' OR participants LIKE '%$uname%') ORDER BY date DESC");
 				}
 				if (mysql_num_rows($result) > 0)
 					echo "<tr><th>Event</th><th>Description</th><th>Date</th><th>Paid</th><th>Participants</th><th>Amount</th></tr>";

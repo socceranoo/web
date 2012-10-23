@@ -12,7 +12,7 @@
 		<div id='other'>
 		<div id='fg_membersite_content'>
 			<h1><br><br><br>Deleted Transactions</h1>
-			<?require_once("operations.php");?>
+			<?require_once("rest-elements.php");?>
 			<table class=imagetable align=center>
 			<caption></caption>
 			<tr><th>Event</th><th>Description</th><th>Date</th><th>Paid</th><th>Participants</th><th>Amount</th></tr>

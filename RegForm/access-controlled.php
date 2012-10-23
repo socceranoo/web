@@ -11,71 +11,16 @@
 		<script type="text/javascript" src="scripts/tumblr.js" ></script>
 		-->
 	</head>
-	<body class='transactions'>
-		<div id='homepage'>
-		<div id='fg_membersite_content'>
-			<h1><br><br><br>money Matters</h1>
-			<?require_once("operations.php");?>
-			<!--<table class="imagetable" align=center>-->
-			<table id="gradient-style" align=center>
-			<caption></caption>
-			<?PHP
-				$owesyou=0;
-				$youowe=0;
-				$result = $fgmembersite->RunQuery("SELECT * FROM $pairtable WHERE user1='$uname' or user2='$uname' ORDER BY user1");
-				if (mysql_num_rows($result) > 0)
-					echo "<tr><th>Who</th><th>How much</th><th>Status</th></tr>";
-				while($row = mysql_fetch_array( $result )) 
-				{
-					echo "<tr><td>";
-					if ($row['user1'] == $uname)
-						$user2=$row['user2'];
-					else if($row['user2'] == $uname)
-						$user2=$row['user1'];
-					echo "<a href=view-transaction.php?page=cur&user=$user2>";
-					echo $user2;
-					echo "</a>";
-					echo "</td><td>";
-					echo "$".abs($row['amount']);
-					echo "</td><td>";
-					if ($uname < $user2)	
-					{
-						if ($row['amount'] > 0 )
-						{
-							$owesyou+=$row['amount'];
-							echo "Owes you";
-						}
-						else if ($row['amount'] < 0 )
-						{
-							$youowe+=abs($row['amount']);
-							echo "You owe";
-						}
-						else
-							echo "Even";
-					}
-					else
-					{
-						if ($row['amount'] > 0 )
-						{
-							$youowe+=$row['amount'];
-							echo "You owe";
-						}
-						else if ($row['amount'] < 0 )
-						{
-							$owesyou+=abs($row['amount']);
-							echo "Owes you";
-						}
-						else
-							echo "Even";
-					}	
-					echo "</td> </tr>";
-				}
-				echo "</table>";
-			?>
-			<p align='center'>TOTAL<br/>
-			OTHERS OWE: $<?echo $owesyou?><br/>
-			YOU OWE: $<?echo $youowe?></p>
-		</div>
-		</div>
+	<body class='home'>
+	<h1>socceranoo's Page</h1>
+	<?//require_once("operations2.php");?>
+	<div class='onlycenter'>
+		
+		<div class="lref"><div class='glossy-reflection'><a href='money-matters.php'><img class='thumbnail' src="../images/moneyTN.jpg"/>MONEY MATTERS</a></div></div>
+		<div class="rref"><div class='glossy-reflection'><a href='synctube-home.php'><img class='thumbnail' src="../images/synctubeTN.jpg"/>SYNCTUBE</a></div></div>
+		<div class="lref"><div class='glossy-reflection'><a href='client.php'><img class='thumbnail' src="../images/gameroom1TN.jpg"/>GAMEROOM</a></div></div>
+		<div class="rref"><div class='glossy-reflection'><a href='ftp.php'><img class='thumbnail' src="../images/ftpTN.jpg"/>MYFTP</a></div></div>
+		<div class="lref"><div class='glossy-reflection'><a href='rt/recipes.php'><img class='thumbnail' src="../images/kitchenTN.jpg"/>LOOTI's KITCHEN</a></div></div>
+	</div>
 	</body>
 </html>

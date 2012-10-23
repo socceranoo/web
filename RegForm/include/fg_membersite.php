@@ -799,6 +799,7 @@ class FGMembersite
                 "email VARCHAR( 64 ) NOT NULL ,".
                 "phone_number VARCHAR( 16 ) NOT NULL ,".
                 "username VARCHAR( 16 ) NOT NULL ,".
+                "fbusername VARCHAR( 16 ) NOT NULL ,".
                 "password VARCHAR( 32 ) NOT NULL ,".
                 "confirmcode VARCHAR(32) ,".
                 "PRIMARY KEY ( id_user )".
