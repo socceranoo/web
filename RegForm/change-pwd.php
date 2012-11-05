@@ -1,14 +1,14 @@
 <?PHP
 require_once("access.php");
-/*
-require_once("./include/membersite_config.php");
+require_once("include/membersite_config.php");
 
-if(!$fgmembersite->CheckLogin())
+if(isset($_POST['submitted']))
 {
-    $fgmembersite->RedirectToURL("login.php");
-    exit;
+	if($fgmembersite->ChangePassword())
+	{
+	    $fgmembersite->RedirectToURL("changed-pwd.php");
+	}
 }
-*/
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">

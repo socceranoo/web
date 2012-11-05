@@ -6,13 +6,13 @@
 	<head>
 		<?require_once("includes.php");?>
 		<!--<meta http-equiv="refresh" content="60"/>-->
-		<title>Welcome!!</title>
+		<title>Homepage</title>
 		<!--
 		<script type="text/javascript" src="scripts/tumblr.js" ></script>
 		-->
 	</head>
 	<body class='home'>
-	<h1>socceranoo's Page</h1>
+	<h1>Anoop's page</h1>
 	<?//require_once("operations2.php");?>
 	<div class='onlycenter'>
 		
@@ -20,7 +20,7 @@
 		<div class="rref"><div class='glossy-reflection'><a href='synctube-home.php'><img class='thumbnail' src="../images/synctubeTN.jpg"/>SYNCTUBE</a></div></div>
 		<div class="lref"><div class='glossy-reflection'><a href='client.php'><img class='thumbnail' src="../images/gameroom1TN.jpg"/>GAMEROOM</a></div></div>
 		<div class="rref"><div class='glossy-reflection'><a href='ftp.php'><img class='thumbnail' src="../images/ftpTN.jpg"/>MYFTP</a></div></div>
-		<div class="lref"><div class='glossy-reflection'><a href='rt/recipes.php'><img class='thumbnail' src="../images/kitchenTN.jpg"/>LOOTI's KITCHEN</a></div></div>
+		<div class="lref"><div class='glossy-reflection'><a href='recipes.php'><img class='thumbnail' src="../images/kitchenTN.jpg"/>LOOTI's KITCHEN</a></div></div>
 	</div>
 	</body>
 </html>

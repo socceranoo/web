@@ -57,7 +57,7 @@
 				{
 					echo "Password : *********<a class='small' href='change-pwd.php'>change</a><br/>";
 					echo "<br/>";
-					echo "<a href='https://www.facebook.com/".$values."'>Facebook profile</a>";
+					echo "<a href='https://www.facebook.com/".$values."' target=_blank >Facebook profile</a>";
 				}
 					
 				echo "<br/>";

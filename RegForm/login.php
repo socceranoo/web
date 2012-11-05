@@ -62,5 +62,6 @@
 			</script>
 		</div>
 		</div>
+	<div class='footer'>Copyright (c) 2012</div>
 	</body>
 </html>

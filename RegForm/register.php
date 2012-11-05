@@ -16,10 +16,9 @@ if(isset($_POST['submitted']))
 	<?require_once("includes.php");?>
 	<title>Contact us</title>
 </head>
-<body>
+<body class='login'>
 
 <!-- Form Code Start -->
-<div id='loginpage'>
 <div id='posRight'>
 <div id='fg_membersite'>
 <form id='register' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>

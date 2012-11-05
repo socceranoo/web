@@ -20,7 +20,8 @@ if(isset($_POST['submitted']))
       <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css" />
       <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
 </head>
-<body>
+<body class='login'>
+<div id='posRight'>
 <!-- Form Code Start -->
 <div id='fg_membersite'>
 <form id='resetreq' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
@@ -41,7 +42,7 @@ if(isset($_POST['submitted']))
 <div class='container'>
     <input type='submit' name='Submit' value='Submit' />
 </div>
-
+<div class='short_explanation'><a href='login.php'>Back to login</a></div>
 </fieldset>
 </form>
 <!-- client-side Form Validations:
@@ -65,5 +66,7 @@ Uses the excellent form validation script from JavaScript-coder.com-->
 Form Code End (see html-form-guide.com for more info.)
 -->
 
+</div>
+</div>
 </body>
 </html>

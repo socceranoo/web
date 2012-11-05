@@ -4,13 +4,13 @@
 
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Changed password</title>
       
-      <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css" /></head><body style="background-color: black; color: rgb(0, 0, 0);" alink="#ee0000" link="#ff0000" vlink="#00ffff">
+      <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css" />
+</head>
+<body class="home">
 <div id="fg_membersite_content">
-<h2 style="color: white;">Changed password</h2><span style="color: white;">
-Your password is updated!</span>
-
+<h2 style="color:white">Your password is updated!</h2>
 <p>
-<a href="logout.php">logout</a>
+<a href="account-info.php">Account Info</a>
 </p>
 
 </div>

@@ -1,25 +1,31 @@
 /* comment to test GIT push */
 
-body.recipes
+body.recipes {
+	background-color:#000;
+}
+div.Section1
 {
-	margin-left:15%;
+	margin-left:20%;
+	padding-left:5%;
+	background-image:url("../../images/bck14.png");
 	/*
 	margin-top:0%;
+	background-image:url("../../images/bck11.jpg");
+	background-size:100% 100%;
 	margin-left:auto;
 	margin-right:auto;
-	background-image:url("../../images/bckblack1.jpg");
 	background-image:url("../../images/bckbrown.jpg");
 	background-repeat:no-repeat;
-	background:#98bf21;
 	background-image:url("../images/background.gif");
 	background-image:url("../../images/teal2.jpg");
 	*/
-	background-color:#000;
 	/*
 	*/
 	width:55%;
 	position:relative;
 	color:#FFF;
+	text-align:left;
+	border:3px solid #fff;
 }
 .recipes a:link
 {
@@ -63,6 +69,11 @@ body.recipes
 	color:#7f9db9;
 }
 
+.recipes img {
+	width:80%;
+	height:60%;
+
+}
 .recipes .image-text {
 
 	width:300px;
