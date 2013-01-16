@@ -1,13 +1,16 @@
 <?PHP
+	$login = false;
 	require_once("./include/membersite_config.php");
 	if($fgmembersite->CheckLogin())
 	{
 		$fgmembersite->RedirectToURL("login-home.php");
+		$login = true;
 	}
 	if(isset($_POST['submitted']))
 	{
 		if($fgmembersite->Login())
 		{
+			$login = true;
 			$fgmembersite->RedirectToURL("login-home.php");
 		}
 	}
@@ -18,8 +21,17 @@
 		<title>Login</title>
 		<?require_once("includes.php");?>
 		<?//require_once("topbar.php");?>
+	<script>
+	var isChrome = testCSS('WebkitTransform');  // Chrome 1+
+	function testCSS(prop) {
+	    return prop in document.documentElement.style;
+	}
+	if (!isChrome && false)
+		setTimeout("window.location='notsupported.php'",1);
+	</script>
 	</head>
 	<body class='login'>
+		<?//require_once("bee.php");?>
 		<div id='posRight'>
 		<!-- Form Code Start >-->
 		<div id='fg_membersite'>

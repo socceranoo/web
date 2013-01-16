@@ -1,0 +1,239 @@
+/*
+Registration/Login Form by html-form-guide.com
+You can customize all the aspects of the form in this style sheet
+*/
+*{
+	margin:0; padding:0;
+}
+body.login {
+	background:url(../images/login-bg);
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	font-family: sans-serif;
+	font-size: 15px;
+	line-height: 1.4em;
+}
+.login a:link, .login a:visited {
+	color: #AAA;
+}
+#webv2 legend, #webv2 h2
+{
+	font-family : sans-serif;
+	font-size: 24px;
+	text-align:center;
+	padding-top:17px;
+	padding-left:20px;
+	color:#777;
+}
+
+#webv2 label
+{
+	font-family : sans-serif;
+	font-size:18px;
+	color:#aaa;
+}
+
+#webv2 input[type="text"],#webv2 textarea,
+#webv2 input[type="password"] {
+	color: #333;
+	font-weight: 200;
+	font-size: 18px;
+	line-height: 1;
+	width: 100%;
+	padding: 3px;
+	margin-top: 2px;
+	margin-right: 6px;
+	margin-bottom: 16px;
+	border: 1px solid #E5E5E5;
+	background-image: -webkit-linear-gradient(top,#EBEBEB,#FBFBFB);
+	background-image: linear-gradient(to bottom,#EBEBEB,#FBFBFB);
+	outline: 0;
+	-webkit-box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
+	box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
+}
+
+#webv2 #scaptcha {
+  width:60px;
+  height:18px;
+}
+
+#webv2 input[type="submit"] {
+	font-family : sans-serif;
+	width:100px;
+	height:30px;
+	font-size: 14px;
+	float: right;
+	border-image: initial;
+	background: #1B607F;
+	/*
+	background-image: -webkit-linear-gradient(top,#21759B,#278AB7);
+	background-image: -moz-linear-gradient(top,#21759B,#278AB7);
+	background-image: -ms-linear-gradient(top,#21759B,#278AB7);
+	background-image: -o-linear-gradient(top,#21759B,#278AB7);
+	background-image: linear-gradient(to bottom,#21759B,#278AB7);
+	border-color: #124560 #2382AE #2382AE #2382AE;
+	color: rgba(255, 255, 255, 0.95);
+	*/
+	background-image: -webkit-linear-gradient(top,#EBEBEB,#FBFBFB);
+	background-image: linear-gradient(to bottom,#EBEBEB,#FBFBFB);
+	color: #333;
+	-webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+	line-height: 28px;
+	padding: 0 12px 2px;
+}
+
+#webv2 textarea {
+	height:60px;
+	width:220px;
+}
+
+#webv2 input[type="text"]:focus,
+#webv2 textarea:focus {
+	border-color: #AAA;
+}
+
+#webv2 .container {
+	margin-top:8px;
+	margin-bottom: 10px;
+	/*
+	*/
+}
+
+#webv2 .error {
+	font-family: sans-serif; 
+	font-size: 12px;
+	color: #333;
+	background-color: #FFEBE8;
+	border-color: #C00;
+}
+
+#webv2 #register_password_errorloc
+{
+    clear:both;
+}
+
+#webv2 .short_explanation {
+   font-family : sans-serif;
+   font-size: 12px;
+   color:#aaa;   
+}
+
+/* spam_trap: This input is hidden. This is here to trick the spam bots*/
+#webv2 .spmhidip {
+   display:none;
+   width:10px;
+   height:3px;
+}
+#webv2 #fg_crdiv {
+		font-family : sans-serif;
+		font-size: 0.3em;
+		opacity: .2;
+		-moz-opacity: .2;
+		filter: alpha(opacity=20);   
+}
+#webv2  #fg_crdiv p {
+	display:none;
+}
+
+#webv2 li {
+	font-family : sans-serif;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+#webv2 {
+	font-family : sans-serif;
+	font-size: 0.9em;
+	line-height: 150%
+}
+
+#webv2 select {
+	font-family : sans-serif;
+	background-color:transparent;
+	/*background-image:url('../../images/bck.jpg');*/
+	width:200px;
+	margin-bottom:20px;
+	font-size: 0.9em;
+	color:#000;
+	font-weight:bold;
+	-webkit-border-radius: 2px;
+	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+	-webkit-user-select: none;
+}
+#webv2 option
+{
+	font-family : sans-serif;
+	/*background-color : #ffff99;*/
+	background-color:white;
+	/*background-image:url('../../images/bck.jpg');*/
+	width:200px;
+	margin-bottom:20px;
+	font-size: 1em;
+	color:#000;
+	font-weight:bold;
+	-webkit-border-radius: 2px;
+	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+	-webkit-user-select: none;
+}
+#webv2 button
+{
+	font-family : stylewars;
+	cursor:pointer;
+	background-color:transparent;
+	font-size: 1em;
+	border:1px solid #222;
+	padding:2px;
+	text-align:center	
+}
+
+#webv2 textarea
+{
+	height:60px;
+	width:220px;
+}
+
+#webv2 form
+{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+	border-radius: 0;
+	box-shadow: none;
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+	display:block;
+	padding: 26px 24px 46px;
+	width: 350px;
+	/*
+	background:white;
+	*/
+	height:570px;
+	background-size:100% 100%;
+	background-image:url('../images/iphone-initial.png');
+	bottom:0px;
+}
+#webv2 fieldset
+{
+	border:0px solid #FFF;
+	padding-top:20px;
+	padding-left:10px;
+	width:90%;
+	height:100%;
+	margin-top:60px;
+	/*
+	*/
+}
+
+
+.login img#title {
+	position:relative;
+	left:38%;
+	margin-left:auto;
+	margin-right:auto;
+}

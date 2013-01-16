@@ -24,7 +24,6 @@ $(document).ready(function()
 		});
 		$(this).css("opacity","0");
 	});
-
 });
 
 function addToArray(a, divid, text, hidid, php)

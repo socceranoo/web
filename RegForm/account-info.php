@@ -81,8 +81,8 @@
 		<h1><br>Account Information</h1>
 		<div id="acc-info">		
 			<div id="image-set">
-				<img class="profile-pic" id="profile-pic" src="../images/users/<?echo $uname?>"/><br/>
-				<a href=# onclick="$('#foto-uploader').show();" align="center">edit/add</a>
+				<div class="profile-pic" id="profile-pic" style="background-image:url('../images/users/<?echo $uname?>')"></div><br/>
+				<a href=# onclick="$('#foto-uploader').show(); $('#edit-add').hide();" id="edit-add"><label align=center>edit/add<label></a>
 			</div>
 			<div id="foto-uploader">
 					<form action="upload-image.php" method="post" enctype="multipart/form-data" name="uploadImage" id="uploadImage">
@@ -90,7 +90,7 @@
 							<label for="image">Upload image:</label>
 							<input type="file" name="image" id="image" />
 							<input type="submit" name="upload" id="upload" value="Upload" />
-							<a href=# id="cancel" onclick="$('#foto-uploader').hide();">Cancel</a>
+							<a href=# id="cancel" onclick="$('#foto-uploader').hide();$('#edit-add').show();">Cancel</a>
 					</form>
 			</div>
 			<script>$('#foto-uploader').hide();</script>

@@ -2,6 +2,7 @@
 <!--- scripts -->
 <script LANGUAGE="JavaScript">redirectionTime = "1";// 2 seconds
 redirectionURL = "RegForm/login.php";
+//redirectionURL = "SlideToUnlock/";
 function redirectionTimer() { self.setTimeout("self.location.href = redirectionURL;",redirectionTime); }</script>
 <!----></head>
 <body onLoad="redirectionTimer()">

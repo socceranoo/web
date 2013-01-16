@@ -1,11 +1,14 @@
 .calendar-box {
 	display:none;
+	background: url(../../images/minaret3.jpg);
+	/*
 	background-color:transparent;
-	/*border:1px solid #444;*/
+	border:1px solid #444;*/
 	position:absolute;
 	width:230px;
 	margin-left:50px;
 	margin-top:-10px;
+	z-index:200;
 }
 .calendar-box select.calendar-month {
 	background-color:transparent;

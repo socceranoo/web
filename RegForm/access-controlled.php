@@ -12,10 +12,11 @@
 		-->
 	</head>
 	<body class='home'>
-	<h1>Anoop's page</h1>
-	<?//require_once("operations2.php");?>
+	<h1>SiteWhichMustNotBeNamed</h1>
+	<?//require_once("bee.php");?>
 	<div class='onlycenter'>
 		
+		<div class="rref"><div class='glossy-reflection'><a href='resume-home.php'><img class='thumbnail' src="../images/ResumeBuildTN1.jpg"/>RESUME BUILDER</a></div></div>
 		<div class="lref"><div class='glossy-reflection'><a href='money-matters.php'><img class='thumbnail' src="../images/moneyTN.jpg"/>MONEY MATTERS</a></div></div>
 		<div class="rref"><div class='glossy-reflection'><a href='synctube-home.php'><img class='thumbnail' src="../images/synctubeTN.jpg"/>SYNCTUBE</a></div></div>
 		<div class="lref"><div class='glossy-reflection'><a href='client.php'><img class='thumbnail' src="../images/gameroom1TN.jpg"/>GAMEROOM</a></div></div>

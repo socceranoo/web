@@ -42,7 +42,8 @@ a.small {
 }
 body.home {
 	font-family : jura, wellsley;
-	margin:0; padding:0;
+	margin:0;
+	padding:0;
 	background-image:url('../../images/bck14.png');
 	/*
 	background-size:100%;
@@ -60,14 +61,14 @@ body.home {
 .home h1 
 {
 	font-family : wellsley;
-	font-size: 3.9em;
+	font-size: 3.0em;
 	text-align:center;
 	color:#ff7;
-	margin-top:20px;
+	margin-top:40px;
 }
 .home div.onlycenter {
 	width:50%;
-	margin-bottom:20px;
+	margin-bottom:10px;
 	margin-top:10%;
 	position:absolute;
 	left:25%;
@@ -78,9 +79,17 @@ body.home {
 
 .home img.thumbnail {
 	width:100%;
+	/*
 	height:100%;
+	*/
 }
-
+.home .thumbnail2 {
+	height:320px;
+	width:320px;
+	background-size:100% 100%;
+	/*
+	*/
+}
 .lref {
 	width:40%;
 	height:30%;
@@ -697,9 +706,18 @@ div#container {
 div#theTimer {
 }
 
-img.profile-pic {
+div#success-add-friend{
 	width:100%;
-	height:100%;
+	margin-left:auto;
+	margin-right:auto;
+	/*
+	border:1px solid #444;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;   
+	display:none;
+	*/
+	z-index:50;
 }
 
 #acc-info {
@@ -709,7 +727,7 @@ img.profile-pic {
 	margin-right:auto;
 	position:absolute;
 	left:35%;
-	border:1px solid #444;
+	border:10px solid #444;
 	color:#fff;
 	text-align:center;
 	font-size:1.6em;
@@ -719,18 +737,69 @@ img.profile-pic {
 }
 
 #acc-info #image-set {
-	width:50%;
+	width:100%;
 	height:20%;
 	position:relative;
-	left:25%;
 	margin-top:10px;
 	text-align:center;
 	font-size:1.0em;
 }
 
+#acc-info #image-set div.profile-pic {
+	width:50%;
+	position:relative;
+	left:25%;
+	height:240px;
+	background-size:100% 100%;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;   
+}
+#acc-info #image-set div.profile-pic:hover {
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;   
+
+}
 div.footer {
 	margin:10px;
 	position:absolute;
 	left:0px;
 	bottom:0px;
+}
+#bee {
+	height:20%;
+	width:15%;
+	background-image:url('../../images/bee_nobg.png');
+	/*
+	background-image:url('../../images/bike.jpg');
+	*/
+	background-size:100% 100%;
+	position:absolute;
+	left:0%;
+	top:0%;
+	z-index:-1;
+}
+/*
+#bee #bee_img {
+	height:100%;
+	width:100%;
+}
+*/
+
+div.hidden{
+	display:none;
+}
+
+div.tuximg {
+	width:110px;
+	height:128px;
+	background-image:url('../../images/Tux.png');
+	background-size:100% 100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+button.tuxbutton {
+	position:relative;
+	left:40%;
 }

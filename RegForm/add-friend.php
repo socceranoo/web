@@ -6,73 +6,45 @@
 	<head>
 		<?require_once("includes.php");?>
 		<title>Add friends</title>
-		<script type="text/javascript">var friendarray = new Array();</script>
 	</head>
-	<body class='transactions'>
+	<body class='transactions' onload="money_add_friend_init();">
 		<div id='other'>
 		<div id='fg_membersite_content'>
 		<div id='fg_membersite'>
 			<h1><br><br><br>Add Friend's</h1>
 			<?require_once("rest-elements.php");?>
 			<div id='bill'>
-			<form action=process.php name=form1 method=post>
+			<form id='add-friend' name="add-friend">
 				<fieldset>	
 				<legend>Add-friends</legend>		
 				<div class='short_explanation'>* required fields</div>
 				<div class='container'>
 					<label for='list'>Enter the email*</label><br/>
-					<!--
-					<label for='list'>Add from the list?*</label><br/>
-					-->
 					<div id="dummy"></div>
 					<input type=text id='email'/>
-					<input type="button" value="Add" onclick="addToArray(friendarray, 'dummy', 'email', 'frlist', 'load.php')"/>
-					<input type="hidden" name="frlist" id="frlist" value=""/>
-					<? 
-						check_and_add_user_table($pairtable);
-						/*
-						echo "<select name='jumpmenu[]' multiple='multiple'>";
-						$result = $fgmembersite->RunQuery("SELECT * FROM $pairtable WHERE user1='$uname' or user2='$uname'");
-						$stack = array();
-						while($row = mysql_fetch_array($result))
-						{
-							if ($row['user1'] == $uname)
-								array_push($stack, $row['user2']);
-							else if($row['user2'] == $uname)
-								array_push($stack, $row['user1']);
-						}
-						$result = $fgmembersite->RunQuery("SELECT * FROM $regusertable WHERE username!='$uname'");
-						while($row = mysql_fetch_array( $result )) 
-						{
-							$name = $row['name'];
-							$user = $row['username'];
-							if (!in_array($user, $stack)) 
-							{
-								echo "<option value=$user>";
-								echo $name;
-								echo "</option>";
-							}
-						}
-						echo "</select>";
-						*/
-					?>	
-					<span id='form_jumpmenu_errorloc' class='error'></span>
+					<span id='add-friend_email_errorloc' class='error'></span>
+					<input type="button" value="Add" onclick="add_to_friend_array();"/>
+					<?check_and_add_user_table($pairtable);?>	
 				</div>
 				<div class='container'>
-					<input type="submit" />
+					<input type="submit"/>
 				</div>
+				<div id="success-add-friend" onlick="$('#success-add-friend').fadeOut(800,function(){})"></div>
 				</fieldset>
 			</form>
 			</div>
 		</div>
 		<script type='text/javascript'>
 		// <![CDATA[
-			var frmvalidator  = new Validator("form1");
+			/*
+			var frmvalidator  = new Validator("add-friend");
 			frmvalidator.EnableOnPageErrorDisplay();
 			frmvalidator.EnableMsgsTogether();
 			frmvalidator.addValidation("list","req","Please select one user to add");
-			//frmvalidator.addValidation("participants","req","Please provide who participants");
-			// ]]>
+			frmvalidator.addValidation("email","email","Please provide a valid email address");
+			*/
+		// ]]>
+			money_add_friend_ajax_init();
 		</script>
 		</div>
 		</div>
