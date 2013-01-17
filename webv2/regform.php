@@ -1,7 +1,7 @@
 <form id='register' action='<?php echo $fgmembersite->GetSelfScript(); register();?>' method='post' accept-charset='UTF-8'>
 <fieldset >
 <legend>register</legend>
-<input type='hidden' name='submitted' id='submitted' value='1'/>
+<input type='hidden' name='registersubmit' id='registersubmit' value='1'/>
 <div class='short_explanation'>* required fields</div>
 <input type='text'  class='spmhidip' name='<?php echo $fgmembersite->GetSpamTrapInputName(); ?>' />
 <div><span class='error'><?php echo $fgmembersite->GetErrorMessage(); ?></span></div>

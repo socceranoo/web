@@ -1,7 +1,7 @@
 <form id='login' action='<?php echo $fgmembersite->GetSelfScript(); login();?>' method='post' accept-charset='UTF-8' align=left>
 <fieldset >
 	<legend>login</legend>
-	<input type='hidden' name='submitted' id='submitted' value='1'/>
+	<input type='hidden' name='loginsubmit' id='loginsubmit' value='1'/>
 	<div class='short_explanation'>* required fields</div>
 	<div><span class='error'><?php echo $fgmembersite->GetErrorMessage(); ?></span></div>
 	<div class='container'>

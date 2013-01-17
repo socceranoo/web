@@ -15,51 +15,46 @@ body.login {
 	font-size: 15px;
 	line-height: 1.4em;
 }
-.login a:link, .login a:visited {
-	color: #AAA;
+.login #iphone a:link, .login #iphone a:visited {
+	color: #000;
 }
-#webv2 legend, #webv2 h2
+#iphone legend
 {
 	font-family : sans-serif;
 	font-size: 24px;
-	text-align:center;
-	padding-top:17px;
-	padding-left:20px;
-	color:#777;
+	color:#AAA;
 }
 
-#webv2 label
+#iphone label
 {
 	font-family : sans-serif;
 	font-size:18px;
-	color:#aaa;
+	color:#333;
 }
 
-#webv2 input[type="text"],#webv2 textarea,
-#webv2 input[type="password"] {
+#iphone input[type="text"], #iphone input[type="password"] {
 	color: #333;
 	font-weight: 200;
 	font-size: 18px;
 	line-height: 1;
 	width: 100%;
+	height:20px;
 	padding: 3px;
 	margin-top: 2px;
 	margin-right: 6px;
 	margin-bottom: 16px;
 	border: 1px solid #E5E5E5;
-	background-image: -webkit-linear-gradient(top,#EBEBEB,#FBFBFB);
-	background-image: linear-gradient(to bottom,#EBEBEB,#FBFBFB);
+	/*
+	background:transparent;
+	*/
+	background-image: -webkit-linear-gradient(top,#ABABAB,#EBEBEB);
+	background-image: linear-gradient(to bottom,#ABABAB,#EBEBEB);
 	outline: 0;
 	-webkit-box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
 	box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
 }
 
-#webv2 #scaptcha {
-  width:60px;
-  height:18px;
-}
-
-#webv2 input[type="submit"] {
+#iphone input[type="submit"] {
 	font-family : sans-serif;
 	width:100px;
 	height:30px;
@@ -86,24 +81,12 @@ body.login {
 	padding: 0 12px 2px;
 }
 
-#webv2 textarea {
-	height:60px;
-	width:220px;
-}
-
-#webv2 input[type="text"]:focus,
-#webv2 textarea:focus {
+#iphone input[type="text"]:focus,
+{
 	border-color: #AAA;
 }
 
-#webv2 .container {
-	margin-top:8px;
-	margin-bottom: 10px;
-	/*
-	*/
-}
-
-#webv2 .error {
+#iphone .error {
 	font-family: sans-serif; 
 	font-size: 12px;
 	color: #333;
@@ -111,129 +94,172 @@ body.login {
 	border-color: #C00;
 }
 
-#webv2 #register_password_errorloc
+#iphone #register_password_errorloc
 {
     clear:both;
 }
 
-#webv2 .short_explanation {
+#iphone .short_explanation {
    font-family : sans-serif;
    font-size: 12px;
-   color:#aaa;   
+   color:#333;   
 }
 
 /* spam_trap: This input is hidden. This is here to trick the spam bots*/
-#webv2 .spmhidip {
+#iphone .spmhidip {
    display:none;
    width:10px;
    height:3px;
 }
-#webv2 #fg_crdiv {
-		font-family : sans-serif;
-		font-size: 0.3em;
-		opacity: .2;
-		-moz-opacity: .2;
-		filter: alpha(opacity=20);   
-}
-#webv2  #fg_crdiv p {
-	display:none;
-}
-
-#webv2 li {
-	font-family : sans-serif;
-	padding-top:10px;
-	padding-bottom:10px;
-}
-
-#webv2 {
+#iphone {
+	position:relative;
 	font-family : sans-serif;
 	font-size: 0.9em;
-	line-height: 150%
-}
-
-#webv2 select {
-	font-family : sans-serif;
-	background-color:transparent;
-	/*background-image:url('../../images/bck.jpg');*/
-	width:200px;
-	margin-bottom:20px;
-	font-size: 0.9em;
-	color:#000;
-	font-weight:bold;
-	-webkit-border-radius: 2px;
-	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-	-webkit-user-select: none;
-}
-#webv2 option
-{
-	font-family : sans-serif;
-	/*background-color : #ffff99;*/
-	background-color:white;
-	/*background-image:url('../../images/bck.jpg');*/
-	width:200px;
-	margin-bottom:20px;
-	font-size: 1em;
-	color:#000;
-	font-weight:bold;
-	-webkit-border-radius: 2px;
-	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-	-webkit-user-select: none;
-}
-#webv2 button
-{
-	font-family : stylewars;
-	cursor:pointer;
-	background-color:transparent;
-	font-size: 1em;
-	border:1px solid #222;
-	padding:2px;
-	text-align:center	
-}
-
-#webv2 textarea
-{
-	height:60px;
-	width:220px;
-}
-
-#webv2 form
-{
+	line-height: 150%;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:20px;
-	border-radius: 0;
-	box-shadow: none;
+	margin-top:70px;
+	width: 374px;
+	height:720px;
+	padding: 26px 24px 46px;
+	background-size:100% 100%;
+	background-image:url('../images/fulliphoneb.png');
+	z-index:10;
+}
+
+#iphone form
+{
+	width: 100%;
+	height: 100%;
 	-webkit-transition: all 0.5s linear;
 	-moz-transition: all 0.5s linear;
 	-o-transition: all 0.5s linear;
 	transition: all 0.5s linear;
-	display:block;
-	padding: 26px 24px 46px;
-	width: 350px;
-	/*
-	background:white;
-	*/
-	height:570px;
-	background-size:100% 100%;
-	background-image:url('../images/iphone-initial.png');
-	bottom:0px;
+	z-index:5;
 }
-#webv2 fieldset
+#iphone fieldset
 {
 	border:0px solid #FFF;
-	padding-top:20px;
-	padding-left:10px;
-	width:90%;
+	padding-top:15px;
+	padding-left:50px;
+	width:70%;
 	height:100%;
-	margin-top:60px;
-	/*
-	*/
+	margin-top:50px;
 }
 
-
-.login img#title {
-	position:relative;
-	left:38%;
-	margin-left:auto;
-	margin-right:auto;
+#iphone #well {
+	position:absolute;
+	bottom:22%;
+	left:16%;
+	width: 283px; margin: 0 auto;
+	padding-top: 3px;
+	overflow: hidden; 
+	z-index:10;
+	background-image: -webkit-linear-gradient(top,#000,#333);
+	background-image: linear-gradient(to bottom,#333,#000);
+	border-bottom:1px solid #EBEBEB;
+	border-top:1px solid #222;
+	border-radius: 10px;
 }
+
+#iphone #well h2 {
+	background: -moz-linear-gradient(left, #4d4d4d, 0.4, #4d4d4d, 0.5, white, 0.6, #4d4d4d, #4d4d4d); 
+	background: -webkit-gradient(linear,left top,right top,color-stop(0, #4d4d4d),color-stop(0.4, #4d4d4d),color-stop(0.5, white),color-stop(0.6, #4d4d4d),color-stop(1, #4d4d4d)); 
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	-moz-text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: slidetounlock 5s infinite;
+	font-size: 20px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	padding: 0;
+	width: 90%;
+	margin-left:0px;
+	-webkit-text-size-adjust: none;
+}
+
+#iphone #well #slider {
+	background: url(../images/arrow.png) no-repeat;
+	background-size:100% 100%;
+	width: 60px;
+	height: 40px;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+}
+
+#iphone #well h2 span {
+	padding-left:20px;
+}
+@-webkit-keyframes slidetounlock {
+	0% {
+		background-position: -300px 0;
+	}
+	100%{
+		background-position: 300px 0;
+	}
+}
+#iphone #homebutton {
+	position:absolute;
+	bottom:13.5%;
+	left:44%;
+	cursor:pointer;
+	width: 55px; margin: 0 auto;
+	height:55px;
+	border-radius: 60px;
+}
+#iphone #lockbutton {
+	position:absolute;
+	left:63%;
+	top:1%;
+	cursor:pointer;
+	width: 50px; margin: 0 auto;
+	height:5px;
+	z-index:15;
+}
+
+#iphone #timearea {
+	position:absolute;
+	left:16%;
+	top: 13%;
+	width: 67%; 
+	height: 60px;
+	text-align:center;
+	padding-top:30px;
+	color:#EBEBEB;
+	font-size:20px;
+	z-index:15;
+	background-image: -webkit-linear-gradient(top,#000,#333);
+	background-image: linear-gradient(to bottom,#333,#000);
+}
+#iphone #timearea #timer{
+	font-size:50px;
+}
+#iphone #batterymeter {
+	position:absolute;
+	left:25%;
+	top:35%;
+	width: 50%; margin: 0 auto;
+	height:25%;
+	z-index:15;
+	background-image:url(../images/battery.png);
+	background-size:100% 100%;
+}
+#iphone #blackscreen{
+	position:absolute;
+	left:16%;
+	top:13%;
+	width: 68%; margin: 0 auto;
+	height:65%;
+	z-index:1;
+	background:black;
+}
+
+#iphone #content {
+	font-size:15px;
+}
+#iphone #content span{
+
+}
+

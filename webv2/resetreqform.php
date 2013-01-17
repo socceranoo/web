@@ -1,7 +1,7 @@
 <form id='resetreq' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
 <fieldset >
 <legend>reset</legend>
-<input type='hidden' name='submitted' id='submitted' value='1'/>
+<input type='hidden' name='resetreqsubmit' id='resetreqsubmit' value='1'/>
 <div class='short_explanation'>* required fields</div>
 <div><span class='error'><?php echo $fgmembersite->GetErrorMessage(); ?></span></div>
 <div class='container'>

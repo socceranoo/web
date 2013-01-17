@@ -7,7 +7,7 @@
 			$fgmembersite->RedirectToURL("login.php");
 			//$login = true;
 		}
-		if(isset($_POST['submitted'])) {
+		if(isset($_POST['loginsubmit'])) {
 			if($fgmembersite->Login()) {
 				//$login = true;
 				$fgmembersite->RedirectToURL("login-home.php");
@@ -16,7 +16,7 @@
 	}
 	function register() {
 		global $fgmembersite;
-		if(isset($_POST['submitted'])) {
+		if(isset($_POST['registersubmit'])) {
 			if($fgmembersite->RegisterUser()) {
 				$fgmembersite->RedirectToURL("thank-you.html");
 			}
@@ -24,7 +24,7 @@
 	}
 	function resetpwd() {
 		global $fgmembersite;
-		if(isset($_POST['submitted'])) {
+		if(isset($_POST['resetreqsubmit'])) {
 		   if($fgmembersite->EmailResetPasswordLink()) {
 				$fgmembersite->RedirectToURL("reset-pwd-link-sent.html");
 				exit;
@@ -37,26 +37,33 @@
 	<head>
 		<title>Login</title>
 		<?require_once("include/headers.php");?>
-	<script>
-	var isChrome = testCSS('WebkitTransform');  // Chrome 1+
-	function testCSS(prop) {
-	    return prop in document.documentElement.style;
-	}
-	if (!isChrome && false)
-		//setTimeout("window.location='notsupported.php'",1);
-	</script>
 	</head>
-	<body class='login' onload='logininit();'>
+	<body class='login' id='loginbody' onload='logininit();'>
 		<!--
 		<img id='title' src="images/login-title-bg.png"/>
 		-->
-		<div id='webv2'>
-		<?require_once("loginform.php");?>
-		<?require_once("regform.php");?>
-		<?require_once("forgotpwdform.php");?>
-		</div>
-		<div id="well">
-			<h2><strong id="slider"></strong><span>slide to unlock</span></h2>
+		<div id='iphone'>
+			<!--
+			-->
+			<?require_once("loginform.php");?>
+			<?require_once("regform.php");?>
+			<?require_once("resetreqform.php");?>
+			
+			<div id='content'>
+				<span id='register-success'>Thank you for registering. Your confirmation email is on its way. Please click the link in the email to complete the registration.Please check your spam folder if you do not see it in your inbox. Sorry for the inconvenience</span>
+				<span id='resetreq-success'>An email is sent to your email address that contains the link to reset the password.Please check your spam if you do not find it in inbox</span>
+			</div>
+			<div id="well">
+				<h2><strong id="slider"></strong><span>slide to sign in</span></h2>
+			</div>
+			<div id="homebutton" onclick="homebutton();"></div>
+			<div id="lockbutton" onclick="lockbutton();"></div>
+			<div id="blackscreen"></div>
+			<div id="timearea">
+				<span id='timer'></span><br/>
+				<span id='date'></span>
+			</div>
+			<div id="batterymeter"></div>
 		</div>
 	</body>
 </html>
