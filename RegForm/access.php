@@ -24,6 +24,5 @@
 	//mysql_connect("localhost", "root", "Orange") or die(mysql_error());
 	//mysql_select_db("Main") or die(mysql_error());
 	//require_once("topright.php");
-	$login = true;
 	require_once("db_functions.php");
 ?>

@@ -1,0 +1,244 @@
+*{
+	margin:0; padding:0;
+	border:0;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height:10px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 3px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+body.home {
+	background:#ebebeb;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+	font-size: 15px;
+	line-height: 1.4em;
+	color:black;
+	width:100%;
+	height:1024px;
+}
+/*
+.home .presentation {
+	text-align:center;
+	padding:15px 40px 80px 40px;
+	background:#cbcbcb;
+	background:#e0e0e0;
+	color:#242424;
+	height:40px;
+}
+
+.home .presentation h2 {
+	font-size:38px;
+	font-weight:0;
+	margin:0 0 24px 0;
+}
+.home .presentation h3 {
+	font-size:14px;
+	text-transform:uppercase;
+}
+.home .presentation p{
+	font-size:13px;
+	line-height:24px;
+	color:#333;
+	margin:48px auto 0 auto;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+*/
+.home .curtain_wrapper .desc {
+	font-size:100px;
+	position:absolute;
+	left:45%;
+	top:45%;
+	line-height:24px;
+	opacity:0.2;
+	color:#e0e0e0;
+	z-index:100;
+	background:transparent;
+	float:center;
+	cursor:pointer;
+	text-transform:lowercase;
+}
+.home .curtain_wrapper .desc:hover {
+	opacity:0.8;
+}
+.home .imac {
+	padding:100px 0 20px 0px;
+	width:1024px;
+	border:0;
+	position:relative;
+	vertical-align:baseline;
+	font-size:100%;
+	font:inherit;
+	text-align:center;
+	margin:0 auto;
+	overflow:hidden;
+	font-size:18px;
+	z-index:30;
+}
+
+.home .imac img {
+	width:100%;
+	max-width:100%;
+	z-index:30;
+}
+
+.home .imac .macscreen{
+	position: absolute;
+	top: 146px;
+	left: 47px;
+	width: 91%;
+	height: 56%;
+	background: #E0E0E0;
+	background-size:100% 100%;
+	transition:all 0.7s ease-in-out;
+	-webkit-transition:all 0.7s ease-in-out;
+	-moz-transition:all 0.7s ease-in-out;
+	-o-transition:all 0.7s ease-in-out;
+	opacity: 1;
+}
+
+.home .imac .macscreen img.imgholder {
+	width:100%;
+	height:100%;
+}
+.macscreen .thumbnail-wrap {
+	height:90px;
+	width:90%;
+	position:absolute;
+	bottom:0px;
+	margin:0;
+	opacity:1;
+}
+.thumbnail-wrap .ice-previous,
+.thumbnail-wrap .ice-next {
+	width: 75px;
+	height: 50px;
+	opacity:0.3;
+}
+.thumbnail-wrap .ice-previous:hover,
+.thumbnail-wrap .ice-next:hover {
+	opacity:0.8;
+}
+	
+.thumbnail-wrap .ice-previous {
+	background-image:url('../images/larrow1.png');
+	background-size:100% 100%;
+	position:absolute;
+	top:30%;
+	left:3%;
+}
+.thumbnail-wrap .ice-next {
+	background-image:url('../images/rarrow1.png');
+	background-size:100% 100%;
+	position:absolute;
+	top:30%;
+	right:-5%;
+}
+.macscreen .thumbnail-wrap ul {
+	width:100%;
+	height:100%;
+	position:absolute;
+	margin-left:120px;
+	margin-right:20px;
+	overflow:hidden;
+}
+.macscreen .thumbnail-wrap ul li {
+	text-align:center;
+	display:block;
+	float:left;
+	overflow:hidden;
+}
+.home .imac .macscreen .thumbnail-wrap img.thumbnail {
+	position:relative;
+	padding:0px 6px 0px 6px;
+	width:100px;
+	height:100%;
+	opacity: 0.4;
+	overflow:hidden;
+}
+.home .imac .macscreen .thumbnail-wrap img.thumbnail:hover {
+	opacity: 0.9;
+}
+.home .imac .macscreen img.arrow {
+	height:40px;
+	width:80px;
+	margin:0;
+	opacity: 0.1;
+	z-index:200;
+}
+.home .imac .macscreen img.arrow:hover {
+	opacity: 0.9;
+}
+.macscreen img.arrowright {
+	position:absolute;
+	right:17px;
+	top:45%;
+}
+
+.macscreen img.arrowleft {
+	position:absolute;
+	left:17px;
+	top:45%;
+}
+/*BOTH CURTAIN IMAGES CLASS*/
+.home img.curtain{
+	width:50%;
+	height:100%; /* so jQuery doesn't keep ascpect ration when animating the width '*/
+	z-index:99; /* to show it on top of the content*/
+	opacity:0.92;
+}
+
+.home img.curtain:hover {
+	opacity:1;
+}
+/*LEFT CURTAIN IMAGE CLASS*/
+.home img.curtainLeft{
+	position:absolute; /*absolute positioning is important*/
+	left:0px; /*position it on left side of the container*/
+}
+
+/*RIGHT CURTAIN IMAGE CLASS*/
+.home img.curtainRight{
+	position:absolute; /*absolute positioning is important*/
+	right:0px; /*position it on the right side of the container*/
+}
+
+/*THE CLASS OF THE WRAPPING DIV (THAT WRAPS EVERYTHING)*/
+.home .curtain_wrapper{
+	width:100%; /* same as width of both the images summed */
+	height:100%; /* same as height of the images*/
+	overflow:hidden; /*hide everything out of boundaries (in this case for the description div)*/
+	position:relative;
+	display:block;
+	color:white; /* just styling*/
+	margin:0 auto;
+	background:#ebebeb;
+
+}
+.home span.topmenu
+{
+	font-size:14px;
+	font-family:sans-serif;
+	position:relative;
+	top:0px;
+	color:#000;
+	right:0px;
+	width:100%;
+	text-align:right;
+	padding-right:0px;
+}

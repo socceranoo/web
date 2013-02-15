@@ -1,6 +1,7 @@
 var xpos =0;
 var lock = true;
 var slider = false;
+var curform = "login";
 //var charging = false;
 var charging = true;
 var weekday=new Array(7);
@@ -25,12 +26,17 @@ month[9]="October";
 month[10]="November";
 month[11]="December";
 
+var formarr =new Array();
+formarr[0]="login";
+formarr[1]="register";
+formarr[2]="resetreq";
 
 $(document).ready(function() {
 	//TestforChrome 
 	var isChrome = testCSS('WebkitTransform');  // Chrome 1+
 	if (!isChrome && false)
 		setTimeout("window.location='notsupported.php'",1);
+	logininit();
 });
 
 function testCSS(prop) {
@@ -41,8 +47,9 @@ function logininit() {
 	hideallforms();
 	hideslider();
 	hideElem("content");
+	ajaxinit();
 	//window.setInterval("movebackground()", 50);
-	window.setInterval("mydate()", 5000);
+	window.setInterval("mydate()", 1000);
 }
 function getid(id){
 	return document.getElementById(id);
@@ -54,10 +61,13 @@ function showElem(id) {
 	$("#"+id).show();
 }
 
-function showhideform(formname) {
-	hideallforms();
-	showElem(formname);
-	//$("#"+formname).show("slide", {direction:"right"}, 1000);
+function showhideform(formname, fromform) {
+	if (formname === curform)
+		return;
+	$("#"+curform).hide(200, function() {
+		$("#"+formname).fadeIn(200);
+		curform = formname;
+	});
 	lock = false;
 }
 function hideallforms() {
@@ -83,6 +93,7 @@ function lockbutton(){
 	{
 		if (slider) {
 			hideslider();
+			showElem("blackscreen");
 		}else {
 			showslider();
 		}
@@ -93,19 +104,20 @@ function lockbutton(){
 }
 function lockphone(){
 	hideallforms();
-	$("#slider").animate({ left: 0 });
 	hideslider();
+	showElem("blackscreen");
+	$("#slider").animate({ left: 0 });
 	lock = true;
 }
 
 function unlockphone(){
-	showhideform("login");
-	lock = false;
+	hideslider();
 	hideElem("blackscreen");
+	lock = false;
+	showElem("login");
 }
 function showslider(){
 	showElem("well");
-	slider = true;
 	mydate();
 	showElem("timearea");
 	if (charging) {
@@ -114,14 +126,14 @@ function showslider(){
 	}else {
 		hideElem("blackscreen");
 	}
+	slider = true;
 }
 
 function hideslider(){
 	hideElem("well");
-	slider = false;
 	hideElem("timearea");
 	hideElem("batterymeter");
-	showElem("blackscreen");
+	slider = false;
 }
 
 function mydate(){
@@ -150,8 +162,6 @@ function sliderJqueryinit() {
 			containment: 'parent',
 			drag: function(event, ui) {
 				if (ui.position.left > 190) {
-					$("#well").fadeOut();
-					hideslider();
 					unlockphone();
 				} else {
 					// Apparently Safari isn't allowing partial opacity on text with background clip? Not sure.
@@ -177,7 +187,7 @@ function sliderJqueryinit() {
 			if(curX <= 0)
 				return;
 			if(curX > 190){
-				$('#well').fadeOut();
+				unlockphone();
 			}
 			el.style.webkitTransform = 'translateX(' + curX + 'px)'; 
 		}, false);
@@ -191,3 +201,79 @@ function sliderJqueryinit() {
 	});
 }
 
+function ajaxinit()
+{
+	$("#"+formarr[0]).submit(function(event) {
+		// prevent default posting of form
+		event.preventDefault();
+		val = document.getElementById(formarr[0]).onreset();
+		if (!val)
+			return;
+		var $form = $(this), $inputs = $form.find("input,input,input,input");
+		$inputs.attr("disabled", "disabled", "disabled", "disabled");
+		var uname = getid("lusername").value;
+		var pwd = getid("lpassword").value;
+		var hidden = getid("loginsubmit").value;
+		$.post("processform.php",{ formname: formarr[0], loginsubmit:hidden, username:uname, password:pwd},function(data){
+			process_ajax(formarr[0], data);
+			$inputs.removeAttr("disabled");
+			}, "json");
+	});
+	$("#"+formarr[1]).submit(function(event) {
+		// prevent default posting of form
+		event.preventDefault();
+		val = document.getElementById(formarr[1]).onreset();
+		if (!val) {
+			return;
+		}
+		var $form = $(this), $inputs = $form.find("input","input","input","input","input","input","input");
+		$inputs.attr("disabled", "disabled", "disabled", "disabled", "disabled", "disabled", "disabled");
+		var uname = getid("rusername").value;
+		var fname = getid("rname").value;
+		var pwd = getid("rpassword_id").value;
+		var mail = getid("remail").value;
+		var hidden = getid("registersubmit").value;
+		$.post("processform.php",{ formname:formarr[1], registersubmit:hidden, name:fname, username:uname, email:mail, password:pwd },function(data){
+			process_ajax(formarr[1], data);
+			$inputs.removeAttr("disabled");
+			}, "json");
+	});
+	$("#"+formarr[2]).submit(function(event) {
+		// prevent default posting of form
+		event.preventDefault();
+		val = document.getElementById(formarr[2]).onreset();
+		if (!val) {
+			return;
+		}
+		var $form = $(this), $inputs = $form.find("input","input","input");
+		$inputs.attr("disabled", "disabled", "disabled");
+		var mail = getid("email").value;
+		var hidden = getid("resetreqsubmit").value;
+		$.post("processform.php",{ formname:formarr[2], resetreqsubmit: hidden, email:mail },function(data){
+			process_ajax(formarr[2], data);
+			$inputs.removeAttr("disabled");
+		}, "json");
+	});
+	$('#'+formarr[0]).find('input').click(function(event) {
+		var elem = event.target.id;
+		getid(elem).value = "";
+	});
+	$('#'+formarr[0]).find('input').keydown(function(event) {
+		var elem = event.target.id;
+	});
+}
+
+function process_ajax(formname, data){
+	var retval= data.retval;
+	var info= data.info;
+	var url= data.url;
+	var errormsg= data.errormsg;
+	if (retval == "true") {
+		hideElem(formname);
+		$("#success").html(info+url);
+		if (formname == "login")	
+			setTimeout("window.location='"+url+"'",1);
+	} else {
+		$("#"+formname+"error").html(errormsg);
+	}
+}
