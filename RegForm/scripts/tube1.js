@@ -16,7 +16,7 @@ function init()
 {
 	hideElem("noserver");
 	hideElem("default");
-	var host = "ws://98.234.216.9:9002/RegForm/tubeserver.php"; // SET THIS TO YOUR SERVER
+	var host = "ws://gatoraze.tk:9002/RegForm/tubeserver.php"; // SET THIS TO YOUR SERVER
 	try {
 		txtareaelem = getid("chat");
 		user=document.refreshForm.uname.value;

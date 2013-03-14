@@ -4,6 +4,10 @@
 <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js'></script>
 <script src='scripts/gen_validatorv4.js'></script>
 <script type="text/javascript" async"" src="http://www.google-analytics.com/ga.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Quintessential' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Elsie+Swash+Caps' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
 <!--
 <link rel="icon" type="image/ico" href="images/gr.png"/>
 <link rel="STYLESHEET" type="text/css" href="style/curtain.css" />

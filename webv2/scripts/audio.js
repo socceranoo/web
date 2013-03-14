@@ -15,6 +15,23 @@ $(document).ready(function() {
 	$("#listname").hide();
 	$("#cancelsave").hide();
 	$(".loading").hide();
+	$(document).keyup(function(event) {
+		if (event.keyCode == 32) {
+			//playpause();
+		}
+	});
+	$(document).keydown(function(event) {
+		if (event.keyCode == 32) {
+			playpause();
+		}else if (event.keyCode == 37 || event.keyCode == 38) {
+			prevsong();	
+		}else if (event.keyCode == 39 || event.keyCode == 40) {
+			nextsong();	
+		}
+	});
+	$(window).unload(function () { 
+		alert("Leave Really?");
+	});
 	$("#audio").submit(function(event) {
 		// prevent default posting of form
 		event.preventDefault();
@@ -54,8 +71,17 @@ $(document).ready(function() {
 	//play_first_file();
 });
 
+var playpause = function () {
+	var myaudio = document.getElementById("player");
+		if (myaudio.paused) {
+			myaudio.play();
+			return;
+		}else if(!myaudio.paused && myaudio.duration > 0){
+			myaudio.pause();
+			return;
+		}
+}
 var span_click = function() {
-	alert("here");
 	id = event.target.id;
 	pid = $("#"+id).parent().attr('id');
 	alert(pid);
@@ -201,14 +227,19 @@ function autonextsong() {
 	nextsong();
 }
 var nextsong = function() {
-	next = getnextsong();
+	next = getnextsong("NEXT");
 	id = "p"+next;
 	playfile(id, next);
 }
 
-var prevsong = nextsong;
+var prevsong = function() {
+	prev = getnextsong("PREV");
+	id = "p"+prev;
+	playfile(id, prev);
+}
 
-function getnextsong() {
+
+function getnextsong(option) {
 	if (shuffle) {
 		next = get_random_number(playcount);
 		if (next == current){
@@ -216,8 +247,13 @@ function getnextsong() {
 			next %=playcount;
 		}
 	}else {
-		next = current+1;
-		next %=playcount;
+		if (option == "NEXT") {
+			next = current+1;
+			next %=playcount;
+		}else if (option == "PREV") {
+			next = current + playcount - 1;
+			next %=playcount;
+		}
 	}
 	return next;
 }
