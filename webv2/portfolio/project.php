@@ -1,3 +1,7 @@
+<?PHP
+	$highl ="class=\"highlight\"";
+	$li2=$highl;
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 	<head>
@@ -29,10 +33,14 @@
 					<?require("content/rshark.txt");?>
 				</div>
 				<div class="hidden" id="proj1">
-					<h3 id="proj-heading">moneymatters</h3>
+					<h3 id="proj-heading">gameroom</h3>
 					<?require("content/mmatters.txt");?>
 				</div>
 				<div class="hidden" id="proj2">
+					<h3 id="proj-heading">moneymatters</h3>
+					<?require("content/mmatters.txt");?>
+				</div>
+				<div class="hidden" id="proj3">
 					<h3 id="proj-heading">resumebuilder</h3>
 					<?require("content/rbuilder.txt");?>
 				</div>

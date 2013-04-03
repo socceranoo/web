@@ -1,4 +1,4 @@
-var projarr = Array("rz", "mm", "rb");
+var projarr = Array("rz", "gr", "mm");
 var curpic = -1;
 var no_of_pics = 3;
 var curproj = 0;
@@ -8,6 +8,7 @@ var highlposition = "-34px -91px";
 $(document).ready(function() {
 	/* CONTACT JS */
 	if ($("#contact-form").length) {
+		$("#msgsent").hide();
 		contactajax();
 		return;
 	}
@@ -58,6 +59,7 @@ var nextproj =function () {
 	setcontent(curproj);
 	$(".toc").css("background-position", normalposition);
 	nextpic();
+	window.scrollTo(0, 0);
 }
 var prevproj =function () {
 	curpic = -1;
@@ -67,6 +69,7 @@ var prevproj =function () {
 	setcontent(curproj);
 	$(".toc").css("background-position", normalposition);
 	nextpic();
+	window.scrollTo(0, 0);
 }
 
 var setcontent = function (num) {
@@ -79,22 +82,29 @@ function contactajax() {
 		alert("e");
 		// prevent default posting of form
 		event.preventDefault();
-		val = document.getElementById("contact-form").onreset();
-		alert("e");
-		if (!val) {
-			alert("here");
-			return;
-		}
-		alert("1");
-		var $form = $(this), $inputs = $form.find("input,input,input");
+		var $form = $(this), $inputs = $form.find("input, input,input,textarea");
 		$inputs.attr("disabled", "disabled", "disabled");
-		var name = getid("name").value;
-		var email = getid("email").value;
-		var message = getid("message").value;
-		alert("2");
-		$.post("sendmail.php",{ formname: "contact-form", name:name, email:email, message:message},function(data){
+		var name = document.getElementById("name").value;
+		var email = document.getElementById("email").value;
+		var hidden = document.getElementById("hidden").value;
+		var message = $("#message").html();
+		alert(name+email+message);
+		$.post("sendmail.php",{ formname: "contact-form", name:name, email:email, message:message, hidden:hidden},function(data){
 			$inputs.removeAttr("disabled");
-			alert("3");
+			reset_form();
+			$("#contact-form").hide();	
+			$("#msgsent").show();
 			}, "json");
 	});
+}
+
+function another_message() {
+	$("#contact-form").show();	
+	$("#msgsent").hide();
+}
+function reset_form() {
+		document.getElementById("name").value = "";
+		document.getElementById("email").value = "";
+		$("#message").val("");
+
 }

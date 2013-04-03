@@ -6,9 +6,10 @@ body.gameroom
 	margin-top:0%;
 	margin-left:2%;
 	padding:0;
-	background:#98bf21;
+	background-image:url("../../webv2/images/Music/8.jpg");
+	background-size:100% 100%;
 	/*
-	background-image:url("../images/bck3.jpg");
+	background:#98bf21;
 	background-repeat:no-repeat;
 	background-image:url("../images/background.gif");
 	background-image:url("../../images/teal2.jpg");

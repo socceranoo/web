@@ -12,7 +12,7 @@
 		foreach($fileArr as $file) {
 			$extension = pathinfo($directory.$file);	
 			$ext = $extension['extension'];
-			if ($ext == "rar" || $ext == "zip" || $ext == "zip") {
+			if ($ext == "exe" ||$ext == "rar" || $ext == "zip" || $ext == "zip") {
 				//print_spaces(10);
 				print "<a href='".$directory.$file."'>";
 				print $file;
@@ -38,7 +38,7 @@
 </head>
 <body onload="init();">
 	<div id="files">
-	<?listfiles("../ftp/");?>
+	<?listfiles("../ftp/AOE-2/");?>
 	</div>
 </body>
 </html>
