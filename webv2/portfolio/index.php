@@ -9,8 +9,12 @@
 		<?require_once("header.php");?>
 		<div id="wrapper" class="home">			
 			<div id="content">
+			<div class="pagediv"><p>Portfolio under construction, check out the links on the top</p></div>
+			<img src="images/construction.gif" style="width:950px;height:730px;"/>
+			<!--
 				<div class="halfcontent" id="backend"></div>
 				<div class="halfcontent" id="frontend"></div>
+			-->
 			</div>
 		</div>
 		<?require_once("footer.php");?>

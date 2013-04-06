@@ -15,4 +15,8 @@
 <div class="hidden" id="uname"><?echo $uname?></div>
 <div class="hidden" id="name"><?echo $fullname?></div>
 <div class="hidden" id="uid"><?echo $userid?></div>
-<?if (!$public && $login) require_once("topright.php");?>
+<?
+	if ($login && !$public) {
+		require_once("topright.php");
+	}
+?>

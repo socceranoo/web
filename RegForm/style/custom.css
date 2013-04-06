@@ -46,6 +46,15 @@ ul#topbar li a:hover, ul#topbar li a:active
 	text-align: left;
 	border-collapse: collapse;
 }
+#gradient-style a:link {
+        color:blue;
+        text-decoration:none;
+}
+#gradient-style a:visited {
+        color:blue;
+        text-decoration:none;
+}
+
 #gradient-style th
 {
 	font-size: 1.0em;

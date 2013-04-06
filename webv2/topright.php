@@ -2,16 +2,16 @@
 <p>
 logged in (<?= $fgmembersite->UserName() ?>)
 &nbsp;
-<a href='../webv2/1login-home.php'>home</a>
+<a href='1login-home.php'>home</a>
 &nbsp;
 <!--
 <a href='client.php'>Gameroom</a>
 &nbsp;
 <a href='change-pwd.php'>change password</a>
 -->
-<a href='logout.php'>logout</a>
+<a href='../RegForm/logout.php'>logout</a>
 &nbsp;
-<a href='account-info.php'>your account</a>
+<a href='../RegForm/account-info.php'>your account</a>
 &nbsp;
 </p>
 </div>

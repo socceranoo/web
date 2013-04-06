@@ -86,9 +86,9 @@ margin: 0px auto;
 	margin:0px auto;	
 }
 .home #content {
-	height:730px;
 	z-index:20;
 	/*
+	height:730px;
 	position: relative;
 	margin: 60px auto 20px auto;
 	background: url(../../images/login-bg);

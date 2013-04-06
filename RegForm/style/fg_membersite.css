@@ -7,11 +7,11 @@ body
 	margin:0; padding:0;
 }
 a:link {
-	color:blue;
+	color:orange;
 	text-decoration:none;
 }
 a:visited {
-	color:maroon;
+	color:orange;
 	text-decoration:none;
 }
 a:active {
@@ -46,6 +46,7 @@ body.home {
 	padding:0;
 	background-image:url('../../images/bck14.png');
 	/*
+	background-image:url('../../images/linux.jpg');
 	background-size:100%;
 	background-size:100%;
 	background-image:url('../../images/bck1.jpg');
@@ -63,7 +64,7 @@ body.home {
 	font-family : wellsley;
 	font-size: 3.0em;
 	text-align:center;
-	color:#ff7;
+	color:#b0b0b0;
 	margin-top:40px;
 }
 .home div.onlycenter {
@@ -95,12 +96,14 @@ body.home {
 	height:30%;
 	position:relative;
 	left:0px;
+	float:left;
 }
 .rref {
 	width:40%;
 	height:30%;
 	position:relative;
 	left:60%;
+	float:left;
 }
 .home legend, #home h2
 {
@@ -120,14 +123,16 @@ body.home {
 }
 body.transactions {
 	margin:0; padding:0;
-	background-image:url('../../images/bck.jpg');
+	background-image:url('../../webv2/trump/images/blueback.jpg');
 
 }
 body.login {
 	/*
 	background-image:url('../../images/vfv1.jpg');
-	*/
 	background-image:url('../../images/bck26.jpg');
+	background-image:url('../../images/linux.jpg');
+	*/
+	background-image:url('../../webv2/images/music3.bmp');
 	background-repeat:no-repeat;
 	background-size:100%;
 }
@@ -319,7 +324,7 @@ padding-bottom:10px;
 	font-family : wellsley;
    font-size: 3.9em;
 	text-align:center;
-   color:#333;
+   color:#b0b0b0;
 	/*
 	margin-top:20px;
    font-family :stylewars;
@@ -432,14 +437,17 @@ div.leftsideboxes {
 #homepage 
 { 
 	margin:0; padding:0;
+	/*
 	background-image:url('../../images/bck.jpg');
+	background-image:url('../../webv2/trump/images/blueback.jpg');
+	*/
 }
 
 #other 
 { 
 	margin:0; padding:0;
-	background-image:url('../../images/bck.jpg');
 	/*
+	background-image:url('../../images/bck.jpg');
 	height:100%; 
 	background-repeat:no-repeat;
 	background-size: 100% 100%;
@@ -505,7 +513,7 @@ div.topright
 	display:block;
 	/*set the div in the top right corner*/
 	position:absolute;
-	color:#777;
+	color:#b0b0b0;
 	top:0;
 	right:0;
 	width:100%;

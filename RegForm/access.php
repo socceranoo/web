@@ -6,6 +6,7 @@
 	    $fgmembersite->RedirectToURL("login.php");
 	    exit;
 	}
+	$login = true;
 	//$pairtable = $fgmembersite->UserTable();
 	//$moneytable = $fgmembersite->MoneyTable();
 	//$deletedtable = $fgmembersite->DeletedTable();

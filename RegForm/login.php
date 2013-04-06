@@ -3,7 +3,7 @@
 	require_once("./include/membersite_config.php");
 	if($fgmembersite->CheckLogin())
 	{
-		$fgmembersite->RedirectToURL("login-home.php");
+		$fgmembersite->RedirectToURL("../webv2/1login-home.php");
 		$login = true;
 	}
 	if(isset($_POST['submitted']))
@@ -11,7 +11,7 @@
 		if($fgmembersite->Login())
 		{
 			$login = true;
-			$fgmembersite->RedirectToURL("login-home.php");
+			$fgmembersite->RedirectToURL("../webv2/1login-home.php");
 		}
 	}
 ?>

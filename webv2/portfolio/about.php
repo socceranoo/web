@@ -14,6 +14,8 @@
 		<div id="wrapper">			
 			<div id="content">
 				<!--HALFCONTENTS -->	
+				<div class="halfcontent imgholder" id="img2"><img src="images/simpsons_construction.gif"/></div>
+				<!--
 				<div class="halfcontent" id="aboutme">
 					<h3>About me:</h3>
 					<ul class="randomfacts">
@@ -28,6 +30,7 @@
 						<li><p></p></li>
 					</ul>
 				</div>
+				-->
 				<div class="halfcontent"><div id="profilepic"></div></div>
 			
 				<div class="pagediv"><p>“19 Jan 2038 at 3:14:07 AM”-End of the world according to Unix calendar <!--(2^32 seconds after January 1, 1970)--></p></div>
