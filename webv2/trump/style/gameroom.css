@@ -23,10 +23,11 @@ body.gameroom
 
 .gameroom h2 {
 	font-family: 'Titillium Web', sans-serif;
-	font-size:1.0em;
+	font-size:2.5em;
 	text-align:center;
 	margin-top:1px;
 	color: #b0b0b0;
+	color: orange;
 }
 
 .gameroom div.chatbox {
@@ -278,4 +279,8 @@ li.playername {
 {
 	background: #d0dafd url('../../images/table-images/gradhover.png') repeat-x;
 	color: #339;
+}
+
+.gameroom table {
+
 }

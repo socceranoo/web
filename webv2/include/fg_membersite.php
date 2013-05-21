@@ -152,7 +152,33 @@ class FGMembersite
         
         return true;
     }
-    
+    function Login2($username, $password)
+    {
+        if(empty($username))
+        {
+            $this->HandleError("UserName is empty!");
+            return false;
+        }
+        
+        if(empty($password))
+        {
+            $this->HandleError("Password is empty!");
+            return false;
+        }
+        
+        $username = trim($username);
+        $password = trim($password);
+        
+        if(!isset($_SESSION)){ session_start(); }
+        if(!$this->CheckLoginInDB($username,$password))
+        {
+            return false;
+        }
+        
+        $_SESSION[$this->GetLoginSessionVar()] = $username;
+        
+        return true;
+    }
     function CheckLogin()
     {
          if(!isset($_SESSION)){ session_start(); }
@@ -619,6 +645,7 @@ class FGMembersite
         
         $validator = new FormValidator();
         $validator->addValidation("name","req","Please fill in Name");
+        //$validator->addValidation("nickname","req","Please fill in NickName");
         $validator->addValidation("email","email","The input for Email should be a valid email value");
         $validator->addValidation("email","req","Please fill in Email");
         $validator->addValidation("username","req","Please fill in UserName");
@@ -645,6 +672,7 @@ class FGMembersite
         $formvars['email'] = $this->Sanitize($_POST['email']);
         $formvars['username'] = $this->Sanitize($_POST['username']);
         $formvars['password'] = $this->Sanitize($_POST['password']);
+        $formvars['nickname'] = $this->Sanitize($_POST['nickname']);
     }
     
     function SendUserConfirmationEmail(&$formvars)
@@ -832,7 +860,7 @@ class FGMembersite
                         "id INT NOT NULL AUTO_INCREMENT ,".
                         "user1 VARCHAR( 16 ) NOT NULL ,".
                         "user2 VARCHAR( 16 ) NOT NULL ,".
-                        "amount INT NOT NULL ,".
+                        "amount FLOAT(8,2) NOT NULL ,".
                         "PRIMARY KEY ( id )".
                         ")";
         if(!mysql_query($qry,$this->connection))
@@ -851,6 +879,7 @@ class FGMembersite
         
         $insert_query = 'insert into '.$this->tablename.'(
                 name,
+                nickname,
                 email,
                 username,
                 password,
@@ -859,6 +888,7 @@ class FGMembersite
                 values
                 (
                 "' . $this->SanitizeForSQL($formvars['name']) . '",
+                "' . $this->SanitizeForSQL($formvars['nickname']) . '",
                 "' . $this->SanitizeForSQL($formvars['email']) . '",
                 "' . $this->SanitizeForSQL($formvars['username']) . '",
                 "' . md5($formvars['password']) . '",
@@ -878,22 +908,26 @@ class FGMembersite
         return md5($email.$this->rand_key.$randno1.''.$randno2);
     }
 
-    function RunQuery($qry)
+    function RunQuery($qry, $insert_new)
     {
-	if (!$this->connection)
-	{
-		if(!$this->DBLogin())
+		if (!$this->connection)
 		{
-		    $this->HandleError("Database login failed!");
-		    return null;
-		}   
-	}
+			if(!$this->DBLogin())
+			{
+				$this->HandleError("Database login failed!");
+				return null;
+			}   
+		}
         $result = mysql_query($qry,$this->connection);
-	if (!$result)
-	{
+		if (!$result)
+		{
             $this->HandleDBError("Error running query:$qry");
-        }   
-	return $result;
+        }
+		
+		if ($insert_new) {
+			$result = mysql_insert_id($this->connection);
+		}	
+		return $result;
     }
     function SanitizeForSQL($str)
     {

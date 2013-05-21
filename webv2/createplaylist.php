@@ -1,8 +1,8 @@
 <?PHP
+	require_once("./include/membersite_config.php");
 	$songtable = "song";
 	$tagtable = "songtag";
 	$maptable = "songtagmap";
-	require_once("./include/membersite_config.php");
 	$retval = "true";
 	$info = "";
 	$listname ="";

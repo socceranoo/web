@@ -1,0 +1,57 @@
+.calendar-box {
+	/*
+	display:none;
+	background: url(../../images/minaret3.jpg);
+	background-color:transparent;
+	border:1px solid #444;*/
+	position:absolute;
+	width:230px;
+	margin-left:0px;
+	margin-top:-10px;
+	z-index:500;
+}
+
+.calendar-box a:link {
+	color:#e7e7e7;
+	z-index:500;
+}
+.calendar-box select.calendar-month {
+	background-color:transparent;
+	width:90px;
+	z-index:500;
+}
+.calendar-box select.calendar-year {
+	background-color:transparent;
+	width:70px;
+	z-index:500;
+}
+.calendar-box .calendar-cancel {
+	background-color:transparent;
+	border:1px solid #444;
+	width:100%;
+	z-index:500;
+}
+.calendar-box table td {
+	width:14%;
+	z-index:500;
+}
+.calendar-box .calendar-title {
+	text-align:center;
+	z-index:500;
+}
+.calendar-box a {
+	text-decoration:none;
+	z-index:500;
+}
+.calendar-box .today a {
+	padding:0 5px;
+	margin-left:-5px;
+	background-color:red;
+	z-index:500;
+} 
+.calendar-box .selected a {
+	padding:0 5px;
+	margin-left:-5px;
+	background-color:#000;
+	z-index:500;
+}

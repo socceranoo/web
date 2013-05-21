@@ -4,13 +4,13 @@
 }
  
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.6); 
     border-radius: 3px;
 }
  
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1); 
 }
 ::selection {
 	background: #63B7BB;
@@ -32,4 +32,122 @@
 :-ms-input-placeholder { /* Internet Explorer 10+ */
 	color:    #999;
 	font-size: 10px;
+}
+input[type="submit"], input[type="button"] {
+	font-family: 'Titillium Web', sans-serif;
+	margin: 10px 6px 16px 0px;
+	height:29px;
+	font-size: 14px;
+	background: #b0dbd6;
+	background-image: -webkit-linear-gradient(top,#EBEBEB,#FBFBFB);
+	background-image: linear-gradient(to bottom,#EBEBEB,#FBFBFB);
+	color: #333;
+	border-radius: 18px;
+	-webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+	line-height: 28px;
+	padding: 0 12px 2px;
+}
+input[type="text"], input[type="email"], input[type="password"]{
+	font-family: 'Titillium Web', sans-serif;
+	color: #333;
+	font-size: 18px;
+	width: 400px;
+	height:34px;
+	padding: 3px;
+	margin: 2px 6px 5px -10px;
+	margin-left:auto;
+	margin-right:auto;
+	border: 1px solid #E5E5E5;
+	border-radius:10px;
+	/*
+	background-image: -webkit-linear-gradient(top,#ABABAB,#EBEBEB);
+	background-image: linear-gradient(to bottom,#ABABAB,#EBEBEB);
+	-webkit-box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
+	box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
+	*/
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+	border-radius:10px;
+	background-image: -webkit-linear-gradient(top,#E5E5E5, #EBEBEB);
+	background-image: linear-gradient(to bottom,#E5E5E5,#EBEBEB);
+}
+textarea {
+	font-family: 'Titillium Web', sans-serif;
+	resize:auto;
+	width: 400px;
+	height: 84px;
+	overflow:auto;
+	margin: 2px 6px 5px -0px;
+	border: 1px solid #E5E5E5;
+	border-radius:10px;
+}
+textarea:focus {
+	border-radius:10px;
+	background-image: -webkit-linear-gradient(top,#E5E5E5, #EBEBEB);
+	background-image: linear-gradient(to bottom,#E5E5E5,#EBEBEB);
+	/*
+	-webkit-box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
+	box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
+	*/
+}
+
+select {
+	font-family: 'Titillium Web', sans-serif;
+	height:30px;
+}
+option {
+	color:#222;
+	background-color:#b0b0b0;
+	font-size:25px;
+}
+fieldset {
+	font-family: 'Titillium Web', sans-serif;
+	margin: 10px auto;
+}
+fieldset label{
+	color:orange;
+	font-size:20px;
+}
+fieldset legend{
+	color:#b0b0b0;
+	font-size:25px;
+	/*
+	position:fixed;
+	top:50px;
+	*/
+}
+
+.topright {
+	display:block;
+	/*set the div in the top right corner*/
+	position:absolute;
+	color:#e0e0e0;
+	top:0px;
+	right:0px;
+	width:100%;
+	font-family: sans-serif;
+	text-align:right;
+	padding-right:10px;
+	/*give it some background and border
+	background:#000;
+	border:1px solid #eee;*/
+	z-index:10;
+}
+.topleft {
+	display:block;
+	/*set the div in the top right corner*/
+	position:absolute;
+	color:#e0e0e0;
+	top:0px;
+	left:0px;
+	width:100%;
+	font-family: sans-serif;
+	text-align:left;
+	padding-right:10px;
+	/*give it some background and border
+	background:#000;
+	border:1px solid #eee;*/
 }

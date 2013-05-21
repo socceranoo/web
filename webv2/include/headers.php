@@ -1,10 +1,13 @@
 <!-- COMMON -->
+<?$custom_css_file="http://gatoraze.tk/webv2/style/common.css";?>
 <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'></script>
 <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
 <script src='scripts/gen_validatorv4.js'></script>
 <script type="text/javascript" async"" src="http://www.google-analytics.com/ga.js"></script>
-<link rel="STYLESHEET" type="text/css" href="style/common.css" />
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<link rel="STYLESHEET" type="text/css" href="<?echo $custom_css_file;?>"/>
 <link href='http://fonts.googleapis.com/css?family=Quintessential' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Elsie+Swash+Caps' rel='stylesheet' type='text/css'>

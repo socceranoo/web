@@ -206,15 +206,13 @@ function ajaxinit()
 	$("#"+formarr[0]).submit(function(event) {
 		// prevent default posting of form
 		event.preventDefault();
-		val = document.getElementById(formarr[0]).onreset();
-		if (!val)
-			return;
 		var $form = $(this), $inputs = $form.find("input,input,input,input");
 		$inputs.attr("disabled", "disabled", "disabled", "disabled");
 		var uname = getid("lusername").value;
 		var pwd = getid("lpassword").value;
 		var hidden = getid("loginsubmit").value;
-		$.post("processform.php",{ formname: formarr[0], loginsubmit:hidden, username:uname, password:pwd},function(data){
+		alert(formarr[0]);
+		$.post("include/processform.php",{ formname: formarr[0], loginsubmit:hidden, username:uname, password:pwd},function(data){
 			process_ajax(formarr[0], data);
 			$inputs.removeAttr("disabled");
 			}, "json");
@@ -222,18 +220,15 @@ function ajaxinit()
 	$("#"+formarr[1]).submit(function(event) {
 		// prevent default posting of form
 		event.preventDefault();
-		val = document.getElementById(formarr[1]).onreset();
-		if (!val) {
-			return;
-		}
-		var $form = $(this), $inputs = $form.find("input","input","input","input","input","input","input");
-		$inputs.attr("disabled", "disabled", "disabled", "disabled", "disabled", "disabled", "disabled");
+		var $form = $(this), $inputs = $form.find("input","input","input","input","input","input", "input","input");
+		$inputs.attr("disabled", "disabled", "disabled", "disabled", "disabled", "disabled", "disabled", "disabled");
 		var uname = getid("rusername").value;
 		var fname = getid("rname").value;
-		var pwd = getid("rpassword_id").value;
+		var pwd = getid("rpassword").value;
 		var mail = getid("remail").value;
+		var fnickname = getid("rnickname").value;
 		var hidden = getid("registersubmit").value;
-		$.post("processform.php",{ formname:formarr[1], registersubmit:hidden, name:fname, username:uname, email:mail, password:pwd },function(data){
+		$.post("include/processform.php",{ formname:formarr[1], registersubmit:hidden, name:fname, username:uname, email:mail, password:pwd , nickname:fnickname},function(data){
 			process_ajax(formarr[1], data);
 			$inputs.removeAttr("disabled");
 			}, "json");
@@ -241,15 +236,11 @@ function ajaxinit()
 	$("#"+formarr[2]).submit(function(event) {
 		// prevent default posting of form
 		event.preventDefault();
-		val = document.getElementById(formarr[2]).onreset();
-		if (!val) {
-			return;
-		}
 		var $form = $(this), $inputs = $form.find("input","input","input");
 		$inputs.attr("disabled", "disabled", "disabled");
 		var mail = getid("email").value;
 		var hidden = getid("resetreqsubmit").value;
-		$.post("processform.php",{ formname:formarr[2], resetreqsubmit: hidden, email:mail },function(data){
+		$.post("include/processform.php",{ formname:formarr[2], resetreqsubmit: hidden, email:mail },function(data){
 			process_ajax(formarr[2], data);
 			$inputs.removeAttr("disabled");
 		}, "json");
@@ -270,10 +261,13 @@ function process_ajax(formname, data){
 	var errormsg= data.errormsg;
 	if (retval == "true") {
 		hideElem(formname);
+		if (formname == "login"){
+			setTimeout("window.location='"+url+"'",0);
+			return;
+		}
 		$("#success").html(info+url);
-		if (formname == "login")	
-			setTimeout("window.location='"+url+"'",1);
 	} else {
 		$("#"+formname+"error").html(errormsg);
 	}
 }
+

@@ -1,7 +1,7 @@
 <?PHP
-	require_once($_SERVER['DOCUMENT_ROOT']."RegForm/include/membersite_config.php");
+	require_once($_SERVER['DOCUMENT_ROOT']."webv2/include/membersite_config.php");
 	if(!$fgmembersite->CheckLogin()) {
-		$fgmembersite->RedirectToURL("../RegForm/login.php");
+		$fgmembersite->RedirectToURL("login.php");
 		exit;
 	}
 ?>
@@ -19,7 +19,7 @@
 		<img src="images/imac2.png" alt="">
 		<div class='macscreen' id="macscreen1">
 			<div class="divholder">
-			<?require_once("insertdivs.php");?>
+			<?require_once("include/insertdivs.php");?>
 			</div>
 		</div>
 	</div>

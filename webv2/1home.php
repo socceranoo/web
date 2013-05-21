@@ -18,7 +18,7 @@
 		<img src="images/imac2.png" alt="">
 		<div class='macscreen' id="macscreen1">
 			<div class="divholder">
-			<?require_once("insertdivs.php");?>
+			<?require_once("include/insertdivs.php");?>
 			</div>
 		</div>
 	</div>
