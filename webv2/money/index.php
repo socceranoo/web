@@ -13,6 +13,7 @@
 	<body id=moneybody class='money'>
 		<h2>Money Matters</h2>
 			<ul class='box operations' id='operations1'>
+				<h3>Actions</h3>
 				<li id=li_summary><a href="JavaScript:(void);">Summary</a></li>
 				<li id=li_add-friend><a href='JavaScript:(void);'>Add Friend(s)</a></li>
 				<li id=li_add-bill><a href='JavaScript:(void);'>Add Bill</a></li>

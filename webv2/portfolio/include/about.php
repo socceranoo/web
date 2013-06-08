@@ -1,61 +1,63 @@
-<div class=content >
+<div id=about-content class=content >
+	<span class="bl-icon bl-icon-close"></span>
+	<div class="cleardiv"></div>
 	<!--HALFCONTENTS -->	
 	<!--
 	<div class="halfcontent imgholder" id="img2"><img src="images/simpsons_construction.gif"/></div>
-	<div class="halfcontent" id="aboutme">
+	<div class="halfcontent right"><?require("include/lorem.php");?></div>
+	-->
+	<div class="halfcontent right" id="aboutme">
 		<h3>About me:</h3>
 		<ul class="randomfacts">
-			<li><p></p></li>
-			<li><p></p></li>
-			<li><p></p></li>
-			<li><p></p></li>
-			<li><p></p></li>
-			<li><p></p></li>
-			<li><p></p></li>
-			<li><p></p></li>
-			<li><p></p></li>
+			<li><p>die-hard soccer fan and I support ‘Real Madrid’ and 'Chelsea'</p></li>
+			<li><p>plays FIFA 13 online on my PS3.</p></li>
+			<li><p>Works out 5 days a week.</p></li>
+			<li><p>big music buff</p></li>
+			<li><p>owns a 650cc Kawasaki Ninja motorcycle</p></li>
+			<li><p>likes to wear full sleeve shirts and then roll it up <img src="../images/emoticons/png/32x32/Emoticon_14.png" id="http://www.websmileys.com/sm/cool/1155.gif"/></p></li>
+			<li><p>loves Christopher Nolan’s movies</p></li>
+			<li><p>a vegetarian who loves mexican, indian and italian food.</p></li>
 		</ul>
 	</div>
-	-->
 	<div class="halfcontent left"><div id="profilepic"></div></div>
-	<div class="halfcontent right"><?require("include/lorem.php");?></div>
 
-	<div class="pagediv"><p>“19 Jan 2038 at 3:14:07 AM”-End of the world according to Unix calendar <!--(2^32 seconds after January 1, 1970)--></p></div>
+	<div class="pagediv"><p>I had a dream... and there were 1's and 0's everywhere, and I think I saw a 2!</p></div>
 
-	<!--HALFCONTENTS -->	
-	<div class="halfcontent imgholder left" id="graph2"><img src="images/graph2.png"/></div>
-	<div class="halfcontent right"><?require("include/lorem.php");?></div>
-
-	<div class="pagediv"><p>"Just because we’re growing up, it doesn’t mean we’ve had enough"</p></div>
 
 	<!--HALFCONTENTS -->	
+	<div class="halfcontent right"><?require("include/lorem.php");?></div>
+	<div class="halfcontent left"><p>I am an aspiring front end developer who loves coding.</div>
+	<div class="pagediv"><p></p></div>
 	<div class="halfcontent left" id="facts">
 		<h3>Some additional facts about me:</h3>
 		<ul class="randomfacts">
-			<li><p>die-hard soccer fan and I support ‘Real Madrid’</p></li>
-			<li><p>plays FIFA 13 online on my PS3.</p></li>
-			<li><p>Works out 5 days a week.</p></li>
-			<li><p>big music buff, “what you hear is what you listen to” type..</p></li>
-			<li><p>owns a 650cc Kawasaki Ninja motorcycle</p></li>
-			<li><p>like to wear full hand shirts and then roll it up <img src="http://www.websmileys.com/sm/cool/1155.gif"/></p></li>
-			<li><p>loves Christopher Nolan’s movies</p></li>
-			<li><p>a vegetarian who loves mexican, indian and italian food.</p></li>
-			<li><p>became a fan of coffee recently</p></li>
+			<li><p>I just love coding</p></li>
+			<li><p>Expertise in C, C++, OOP</p></li>
+			<li><p>Software engineer @ Symantec Corp. with close to 3 years of experience</p></li>
+			<li><p>An aspiring full stack web developer with close to 1.5 years of web developement</p></li>
+			<li><p>Expertise in LAMP stack, HTML, CSS, JavaScript, jQuery</p></li>
+			<li><p></p></li>
+			<li><p>a Vim and a git buff</p></li>
+			<li><p></p></li>
 		</ul>
 	</div>
 	<div class="halfcontent imgholder right" id="bike"><img src="images/fifa13-2.png"/></div>
 
-	<div class="pagediv"><p>“An algorithm must be seen to be believed.”<br/>― Donald Knuth</p></div>
+	<div class="pagediv"><p>"Water is the most essential element of life, because without water, you can't make coffee"</p></div>
+	<!--HALFCONTENTS -->	
+	<div class="halfcontent left rgraph-content"><canvas id='uiskills'>[No Canvas Found]</canvas></div>
+	<div class="halfcontent right"><?require("include/lorem.php");?></div>
+	<div class="pagediv"><p>UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity ― Dennis Ritchie</p></div>
 
 	<!--HALFCONTENTS -->	
-	<div class="halfcontent imgholder left" id="graph1"><img src="images/graph.png"/></div>
+	<div class="halfcontent left rgraph-content"><canvas id='languages'>[No Canvas Found]</canvas></div>
 	<div class="halfcontent right"><?require("include/lorem.php");?></div>
 
 	<div class="pagediv"><p>"Just because we’re growing up, it doesn’t mean we’ve had enough"</p></div>
 
 	<!--HALFCONTENTS -->	
 	<div class="halfcontent right"><?require("include/lorem.php");?></div>
-	<div class="halfcontent imgholder left" id="graph3"><img src="images/graph3.png"/></div>
+	<div class="halfcontent left rgraph-content"><canvas id='strengths'>[No Canvas Found]</canvas></div>
 
-	<div class="pagediv"></div>
+	<div class="cleardiv"></div>
 </div>

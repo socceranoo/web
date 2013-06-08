@@ -8,11 +8,12 @@ body.gameroom
 {
 	width:100%;
 	height:800px;
-	background:#000;
-	background-image:url("../images/blueback.jpg");
+	background: #3072FF;
 	background-size:cover;
 	overflow:hidden;
+	background-image:url("../images/redwallpaper.png");
 	/*
+	background-image:url("../images/blueback.jpg");
 	background-image:url("../../portfolio/images/bwfifa13.png");
 	-webkit-transition:background .5s ease-in-out;
 	-moz-transition:background 1s ease-in-out;
@@ -156,10 +157,10 @@ li.playername {
 	*/
 }
 .team1 {
-	border:2px solid yellow;
+	border:6px solid yellow;
 }
 .team2 {
-	border:2px solid red;
+	border:6px solid blue;
 }
 
 #li_pl0 { position:absolute; bottom:-60px; left:50%;margin-left:-40px;background-position:0px 0px;}

@@ -1,16 +1,18 @@
+/*
+*/
 ::-webkit-scrollbar {
     width: 10px;
     height:10px;
 }
  
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.6); 
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 1);
     border-radius: 3px;
 }
  
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1); 
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 1);
 }
 ::selection {
 	background: #63B7BB;

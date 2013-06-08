@@ -42,26 +42,28 @@
 	left: 0;
 	background: #FF2727;
 	background: #3072FF;
+	background: #6C97F1;
 }
 
 .bl-main > section:nth-child(2) {
 	top: 0;
 	left: 50%;
 	background: #F8F809;
+	background: #FFFF86;
 }
 
 .bl-main > section:nth-child(3) {
 	top: 50%;
 	left: 0;
-	background: #00E4E4;
-	background: #48FF25;
+	background: #7BEBB1;
+
 }
 
 .bl-main > section:nth-child(4) {
 	top: 50%;
 	left: 50%;
-	background: #A430FF;
-	background: #FF5412;
+	background: #FF6428;
+	background: #FF7641;
 }
 /* Transition classes and properties */
 /* Separated for a better overview and control */
@@ -72,24 +74,31 @@
 	top: 0;
 	left: 0;
 }
+/*
 .bl-main > section:first-child.bl-expand {
 	background: #FF2727;
 	background: #3072FF;
+	background: #6C97F1;
 }
 
 .bl-main > section:nth-child(2).bl-expand {
 	background: #F8F809;
+	background: #FFFF30;
+	background: #FFFF86;
 }
 
 .bl-main > section:nth-child(3).bl-expand {
 	background: #00E4E4;
 	background: #48FF25;
+	background: #06F77A;
 }
 
 .bl-main > section:nth-child(4).bl-expand {
 	background: #A430FF;
 	background: #FF5412;
+	background: #FF6428;
 }
+*/
 .bl-main > section.bl-expand-top {
 	z-index: 100;
 }
@@ -191,16 +200,26 @@
 .bl-box h2 {
 	text-align: center;
 	margin: 0 auto;
-	font-size: 1.0em;
+	font-size: 0.9em;
 	text-transform: uppercase;
+	font-weight:bold;
 	font-family: 'Titillium Web', sans-serif;
+	color:#000;
+	z-index:100;
 }
 
 .bl-icon {
-	width: 40%;
+	position: relative;
+	/*
+	top: 121px;
+	left: 446px;
+	*/
+	padding-top: 10px;
+	width: 65px;
+	height: 56px;
 	text-align: center;
 	margin: 0 auto;
-	font-size: 1.8em;
+	font-size: 1.7em;
 	font-family: 'icomoon';
 	font-family: 'Metrize-Icons';
 	speak: none;
@@ -211,6 +230,14 @@
 	line-height: 1;
 	cursor: pointer;
 	-webkit-font-smoothing: antialiased;
+	color:#000;
+	z-index:10;
+	border-radius:50px;
+	/*
+	color:#FFF;
+	background:#000;
+	border:2px solid #000;
+	*/
 }
 
 .bl-icon:before {
@@ -221,15 +248,21 @@
 
 .bl-icon-close {
 	float:right;
-	width:30px;
-	font-size: 1em;
-	position: absolute;
-	top: 5px;
-	right: 5px;
+	width:40px;
+	height: 40px;
+	font-size: 20px;
+	position: relative;
+	padding-top: 0px;
+	top: -20px;
+	right: -20px;
 	cursor: pointer;
 	z-index: 100;
 	opacity: 0;
+	background:red;
+	color:#FFF;
+	font-family: 'icomoon';
 	pointer-events: none;
+	border:0px solid #000;
 }
 
 .bl-icon-about:before {
@@ -253,8 +286,8 @@
 }
 
 .bl-icon-close:before {
-	content: "\e005";
 	content: "\e0eb";
+	content: "\e005";
 }
 
 .bl-icon-facebook:before {
@@ -290,6 +323,7 @@
 	line-height: 1;
 	cursor: pointer;
 	-webkit-font-smoothing: antialiased;
+	color:#fff;
 
 }
 .bl-social-icon a{
@@ -297,15 +331,18 @@
 }
 .bl-content {
 	width: 90%;
-	height: 95%;
+	height: 100%;
 	opacity: 0;
 	pointer-events: none;
 	position: absolute;
-	top: 2.5%;
+	top: 0%;
 	left: 5%;
 	margin-left:-1%;
+	overflow-y: scroll;
+	/*
 	overflow-y: auto;
 	overflow-x: hidden;
+	*/
 	-webkit-overflow-scrolling: touch;
 }
 

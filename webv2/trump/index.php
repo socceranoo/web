@@ -7,6 +7,7 @@
 		<?require_once("./include/card.php");?>
 	</head>
 	<body class='gameroom' id='gameroombody'>
+	<h2>Welcome to the Gameroom</h2>
 	<div class="chatbox">
 		<textarea class="chat" id="chat" disabled></textarea>
 		<input type="input" class="msg" id="msg" onkeypress="onkey(event)" disabled/>
@@ -14,7 +15,6 @@
 	<div id=cardholder class=carddiv>
 		<ul id=mycards>
 			<!--
-	<h2>Welcome to the Gameroom</h2>
 			<li class=card id=li1></li>
 			<li class=card id=li2></li>
 			<li class=card id=li3></li>

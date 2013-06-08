@@ -210,7 +210,7 @@ var card_index_for_bg_position = function (pos_str) {
 }
 function process(msg)
 {
-	log(msg);
+	//log(msg);
 	var match = /CARDS:(.*)/i.exec(msg);
 	if(match && match[1]) {
 		str = match[1].trim();

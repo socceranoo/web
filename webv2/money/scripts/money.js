@@ -19,8 +19,8 @@ $(document).ready(function() {
 	$("#li_add-payment").click(show_ap_form);
 	$('.close').click(close_payer_payee);
 	$(".userclick").click(view_user_transaction_ajax);
-	//summary_ajax();
-	test_function();
+	summary_ajax();
+	//test_function();
 });
 var test_function = function() {
 	/*

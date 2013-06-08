@@ -1,5 +1,7 @@
 <div class="content">
-	<div class="fullcontent"><img src="images/bwfifa13-1.png"/></div>
+	<span class="bl-icon bl-icon-close"></span>
+	<h2>Get in touch</h2>
+	<div class="fullcontent"><img class='contact-img' src="images/bwfifa13-1.png"/></div>
 	<form id="contact-form">
 		<legend>Send me an email</legend><br/>
 		<fieldset >
@@ -17,5 +19,5 @@
 			</div>
 		</fieldset>
 	</form>
-	<div class="pagediv" id="msgsent"><p>Your message has been sent<br/><p style="cursor:pointer;" onclick="another_message();">Send another message</p></p></div>
+	<div class="pagediv" id="msgsent"><p>Your message has been sent<br/><p id=another-message style="cursor:pointer;">Send another message</p></p></div>
 </div>
