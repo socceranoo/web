@@ -4,12 +4,15 @@
 	$errormsg="";
 	$url = "";
 	$info = "";
-	function login(){
+	function login($page){
 		global $fgmembersite;
 		global $retval, $errormsg, $url, $info;
 		if(isset($_POST['loginsubmit'])) {
 			if($fgmembersite->Login()) {
-				$url = "1login-home.php";
+				if ($page != "")
+					$url = $page;
+				else 
+					$url = "home.php";
 				$info = "You have successfully logged in";
 				//$fgmembersite->RedirectToURL("login-home.php");
 			}
@@ -48,13 +51,29 @@
 			}
 		}
 	}
+	function changepwd() {
+		global $fgmembersite;
+		global $retval, $errormsg, $url, $info;
+		if(isset($_POST['changepwdsubmit'])) {
+			if($fgmembersite->ChangePassword()) {
+				$url = "l";
+				$info = "Your Password has been changed successfully.";
+			}
+			else {
+				$errormsg = $fgmembersite->GetErrorMessage();
+				$retval = "false";
+			}
+		}
+	}
 	function filemain() {
 		if ($_POST['formname'] == "login")
-			login();
+			login($_POST['page']);
 		else if ($_POST['formname'] == "register")
 			register();
 		else if ($_POST['formname'] == "resetreq")
 			resetpwd();
+		else if ($_POST['formname'] == "changepwd")
+			changepwd();
 	
 	}
 filemain();

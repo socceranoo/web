@@ -41,7 +41,7 @@ class FGMembersite
     //-----Initialization -------
     function FGMembersite()
     {
-        $this->sitename = 'socceranoo.github.com';
+        $this->sitename = 'gatoraze.com';
         $this->rand_key = '0iQx5oBk66oVZep';
     }
     
@@ -104,7 +104,29 @@ class FGMembersite
         
         return true;
     }
-
+	function ConfirmUser2($code)
+    {
+        if(empty($code)) {
+            $this->HandleError("Confirm code is empty.");
+            return false;
+		}
+		
+		if (strlen($code)<=10) {
+            $this->HandleError("Confirmation code is invalid");
+            return false;
+        }
+        $user_rec = array();
+        if(!$this->UpdateDBRecForConfirmation($user_rec, $code))
+        {
+            return false;
+        }
+        
+        $this->SendUserWelcomeEmail($user_rec);
+        
+        $this->SendAdminIntimationOnRegComplete($user_rec);
+        
+        return true;
+    }
     function ConfirmUser()
     {
         if(empty($_GET['code'])||strlen($_GET['code'])<=10)
@@ -113,7 +135,7 @@ class FGMembersite
             return false;
         }
         $user_rec = array();
-        if(!$this->UpdateDBRecForConfirmation($user_rec))
+        if(!$this->UpdateDBRecForConfirmation($user_rec, $_GET['code']))
         {
             return false;
         }
@@ -199,6 +221,8 @@ class FGMembersite
     
     function UserName()
     {
+		$username = $_SESSION['username'];
+		system("echo 'username function $username' >> /tmp/login");
         return isset($_SESSION['username'])?$_SESSION['username']:'';
     }
 
@@ -403,11 +427,13 @@ class FGMembersite
     
     function CheckLoginInDB($username,$password)
     {
+		$final_username = $username;
         if(!$this->DBLogin())
         {
             $this->HandleError("Database login failed!");
             return false;
         }          
+		system("echo 'before $username' >> /tmp/login");
         $username = $this->SanitizeForSQL($username);
         $pwdmd5 = md5($password);
         $qry = "Select name, email from $this->tablename where BINARY username='$username' and password='$pwdmd5' and confirmcode='y'";
@@ -422,27 +448,29 @@ class FGMembersite
         
         $row = mysql_fetch_assoc($result);
         
+		system("echo 'after $username' >> /tmp/login");
         
         $_SESSION['name_of_user']  = $row['name'];
         $_SESSION['email_of_user'] = $row['email'];
-        $_SESSION['username'] = $username;
+        $_SESSION['username'] = $final_username;
+		system("echo 'Session $final_username' >> /tmp/login");
         
         return true;
     }
     
-    function UpdateDBRecForConfirmation(&$user_rec)
+    function UpdateDBRecForConfirmation(&$user_rec, $code)
     {
         if(!$this->DBLogin())
         {
             $this->HandleError("Database login failed!");
             return false;
         }   
-        $confirmcode = $this->SanitizeForSQL($_GET['code']);
+        $confirmcode = $this->SanitizeForSQL($code);
         
         $result = mysql_query("Select name, email from $this->tablename where confirmcode='$confirmcode'",$this->connection);   
         if(!$result || mysql_num_rows($result) <= 0)
         {
-            $this->HandleError("Wrong confirm code.");
+            $this->HandleError("Confirmation code is invalid");
             return false;
         }
         $row = mysql_fetch_assoc($result);
@@ -525,7 +553,9 @@ class FGMembersite
         "\r\n".
         "Regards,\r\n".
         "Webmaster\r\n".
-        $this->sitename;
+
+        $this->sitename. "\n<img src='cid:logo'/>";
+		$mailer->AddEmbeddedImage('/images/emblemv5.png', 'logo');
 
         if(!$mailer->Send())
         {
@@ -581,7 +611,7 @@ class FGMembersite
 
         $mailer->From = $this->GetFromAddress();
         
-        $link = $this->GetAbsoluteURLFolder().
+		$link = $this->GetAbsoluteURLFolder().
                 '/resetpwd.php?email='.
                 urlencode($email).'&code='.
                 urlencode($this->GetResetPasswordCode($email));
@@ -699,7 +729,7 @@ class FGMembersite
         "Regards,\r\n".
         "Webmaster\r\n".
         $this->sitename."\r\n".
-	"It's not who you are underneath, it is what you do that defines you\r\n";
+		"It's not who you are underneath, it is what you do that defines you\r\n";
 
         if(!$mailer->Send())
         {
@@ -711,7 +741,8 @@ class FGMembersite
     function GetAbsoluteURLFolder()
     {
         $scriptFolder = (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on')) ? 'https://' : 'http://';
-        $scriptFolder .= $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']);
+        $scriptFolder .= $_SERVER['HTTP_HOST'];
+        //$scriptFolder .= $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']);
         return $scriptFolder;
     }
     
@@ -766,7 +797,7 @@ class FGMembersite
         
         if(!$this->IsFieldUnique($formvars,'username'))
         {
-            $this->HandleError("This UserName is already used. Please try another username");
+            $this->HandleError("This username is already used. Please try another username");
             return false;
         }        
         if(!$this->InsertIntoDB($formvars))

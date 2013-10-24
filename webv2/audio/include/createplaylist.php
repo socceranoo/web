@@ -10,12 +10,12 @@
 		$listname =$_POST['playlist'];
 		$songarr = $_POST['songarr']; 
 		if (playlist_already_exists($listname, $user)){
-			$info .="playList already exists";
+			$info .="Playlist already exists";
 			$retval="false";
 			return;
 		}
 		$playlist_id = get_playlist_id($listname, $user);
-		$info .="playList created with id $playlist_id\n";
+		$info .="Playlist created with id $playlist_id\n";
 		tag_songs($songarr, $playlist_id);
 	}
 	function playlist_already_exists($playlist, $uname) {

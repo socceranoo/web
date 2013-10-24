@@ -32,7 +32,7 @@ div.jp-audio {
 	margin-left:-260px;
 	position: absolute;
 	left:50%;
-	bottom:10px;
+	bottom:0px;
 }
 div.jp-video-270p {
 	width:480px;
@@ -343,7 +343,7 @@ div.jp-audio div.jp-type-single div.jp-duration {
 }
 div.jp-audio div.jp-type-playlist div.jp-current-time,
 div.jp-audio div.jp-type-playlist div.jp-duration {
-	top:34px;
+	top:12px;
 	left:164px;
 	width:212px;
 }
@@ -579,3 +579,38 @@ div.jp-video-360p div.jp-jplayer {
 div.jp-jplayer {
 	background-color: #000000;
 }
+
+@media (max-width: 767px) {
+
+	div.jp-audio {
+		width: 320px;
+		margin-left: -160px;
+		position: absolute;
+		left: 50%;
+		bottom: 0px;
+	}
+	div.jp-playlist ul {
+		max-height: 150px;
+	}
+	div.jp-audio div.jp-type-playlist div.jp-progress {
+		width: 70px;
+	}
+	div.jp-volume-bar {
+		width: 34px;
+	}
+	div.jp-audio div.jp-type-playlist div.jp-volume-bar {
+		left: 270px;
+	}
+	div.jp-audio .jp-type-playlist ul.jp-toggles {
+		left: 160px;
+	}
+	div.jp-audio div.jp-type-playlist div.jp-current-time, div.jp-audio div.jp-type-playlist div.jp-duration {
+		left: 164px;
+		width: 70px;
+		font-size: 10px;
+	}
+	div.jp-audio div.jp-type-playlist a.jp-mute, div.jp-audio div.jp-type-playlist a.jp-unmute {
+		left: 247px;
+	}
+}
+

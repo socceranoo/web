@@ -1,0 +1,135 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.melbourne-regular {
+  font-family: 'melboune-regular';
+}
+.background-turquoise {
+  background-color: #1abc9c !important;
+}
+.background-greenSea {
+  background-color: #16a085 !important;
+}
+.background-emerald {
+  background-color: #2ecc71 !important;
+}
+.background-nephritis {
+  background-color: #27ae60 !important;
+}
+.background-peterRiver {
+  background-color: #3498db !important;
+}
+.background-belizeHole {
+  background-color: #2980b9 !important;
+}
+.background-amethyst {
+  background-color: #9b59b6 !important;
+}
+.background-wisteria {
+  background-color: #8e44ad !important;
+}
+.background-wetAsphalt {
+  background-color: #34495e !important;
+}
+.background-midnightBlue {
+  background-color: #2c3e50 !important;
+}
+.background-orange {
+  background-color: #f89406 !important;
+}
+.background-sunFlower {
+  background-color: #f1c40f !important;
+}
+.background-carrot {
+  background-color: #e67e22 !important;
+}
+.background-pumpkin {
+  background-color: #d35400 !important;
+}
+.background-alizarin {
+  background-color: #e74c3c !important;
+}
+.background-pomegranate {
+  background-color: #c0392b !important;
+}
+.background-clouds {
+  background-color: #ecf0f1 !important;
+}
+.background-silver {
+  background-color: #bdc3c7 !important;
+}
+.background-concrete {
+  background-color: #95a5a6 !important;
+}
+.background-asbestos {
+  background-color: #7f8c8d !important;
+}
+.background-transparent {
+  background: transparent !important ;
+}
+body {
+  background: url('../images/gray.jpg') repeat;
+}
+.body-inverse {
+  color: #ddd;
+}
+#search-query {
+  width: 70%;
+}
+#search-submit {
+  width: 20%;
+}
+.feed {
+  height: 300px;
+  overflow: auto;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.info-modal {
+  width: 80%;
+  margin: 5px auto;
+  height: 620px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 3% !important;
+  left: 10%;
+}
+.common-title {
+  cursor: pointer;
+  color: #3498db;
+}
+.common-title:hover {
+  text-decoration: underline;
+}
+.margin-auto {
+  margin: 2px auto !important;
+}
+.thumbnail {
+  max-width: 100px;
+}

@@ -1,0 +1,254 @@
+a:link {
+	color:orange;
+	text-decoration:none;
+}
+a:visited {
+	color:orange;
+	text-decoration:none;
+}
+a:active {
+	color:green;
+	text-decoration:none;
+}
+body.money {
+	margin:0; padding:0;
+	background-image:url('../../images/blueback.jpg');
+}
+.moneycontent {
+	width:1000px;
+	height:600px;
+	overflow:hidden;
+	margin:0px auto;
+	position:absolute;
+	top:80px;
+	left:50%;
+	margin-left:-500px;
+}
+
+.current-content {
+	width:80%;
+	height:100%;
+	overflow:auto;
+	margin:0px auto;
+}
+.money h2, .money h3,  .money h1, .money h4 , .money h5{
+	font-family: 'Titillium Web', sans-serif;
+	color:orange;
+	font-size:15px;
+	z-index:50;
+}
+.money h1 {
+	text-align:center;
+}
+.money h2 {
+	color:orange;
+	font-size:38px;
+	margin:0px 0px 0px 0px;
+	text-align:center;
+}
+.money h3 { 
+	color:#f7f7f7;
+	font-size:20px;
+	margin:5px 0px 0px 0px;
+	text-align:center;
+}
+.money h4 {
+	color:#f7f7f7;
+	font-size:15px;
+	margin:5px 0px 0px 0px;
+	text-align:center;
+}
+.box {
+	width:200px;
+	border:0px solid yellow;
+}
+
+ul.operations
+{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	margin:10px 0px 10px 0px;
+	/*
+	float:left;
+	background-image:url("../../images/bck.jpg");
+	*/
+}
+ul.operations li {
+	font-family: 'Titillium Web', sans-serif;
+	color:#303030;
+}
+
+ul.operations li a:link, ul.operations li a:visited
+{
+	display:block;
+	width:100%;
+	font-weight:bold;
+	color:cyan;
+	/*
+	background-color:#c8bf21;
+	*/
+	padding:4px;
+	text-decoration:none;
+}
+ul.operations li a:hover, ul.operations li a:active
+{
+	color:#F0f0f0;
+	background-color:#000000;
+}
+ul#friendbox {
+	height:500px;
+	overflow-y:auto;
+	position:absolute;
+	right:0px;
+	top:70px;
+	z-index:200;
+}
+/*
+ul#operations2 {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:500px;
+}
+ul#operations2 li {
+	float:left;
+	padding-right:4px;
+}
+*/
+#gradient-style
+{
+	font-family: 'Titillium Web', sans-serif;
+	color:#f7f7f7;
+	font-size: 1.0em;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10px;
+	width: 99%;
+	text-align: left;
+	border-collapse: collapse;
+}
+#gradient-style a:link {
+        color:orange;
+        text-decoration:none;
+}
+#gradient-style a:visited {
+        color:cyan;
+        text-decoration:none;
+}
+
+#gradient-style a:hover {
+	color: #F5FF00;
+	text-decoration:none;
+}
+#gradient-style th
+{
+	font-size: 19px;
+	font-weight: normal;
+	padding: 8px;
+	/*
+	border-top: 2px solid #d3ddff;
+	border-bottom: 1px solid #fff;
+	*/
+	background: #b9c9fe url('../../images/table-images/gradhead.png') repeat-x;
+	color: #039;
+}
+
+#gradient-style td
+{
+	padding: 4px; 
+	color: #f0f0f0;
+	font-size: 16px;
+	/*
+	border-bottom: 1px solid #fff;
+	border-top: 1px solid #fff;
+	background: #e8edff url('../../images/table-images/gradback.png') repeat-x;
+	*/
+}
+
+#gradient-style tfoot tr td
+{
+	background: #e8edff;
+	font-size: 12px;
+	color: #99c;
+}
+
+#gradient-style tbody tr:hover td {
+	/*
+	background: black;
+	background: #d0dafd url('../../images/table-images/gradhover.png') repeat-x;
+	*/
+	color: #F5FF00;
+}
+
+.hidden {
+	display:none;
+}
+
+.money fieldset {
+	width:400px;
+	border:0px solid yellow;
+}
+.money ul.dummy {
+	list-style-position:outside;
+	list-style-type: none;
+	margin:10px 5px 20px -40px;
+	color:#e7e7e7;
+	/*
+	list-style-image: url(../images/rm.png);
+	*/
+}
+.money ul.dummy li{
+	font-family: 'Titillium Web', sans-serif;
+	color:#e7e7e7;
+	font-size:19px;
+	font-family:10px;
+	text-align:left;
+	margin-bottom:5px;
+	margin-top:-15px;
+	clear:both;
+}
+
+.money input.amount {
+	width:70px;
+	float:right;
+	height:20px;
+	border-radius:0px;
+}
+
+.short_explanation {
+	font-size:0.6em;
+}
+
+#gradient-style td.disp_event {
+}
+
+#gradient-style td.disp_desc {
+	font-size:13px;
+}
+
+#gradient-style td.disp_date {
+	font-size:10px;
+}
+#gradient-style td.disp_paid {
+	font-size:14px;
+}
+#gradient-style td.disp_part {
+	font-size:14px;
+}
+#gradient-style td.disp_amount {
+	font-size:20px;
+}
+
+#gradient-style td.owesyou, h4.owesyou{
+	color:#49FF02;
+	font-weight:bold;
+}
+#gradient-style td.youowe, h4.youowe{
+	color:#F86F55;
+	font-weight:bold;
+}
+#gradient-style td.even {
+	color:black;
+}

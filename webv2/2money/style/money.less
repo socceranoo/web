@@ -1,0 +1,356 @@
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+	html {
+		min-height: 100%;
+	}
+	body {
+		font-family:@proximaFont;
+		font-size: 17px;
+		line-height: 23px;
+		letter-spacing: .75px;
+	}
+	body.money {
+		height: 90%;
+		.horizontalGradient(@turquoise, @peterRiver);
+		background-size:cover;
+		background-repeat:repeat-x;
+	}
+	.border-opposite-left {
+		.border-opposite-left-radius(100px);
+	}
+
+	.border-opposite-right {
+		.border-opposite-right-radius(100px);
+	}
+	.family-rouge {
+		font-family:'Rouge Script', cursive;
+	}
+	.arousel-control {
+		font-family:@sansFontFamily;
+		font-size: 90px;
+		border:0;
+		color:#333;
+		background:transparent;
+	}
+	.carousel-control {
+		font-family:@sansFontFamily;
+		font-size: 90px;
+		border:0;
+		color:#333;
+		background:transparent;
+	}
+
+	.carousel-inner > .item > img{
+		display:inline;
+	}
+
+	.container p {
+		margin: 10px;
+	}
+	
+	.about-pic {
+		margin-top:40px;
+	}
+	.ngdiv {
+		display:none;
+	}
+	#summary {
+		visibility:hidden;
+		clear:both;
+		margin-top:30px;
+	}
+	legend {
+		font-size:30px;
+	}
+	/*
+		display:none;
+	.progress {
+		height:40px;
+		margin:10px 0;
+	}
+	.progress .bar {
+		opacity:0;
+		margin:10px 0;
+		height:100%;
+		width:80%;
+	}
+	.progress .bar-html {
+		width:95%;
+	}
+	.progress .bar-php {
+		width:80%;
+	}
+	.progress .bar-javascript {
+		width:85%;
+	}
+	.progress .bar-jquery {
+		width:75%;
+	}
+	.progress .bar-photoshop {
+		width:70%;
+	}
+	*/
+	.owesyou {
+		color : @nephritis;
+		font-weight:bold;
+	}
+	.youowe {
+		color : @alizarin;
+		font-weight:bold;
+	}
+	table.gradient-style th, table.gradient-style td {
+		padding:20px;
+	}
+	table.gradient-style tr {
+      margin: 5px 0px 5px 0px; /* Space out the Bootstrap <hr> more */
+	}
+	.transaction-table {
+		max-height:800px;
+		overflow:auto;
+	}
+	.ind-amount {
+		width:75px;
+	}
+	.carousel-indicators .active {
+		background-color: @green;
+	}
+	.carousel-indicators li{
+		background-color: #000;
+		height: 10px;
+		width: 20px;
+		cursor:pointer;
+	}
+	.waypoint-appear {
+		opacity:0;
+	}
+	.details-button {
+	}
+	.bar {
+		opacity:0;
+		margin:10px 0;
+		height:40px;
+		width:80%;
+	}
+	.bar-html {
+		.gradientRadialBar(@sunFlower, @carrot);
+		width:95%;
+	}
+	.bar-php {
+		.gradientRadialBar(@peterRiver, @emerald);
+		width:80%;
+	}
+	.bar-javascript {
+		.gradientRadialBar(@amethyst, @belizeHole);
+		width:85%;
+	}
+	.bar-jquery {
+		.gradientRadialBar(@concrete, @wetAsphalt);
+		width:75%;
+	}
+	.bar-photoshop {
+		.gradientRadialBar(@pumpkin, @pomegranate);
+		width:70%;
+	}
+	.facts-ul li {
+		opacity:0;
+	}
+	.lead {
+		font-size:45px;
+		line-height:50px;
+		font-family:'Rouge Script', cursive;
+	}
+	.waypoint-div {
+		opacity:0;
+		/*
+		.transition(opacity 1s ease);
+		*/
+	}
+	#snowkick-img {
+		/*
+		width:720px;
+		height:540px;
+		*/
+		max-width:720px;
+		background-image:url("../images/snowkick/snowkick.jpg");
+	}
+	#heading-start {
+		.scale(2);
+	}
+	.modal.fade.in {
+		position:fixed;
+		top:10%;
+	}
+	.modal-footer .btn{
+		float:none;
+	}
+	/* CUSTOMIZE THE NAVBAR
+		background-position: -0px 0px;
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin-top:20px;
+		z-index: 10;
+    }
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+		border: 0;
+		-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+		-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+		box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+		padding: 25px 20px 16px; /* Increase vertical padding to match navbar links */
+		color:#ddd;
+		font-size:40px;
+		text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+		letter-spacing:1.5px;
+    }
+    .navbar .brand img{
+		float:left;
+		width:34px;
+		height:40px;
+		margin-top:-10px;
+	}
+	.navbar .nav {
+		float:right;
+	}
+	.navbar .nav, .navbar .nav > li {
+		*display:inline; 
+		*zoom:1;
+		vertical-align: top;
+	}
+	.navbar-inner {
+		text-align:center;
+	}
+	.navbar .nav > li {
+		padding-top: 10px;
+	}
+	.navbar .logo-holder {
+		float:right;
+	}
+	.navbar .logo-holder > li {
+		float:left;
+		padding-top: 0px;
+	}
+	/* Navbar links: increase padding for taller navbar */
+	.navbar .nav > li > a {
+		padding: 15px 15px;
+		font-size:16px;
+	}
+
+	/* Offset the responsive button for proper vertical alignment */
+	.navbar .btn-navbar {
+		margin-top: 10px;
+		margin-right: 40px;
+	}
+
+	@ft-topmargin : 30px;
+    .featurette {
+		padding-top:@ft-topmargin;
+    }
+	.featurette-image {
+		margin-top:-@ft-topmargin;
+	}
+	.featurette-heading {
+		text-align:left;
+	}
+    .featurette-divider {
+      margin: 80px 0px 20px 0px; /* Space out the Bootstrap <hr> more */
+    }
+
+    .featurette-divider3 {
+      margin: 20px 0px 20px 0px; /* Space out the Bootstrap <hr> more */
+	  color:#333;
+	  clear:both;
+    }
+    .featurette-divider4 {
+      margin: 5px 0px 5px 0px; /* Space out the Bootstrap <hr> more */
+	  clear:both;
+    }
+    .featurette-divider2 {
+      margin: 40px 0px; /* Space out the Bootstrap <hr> more */
+    }
+	.container .row .section {
+		min-height:45%;
+		max-height:45%;
+	}
+
+	.lead1 {
+		margin-bottom: 20px;
+		font-size: 22.5px;
+		font-weight: 200;
+		line-height: 30px;
+	}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (max-width: 979px) {
+	.navbar-fixed-top {
+		position: static;
+	}
+	.navbar .nav, .navbar .nav > li {
+		float:none;
+		*display:inline; 
+		*zoom:1;
+		vertical-align: top;
+	}
+	.navbar .logo-holder {
+		display:none;
+	}
+	.navbar-inner {
+		text-align:center;
+	}
+	.navbar .brand {
+		padding: 15px 20px 16px; /* Increase vertical padding to match navbar links */
+		font-size:29px;
+	}
+	.navbar .brand img{
+		padding: 15px 10px 0px; /* Increase vertical padding to match navbar links */
+		width:30px;
+		height:36px;
+		margin-top:-20px;
+	}
+	.navbar-inner {
+		border-radius: 0;
+		margin: -20px 0;
+	}
+    .carousel-inner img{
+		width:150px;
+		height:150px;
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar-inner {
+		margin: -20px;
+		text-align:center;
+	}
+	.navbar .nav > li {
+		padding-top: 0px;
+	}
+	.navbar .nav, .navbar .nav > li {
+		float:none;
+		*display:inline; 
+		*zoom:1;
+		vertical-align: top;
+	}
+	.navbar .brand {
+		padding: 15px 0px 0px; /* Increase vertical padding to match navbar links */
+		font-size:23px;
+	}
+	.navbar .brand img{
+		padding: 15px 50px 15px; /* Increase vertical padding to match navbar links */
+		width:24px;
+		height:30px;
+		margin-top:-20px;
+	}
+}

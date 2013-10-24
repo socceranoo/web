@@ -1,0 +1,62 @@
+@import "../../bootstrap/less/variables.less";
+@import "../../bootstrap/less/mixins.less";
+
+@mainWidth : 400px;
+@mainBorderWidth : 4px;
+@smallBorderWidth : 1px;
+@mainHeight : @mainWidth;
+@number : 4;
+body {
+	background:@sunFlower;
+}
+.paused{
+	background-image:url('../images/paused.jpg');
+	z-index:100;
+}
+.main-box {
+	@width:@mainWidth + (@number * 2 * @smallBorderWidth);
+	width:@width;
+	height:@width;
+	border: @mainBorderWidth solid black;
+	margin:10px auto;
+}
+.main-box2 {
+	width:100%;
+	margin:10px auto;
+}
+.main-box3 {
+	@width:@mainWidth + (@number * 2 * @smallBorderWidth);
+	width:@width;
+	margin:10px auto;
+}
+
+.small-box {
+	z-index:10;
+	width:(@mainWidth/@number);
+	height:(@mainHeight/@number);
+	float:left;
+	line-height:(@mainWidth/@number);
+	font-size:@mainWidth/10;
+	color:#000;
+	text-align:center;
+	cursor:pointer;
+	/*
+	.transition(all 0.8s linear);
+	*/
+}
+
+#image {
+	width:35%;
+}
+
+.img-thumbnail {
+	max-width:100px;
+	vertical-align: top;
+}
+
+.wrong-border {
+	border: @smallBorderWidth solid @black;
+}
+.right-border {
+	border: @smallBorderWidth solid @black;
+}

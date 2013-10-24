@@ -1,0 +1,244 @@
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+	body {
+		font-family:@sansFontFamily;
+		/*
+		*/
+		font-size: 17px;
+		line-height: 23px;
+		letter-spacing: .75px;
+	}
+	.background-white{
+		background-color:@white;
+	}
+	.border-opposite-left {
+		.border-opposite-left-radius(100px);
+	}
+
+	.border-opposite-right {
+		.border-opposite-right-radius(100px);
+	}
+	.family-rouge {
+		font-family:'Rouge Script', cursive;
+	}
+
+	.carousel-control {
+		font-family:@sansFontFamily;
+		font-size: 90px;
+		border:0;
+		color:#333;
+		background:transparent;
+	}
+
+	.carousel-inner > .item > img{
+		display:inline;
+	}
+
+	.alveo-container{
+		background-color: #FAFAFA;
+	}
+	.container p {
+		margin: 10px;
+	}
+	
+	.about-pic {
+		margin-top:40px;
+	}
+	.carousel-indicators .active {
+		background-color: @green;
+	}
+	.carousel-indicators li{
+		background-color: #000;
+	}
+	.lead {
+		font-size:19px;
+		line-height:30px;
+	}
+	.waypoint-div {
+		opacity:0;
+		/*
+		.transition(opacity 1s ease);
+		*/
+	}
+	.modal.fade.in {
+		position:fixed;
+		top:5%;
+	}
+	.modal-footer .btn{
+		float:none;
+	}
+	.modal-header img{
+		max-width:200px;	
+		max-height:200px;	
+	}
+	/* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin-top:20px;
+		margin-bottom:20px;
+		z-index: 10;
+    }
+    .navbar{
+	}
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+		border: 0;
+		background: url(../images/bg2.jpg);
+		/*
+		-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+		-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+		box-shadow: 0 2px 10px rgba(0,0,0,.25);
+		*/
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+		padding: 5px 20px 6px; /* Increase vertical padding to match navbar links */
+		color:#ddd;
+		font-size:40px;
+		text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+		letter-spacing:1.5px;
+		font-family:'Rouge Script', cursive;
+    }
+    .navbar .brand img{
+		float:left;
+		width:352px;
+		height:65px;
+		margin-top:-10px;
+	}
+	.navbar .nav {
+		float:right;
+	}
+	.navbar .nav, .navbar .nav > li {
+		*display:inline; 
+		*zoom:1;
+		vertical-align: top;
+	}
+	.navbar .nav > .active > a{
+		color: #127402 !important;
+		font-weight:bold;
+		/*
+		background:transparent !important;
+		border-bottom: 3px solid #0049cf;
+		*/
+	}
+	.navbar-inner {
+		text-align:center;
+	}
+	.navbar .nav > li {
+		padding-top: 10px;
+	}
+	.navbar .nav > li > a{
+		color: #000;
+		font-weight:bold;
+		text-transform:uppercase;
+	}
+	.navbar .nav > li > a:hover{
+		color: #127402;
+		border-bottom: 3px solid #0049cf;
+		font-weight:bold;
+	}
+	.navbar .logo-holder {
+		float:right;
+	}
+	.navbar .logo-holder > li {
+		float:left;
+		padding-top: 0px;
+	}
+	/* Navbar links: increase padding for taller navbar */
+	.navbar .nav > li > a {
+		padding: 15px 15px;
+		font-size:16px;
+	}
+
+	/* Offset the responsive button for proper vertical alignment */
+	.navbar .btn-navbar {
+		margin-top: 10px;
+		margin-right: 40px;
+	}
+
+    .featurette-divider {
+	  visibility:hidden;
+      margin: 80px 0px 20px 0px; /* Space out the Bootstrap <hr> more */
+    }
+
+    .featurette-divider2 {
+	  visibility:hidden;
+      margin: 20px 0px; /* Space out the Bootstrap <hr> more */
+    }
+	.container .row .section {
+		min-height:45%;
+		max-height:45%;
+	}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (max-width: 979px) {
+	.navbar-fixed-top {
+		position: static;
+	}
+	.navbar .nav, .navbar .nav > li {
+		float:none;
+		*display:inline; 
+		*zoom:1;
+		vertical-align: top;
+	}
+	.navbar .logo-holder {
+		display:none;
+	}
+	.navbar-inner {
+		text-align:center;
+	}
+	.navbar .brand {
+		padding: 5px 20px 16px; /* Increase vertical padding to match navbar links */
+		font-size:29px;
+	}
+	.navbar .brand img{
+		padding: 15px 10px 0px; /* Increase vertical padding to match navbar links */
+		width:271;
+		height:50px;
+		margin-top:-20px;
+	}
+	.navbar-inner {
+		border-radius: 0;
+		margin: -20px 0;
+	}
+    .carousel-inner img{
+		width:150px;
+		height:150px;
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar-inner {
+		margin: -20px;
+		text-align:center;
+	}
+	.navbar .nav > li {
+		padding-top: 0px;
+	}
+	.navbar .nav, .navbar .nav > li {
+		float:none;
+		*display:inline; 
+		*zoom:1;
+		vertical-align: top;
+	}
+	.navbar .brand {
+		padding: 15px 0px 0px; /* Increase vertical padding to match navbar links */
+		font-size:23px;
+	}
+	.navbar .brand img{
+		padding: 15px 50px 15px; /* Increase vertical padding to match navbar links */
+		width:271;
+		height:50px;
+		margin-top:-20px;
+	}
+}

@@ -1,25 +1,20 @@
-<div id="footer-bg">
-	<div id="footer">
-		<div id="logo-bg">
-			<div id="logo">
-				<h1>
-				<a href="index.php">Web Design Portfolio</a>
-				</h1>
-			</div>
-			<div class="long"><a href="#"><br/></a></div>
-			<div id=fname class="long"><a class ="name actual-name" href="#">ANJUNATH</a></div>
-			<div id=lname class="long"><a class ="name actual-name" href="#">AGESWARAN</a></div>
+		<div class=container><!-- /.container -->
+			<!-- FOOTER -->
+			<footer>
+				<p class="pull-right"><a id=totop href="javascript:void(0);">Back to top</a></p>
+				<p class=pull-left style="margin:0px;">&copy;2013 Manjunath. &middot; <a href="javascript:void(0);">Privacy & Terms</a> &middot;</p>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gatoraze.com/portfolio/" data-text="Check out the site" data-count="none">Tweet</a>
+			</footer>
 		</div>
-		<div class="contact right">
-			<a title="View my google-plus profile" href="http://www.plus.google.com/socceranoo" target="_blank"><div class='bl-social-icon bl-icon-googleplus'></div></a>
-			<a title="Download my resume" href="files/resume.pdf" target="_blank"><div class='bl-social-icon bl-icon-resume'></div></a>
-			<a title="Follow me on Twitter" href="http://www.twitter.com/socceranoo" target="_blank"><div class='bl-social-icon bl-icon-twitter'></div></a>
-			<a title="View my LinkedIn Profile" href="http://www.linkedin.com/pub/manjunath-mageswaran/14/466/372/" target="_blank"><div class='bl-social-icon bl-icon-linkedin'></div></a>
-			<a title="See my work on github" href="http://github.com/socceranoo" target="_blank"><div class='bl-social-icon bl-icon-github'></div></a>
-			<a title="View my facebook profile" href="http://www.facebook.com/socceranoo" target="_blank"><div class='bl-social-icon bl-icon-facebook'></div></a>
-		</div>
-		<div class="copyright">
-			<h4>© 2013 Manjunath - <a href="http://www.gatoraze.tk/webv2/portfolio">Web Design Portfolio</a></h4>
-		</div>
-	</div>	
-</div>
+		<!--
+				<div id="fb-root"></div>
+				<div class="fb-like" data-href="https://www.facebook.com/RealMadrid?fref=ts" data-send="false" data-layout="button_count" data-width="320" data-show-faces="false" data-font="verdana"></div>
+		<a class="brand pull-left" href="#biglogo"><img src="images/emblemv4.png" style="width:34px; height:40px;" alt="" onclick="triggermodal('#biglogo');"/></a>
+			<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FRealMadrid&amp;send=false&amp;layout=button_count&amp;width=120&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe>
+		-->
+		<!--
+			<a target='_blank' href="https://www.facebook.com/PiecemakerTechnologies"><div class="social-black pinterest-black"></div></a>
+			<a target='_blank' href="https://www.facebook.com/PiecemakerTechnologies"><div class="social-black twitter-black"></div></a>
+			<a target='_blank' href="https://www.facebook.com/PiecemakerTechnologies"><div class="social-black linkedin-black"></div></a>
+			<a target='_blank' href="https://www.facebook.com/PiecemakerTechnologies"><div class="social-black facebook-black"></div></a>
+		-->

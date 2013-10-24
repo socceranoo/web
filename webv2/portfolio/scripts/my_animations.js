@@ -35,7 +35,7 @@ function animations () {
 		}, 700);
 		*/
 	})();
-	$('.bl-box').children('.bl-icon').click(function () {
+	$('.bl-box').children('.bl-icon').click(function (event) {
 		var id = event.target.id;
 		var dest_id = $("#"+id).data('dest');
 		anim_click(dest_id);
@@ -473,5 +473,5 @@ function animations () {
 		}).play();
 	}
 
-	open_section("#section-works");
+	//open_section("#section-blog");
 }

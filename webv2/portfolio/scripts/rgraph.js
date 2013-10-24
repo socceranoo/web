@@ -40,7 +40,7 @@ function load_graphs(num) {
 		bar4.Set('chart.text.color', '#eee');
 		bar4.Set('chart.ymin', 6);
 		bar4.Set('chart.ymax', 10);
-		bar4.Set('chart.title', 'My Strengths');
+		bar4.Set('chart.title', 'Other Strengths');
 		bar4.Set('chart.title.size', 15);
 		bar4.Set('chart.title.color', '#eee');
 		bar4.Set('chart.title.font', 'Titillium Web');

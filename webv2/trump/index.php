@@ -8,6 +8,7 @@
 	</head>
 	<body class='gameroom' id='gameroombody'>
 	<h2>Welcome to the Gameroom</h2>
+	<h5><a href="server.php">Check Server state</a></h5>
 	<div class="chatbox">
 		<textarea class="chat" id="chat" disabled></textarea>
 		<input type="input" class="msg" id="msg" onkeypress="onkey(event)" disabled/>

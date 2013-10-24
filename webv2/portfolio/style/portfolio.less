@@ -1,0 +1,410 @@
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+	body {
+		font-family:@proximaFont;
+		font-size: 17px;
+		line-height: 23px;
+		letter-spacing: .75px;
+	}
+	.full-body {
+		background: url('../images/mooka.jpg') no-repeat;
+		width: 100%;
+		height: 979px;
+		background-color: #2b6378;
+		background-repeat: no-repeat;
+		background-position: center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.enter-button {
+		.transition(all .3s linear);
+		font-size:30px;
+		color:#000;
+	}
+	.enter-button:hover{
+		text-decoration:none;
+	}
+	/*
+		background: url('../../images/plain-grey.jpg') no-repeat;
+	.enter-button:active{
+		text-decoration:none;
+		font-weight:bold;
+		-webkit-box-shadow: 0px 2px 0px #84261a;
+		-moz-box-shadow: 0px 2px 0px #84261a;
+		box-shadow: 0px 2px 0px #84261a;
+		position:relative;
+		top:7px;
+	}
+	*/
+	.my-name {
+		font-size:70px;
+		font-family:'Amarante' serif;
+	}
+	.my-title {
+		font-size:24px;
+		line-height:30px;
+		padding-top:30px;
+		padding-bottom:30px;
+		border-top: 3px solid @emerald;
+		border-bottom: 3px solid @emerald;
+	}
+	.intro-box h1 {
+		font-size:50px;
+	}
+	/*
+	ul.home-icons li:hover {
+		.transition(all .5s linear);
+		padding-top:10px;
+	}
+	*/
+
+	.btn-custom {
+		.buttonBackground(@sunFlower, @carrot);
+		color:#000;
+	 }
+
+	.height-300 {
+		height:300px;
+	}
+	.height-400 {
+		height:400px;
+	}
+	.border-opposite-left {
+		.border-opposite-left-radius(100px);
+	}
+
+	.border-opposite-right {
+		.border-opposite-right-radius(100px);
+	}
+	.family-rouge {
+		font-family:'Rouge Script', cursive;
+	}
+	.arousel-control {
+		font-family:@sansFontFamily;
+		font-size: 90px;
+		border:0;
+		color:#333;
+		background:transparent;
+	}
+	.carousel-control {
+		font-family:@sansFontFamily;
+		font-size: 90px;
+		border:0;
+		color:#333;
+		background:transparent;
+	}
+
+	.carousel-inner > .item > img{
+		display:inline;
+	}
+
+	.container p {
+		margin: 10px;
+	}
+	
+	.about-pic {
+		margin-top:40px;
+	}
+	/*
+	.progress {
+		height:40px;
+		margin:10px 0;
+	}
+	.progress .bar {
+		opacity:0;
+		margin:10px 0;
+		height:100%;
+		width:80%;
+	}
+	.progress .bar-html {
+		width:95%;
+	}
+	.progress .bar-php {
+		width:80%;
+	}
+	.progress .bar-javascript {
+		width:85%;
+	}
+	.progress .bar-jquery {
+		width:75%;
+	}
+	.progress .bar-photoshop {
+		width:70%;
+	}
+	*/
+	.carousel-indicators .active {
+		background-color: @green;
+	}
+	.carousel-indicators li{
+		background-color: #000;
+		height: 10px;
+		width: 20px;
+		cursor:pointer;
+	}
+	.waypoint-appear {
+		opacity:0;
+	}
+	.details-button {
+	}
+	@barHeight : 30px;
+	#bar-keys h2, #bar-value h2 {
+		font-size:25px;
+		line-height:@barHeight;
+	}
+	.bar {
+		opacity:0;
+		margin:10px 0;
+		height:@barHeight;
+		width:80%;
+		box-shadow: 5px 5px 5px #888888;
+	}
+	.bar-html {
+		.gradientRadialBar(@sunFlower, @carrot);
+		width:95%;
+	}
+	.bar-php {
+		.gradientRadialBar(@peterRiver, @emerald);
+		width:80%;
+	}
+	.bar-javascript {
+		.gradientRadialBar(@amethyst, @belizeHole);
+		width:85%;
+	}
+	.bar-jquery {
+		.gradientRadialBar(@concrete, @wetAsphalt);
+		width:75%;
+	}
+	.bar-photoshop {
+		.gradientRadialBar(@pumpkin, @pomegranate);
+		width:70%;
+	}
+	.randomfacts1 li {
+		opacity:0;
+	}
+	.lead {
+		font-size: 30px;
+		line-height: 30px;
+		font-family: 'Titillium web', serif;
+	}
+	.waypoint-div {
+		opacity:0;
+		/*
+		.transition(opacity 1s ease);
+		*/
+	}
+	#snowkick-img {
+		/*
+		width:720px;
+		height:540px;
+		*/
+		max-width:720px;
+		background-image:url("../images/snowkick/snowkick.jpg");
+	}
+	#heading-start {
+		.scale(2);
+	}
+	.modal.fade.in {
+		position:fixed;
+		top:10%;
+	}
+	.modal-footer .btn{
+		float:none;
+	}
+	/* CUSTOMIZE THE NAVBAR
+		background-position: -0px 0px;
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin-top:20px;
+		z-index: 10;
+    }
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+		border: 0;
+		-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+		-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+		box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+		padding: 25px 20px 16px; /* Increase vertical padding to match navbar links */
+		color:#ddd;
+		font-size:40px;
+		text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+		letter-spacing:1.5px;
+		font-family:'Rouge Script', cursive;
+    }
+    .navbar .brand img{
+		float:left;
+		width:40px;
+		height:40px;
+		margin-top:-10px;
+	}
+	.navbar .nav {
+		float:right;
+	}
+	.navbar .nav, .navbar .nav > li {
+		*display:inline; 
+		*zoom:1;
+		vertical-align: top;
+	}
+	.navbar-inner {
+		text-align:center;
+	}
+	.navbar .nav > li {
+		padding-top: 10px;
+	}
+	.navbar .logo-holder {
+		float:right;
+	}
+	.navbar .logo-holder > li {
+		float:left;
+		padding-top: 0px;
+	}
+	/* Navbar links: increase padding for taller navbar */
+	.navbar .nav > li > a {
+		padding: 15px 15px;
+		font-size:16px;
+	}
+
+	/* Offset the responsive button for proper vertical alignment */
+	.navbar .btn-navbar {
+		margin-top: 10px;
+		margin-right: 40px;
+	}
+
+	@ft-topmargin : 30px;
+    .featurette {
+		padding-top:@ft-topmargin;
+    }
+	.featurette-image {
+		width: 400px;
+		height: 400px;
+		margin-top:-@ft-topmargin;
+	}
+	.featurette-heading {
+		text-align:left;
+	}
+    .featurette-divider {
+      margin: 80px 0px 20px 0px; /* Space out the Bootstrap <hr> more */
+    }
+
+    .featurette-divider2 {
+      margin: 40px 0px; /* Space out the Bootstrap <hr> more */
+	  clear:both;
+    }
+    .featurette-divider4 {
+      margin: 40px 0px 40px 0px; /* Space out the Bootstrap <hr> more */
+	  clear:both;
+	  height:1px;
+    }
+    .featurette-divider5 {
+		border-bottom: 3px solid @emerald;
+		margin: 20px 0px 10px 0px; /* Space out the Bootstrap <hr> more */
+		height:3px;
+    }
+	.container .row .section {
+		min-height:45%;
+		max-height:45%;
+	}
+
+	.lead1 {
+		margin-bottom: 20px;
+		font-size: 22.5px;
+		font-weight: 200;
+		line-height: 30px;
+		text-align:justify;
+	}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (max-width: 1300px) {
+	.full-body {
+		height: 765px;
+	}
+}
+@media (max-width: 979px) {
+	.navbar-fixed-top {
+		position: static;
+	}
+	.my-name {
+		font-size:45px;
+	}
+	.navbar .nav, .navbar .nav > li {
+		float:none;
+		*display:inline; 
+		*zoom:1;
+		vertical-align: top;
+	}
+	.navbar .logo-holder {
+		display:none;
+	}
+	.navbar-inner {
+		text-align:center;
+	}
+	.navbar .brand {
+		padding: 15px 20px 16px; /* Increase vertical padding to match navbar links */
+		font-size:29px;
+	}
+	.navbar .brand img{
+		padding: 15px 10px 0px; /* Increase vertical padding to match navbar links */
+		width:36px;
+		height:36px;
+		margin-top:-20px;
+	}
+	.navbar-inner {
+		border-radius: 0;
+		margin: -20px 0;
+	}
+    .carousel-inner img{
+		width:150px;
+		height:150px;
+	}
+	.lead {
+		font-size: 25px;
+		line-height: 25px;
+	}
+}
+
+@media (max-width: 767px) {
+	.full-body {
+		background: url('../images/mooka2.jpg') no-repeat;
+	}
+	.navbar-inner {
+		margin: -20px;
+		text-align:center;
+	}
+	.navbar .nav > li {
+		padding-top: 0px;
+	}
+	.navbar .nav, .navbar .nav > li {
+		float:none;
+		*display:inline; 
+		*zoom:1;
+		vertical-align: top;
+	}
+	.navbar .brand {
+		padding: 15px 0px 0px; /* Increase vertical padding to match navbar links */
+		font-size:23px;
+	}
+	.navbar .brand img{
+		padding: 15px 50px 15px; /* Increase vertical padding to match navbar links */
+		width:30px;
+		height:30px;
+		margin-top:-20px;
+	}
+	.lead {
+		font-size: 20px;
+		line-height: 20px;
+	}
+}

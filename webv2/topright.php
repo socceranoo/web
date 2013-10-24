@@ -1,17 +1,17 @@
 <div class="topright">
 <p>
-logged in <?echo $uname?>
+logged in (<a href='http://gatoraze.com/account-info.php'><?echo $uname?></a>)
 &nbsp;
-<a href='../1login-home.php'>home</a>
+<a href='http://gatoraze.com/home.php'>home</a>
 &nbsp;
 <!--
 <a href='client.php'>Gameroom</a>
+<a href='account-info.php'>your account</a>
 &nbsp;
-<a href='change-pwd.php'>change password</a>
 -->
-<a href='../logout.php'>logout</a>
+<a href='http://gatoraze.com/change-pwd.php'>change password</a>
 &nbsp;
-<a href='../account-info.php'>your account</a>
+<a href='http://gatoraze.com/logout.php'>logout</a>
 &nbsp;
 </p>
 </div>

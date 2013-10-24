@@ -1,5 +1,5 @@
 <?PHP
-	$dir="../../../external/linkhdd/Audio";
+	$dir="../../external/linkhdd/Audio";
 	$string = $_POST['str'];
 	function dir_name_processing ($val) {
 		$val = str_replace(' ', '\ ', $val);

@@ -1,0 +1,47 @@
+@import "../bootstrap/less/variables.less";
+@import "../bootstrap/less/mixins.less";
+
+body {
+	background:url('../images/gray.jpg') repeat;
+}
+
+.body-inverse {
+	color:#ddd;
+}
+#search-query {
+	width:70%;
+}
+#search-submit {
+	width:20%;
+}
+.feed {
+	 height:300px;
+	 overflow:auto;
+	 .border-radius(20px);
+}
+.info-modal {
+	width:80%;
+	margin: 5px auto;
+	height : 620px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	position: absolute;
+	top: 3% !important;
+	left: 10%;
+}
+
+.common-title {
+	cursor:pointer;
+	color:@peterRiver;
+}
+.common-title:hover {
+	text-decoration:underline;
+}
+
+.margin-auto {
+	margin:2px auto !important;
+}
+
+.thumbnail {
+	max-width:100px;
+}

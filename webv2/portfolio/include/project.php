@@ -1,12 +1,16 @@
 <div class="content">
-	<span class="bl-icon bl-icon-close"></span>
 	<div class=cleardiv></div>
-	<div id=proj-thumb-nav class="circleholder threecircles">
-		<div id=mm_thumb name=mm class="transform50 proj-thumb circle project-icon-mm"></div>
-		<div id=rz_thumb name=rz class="transform50 proj-thumb circle project-icon-rs"></div>
-		<div id=gr_thumb name=gr class="transform50 proj-thumb circle project-icon-gr"></div>
+	<span class="bl-icon bl-icon-close"></span>
+	<div id=proj-thumb-nav class="circleholder fourcircles-with-margin">
+		<div id=project3 name=ae class="inactive proj-thumb circle project-icon-ae"><h3>Alveo Energy</h3></div>
+		<div id=project0 name=mm class="inactive proj-thumb circle project-icon-mm"><h3>Money Matters</h3></div>
+		<div id=project1 name=rz class="inactive proj-thumb circle project-icon-rs"><h3>mp3raze</h3></div>
+		<div id=project2 name=gr class="inactive proj-thumb circle project-icon-gr"><h3>Trump</h3></div>
 	</div>
+	<div class=cleardiv></div>
+	<div class=cleardiv></div>
 	<!--
+	<h2>Works</h2>
 	<div class="circleholder sixcircles">
 		<div class="circle"><div class="innercircle orange"><span>HTML</span></div></div>
 		<div class="circle"><div class="innercircle green"><span>javascript</span></div></div>
@@ -15,7 +19,6 @@
 		<div class="circle"><div class="innercircle red"><span>CSS</span></div></div>
 		<div class="circle"><div class="innercircle green"><span>photoshop</span></div></div>
 	</div>
-	-->
 	<div class=cleardiv></div>
 	<div id="proj-main" class="fullcontent">
 		<div class='thirdcontent left'><div id=project-icon-mm name=mm class="project-icon project-icon-mm"><div class=glossy></div></div></div>
@@ -23,7 +26,7 @@
 		<div class='thirdcontent left'><div id=project-icon-gr name=gr class="project-icon project-icon-gr"><div class=glossy></div></div></div>
 		<div id="proj-title-image" class="left"><h2></h2></div>	
 	</div>
-	<div class=cleardiv></div>
+	-->
 	<div id="proj-content" class="hidden">
 		<div class=cleardiv></div>
 		<div id="imac">
@@ -46,19 +49,17 @@
 	<!--
 	-->
 
-	<div class="hidden" id="proj0">
+	<div class="hidden" id="proj-mm">
 		<?require("content/money.php");?>
 	</div>
-	<div class="hidden" id="proj1">
+	<div class="hidden" id="proj-rz">
 		<?require("content/razer.php");?>
 	</div>
-	<div class="hidden" id="proj2">
+	<div class="hidden" id="proj-gr">
 		<?require("content/trump.php");?>
 	</div>
-	<div class="hidden" id="proj3">
-		<h3 id="proj-heading">resumebuilder</h3>
-		<?require("include/lorem.php");?>
-		<?//require("rbuilder.txt");?>
+	<div class="hidden" id="proj-ae">
+		<?require("content/alveo.php");?>
 	</div>
 </div>
 

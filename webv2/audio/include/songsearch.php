@@ -1,5 +1,5 @@
 <?PHP
-	$dir="../../../external/linkhdd";
+	$dir="../../external/linkhdd";
     $string = $argv[1];
     function search_by_mp3_file($dir, $string) {
         $dir.= "/";

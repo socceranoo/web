@@ -6,14 +6,17 @@
 	<?require_once("./include/servheaders.php");?>
 </head>
 <body class=gameroom>
-	<h2>Server State</h2>
-	<div id=scorecard class=team1>
-		<table id='gradient-style' align='center'>
-			<tr><th>Team #</th><th>Points</th></tr>
-			<tr><td>Server</td><td id="servstate">Running</td></tr>
+	<h2>Server State </h2>
+	<h5><a href="index.php">Back to game</a></h5>
+	<div id=scorecard >
+		<table align='center'>
+			<tr><th></th><th></th></tr>
+			<tr><td>Server</td><td id="servstate">-</td></tr>
 			<tr><td>Port</td><td id="servport">9000</td></tr>
 		</table>
-		<input type=button value='server state' id="servbutton"/>
+		<input type=button value='Start Server' id="servbutton"/>
+		<input type=button value='Stop Server' id="servstopbutton"/>
 	</div>
+	
 </body>
 </html>	

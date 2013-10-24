@@ -1,7 +1,7 @@
 <div class="content">
 	<span class="bl-icon bl-icon-close"></span>
 	<h2>Get in touch</h2>
-	<div class="fullcontent"><img class='contact-img' src="images/bwfifa13-1.png"/></div>
+	<div class="fullcontent"><img class='contact-img' src="images/bwfifa13-1.jpg"/></div>
 	<form id="contact-form">
 		<legend>Send me an email</legend><br/>
 		<fieldset >

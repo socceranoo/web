@@ -1,21 +1,19 @@
-<form id='register' accept-charset='UTF-8'>
-<fieldset >
-<legend>register</legend>
-<input type='hidden' name='registersubmit' id='registersubmit' value='1'/>
-<span class='error' id='registererror'></span>
-<div class='short_explanation'>* required fields</div>
-<input type='text'  class='spmhidip' name='<?php echo $fgmembersite->GetSpamTrapInputName(); ?>' />
-	<label>full name*: </label><br/>
-	<input type='text' id='rname' required value='<?php echo $fgmembersite->SafeDisplay('name') ?>' maxlength="50" /><br/>
-	<label>email*:</label><br/>
-	<input type='email' id='remail' required pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" value='<?php echo $fgmembersite->SafeDisplay('email') ?>' maxlength="50" /><br/>
-	<label>username*:</label><br/>
-	<input type='text' id='rusername' required value='<?php echo $fgmembersite->SafeDisplay('username') ?>' maxlength="50" /><br/>
-	<label>password*:</label><br/>
-	<input type='password' id='rpassword' maxlength="50"/>
-	<label>nickname*:</label><br/>
-	<input type='text' id='rnickname' required value='<?php echo $fgmembersite->SafeDisplay('nickname') ?>' maxlength="50" /><br/>
-<input type='submit' name='Submit' value='Submit' />
-<div class='short_explanation'><a href='javascript:void(0)' onclick="showhideform('login', 'register');">Log in</a></div>
-</fieldset>
-</form>
+<div id=register-div style="display:none" ng-controller="Register">
+	<div ng-show=onSuccess class="featurette-divider3"><h2>Welcome {{fullname}}</h2><span>Thank you for registering. Your confirmation email is on its way. Please click the link in the email to complete the registration.Please check your spam folder if you do not see it in your inbox. Sorry for the inconvenience.</span></div>
+	<form id='register-form' accept-charset='UTF-8'>
+		<legend class=text-center>register</legend>
+		<input type='hidden' id='register-submit' value='1'/>
+		<div ng-show=onError class="featurette-divider3"><span id=reg-error class='error'></span></div>
+		<!--
+		<input type='text' class='spmhidip' name='<?php echo $fgmembersite->GetSpamTrapInputName(); ?>' />
+		-->
+		<div class="featurette-divider3"><span class="input-field">fullname*:</span><input class="pull-right input-field" type="text" maxlength="50" required ng-model="fullname"/></div>
+		<div class="featurette-divider3"><span class="input-field">email*:</span><input class="pull-right input-field" type="email" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" maxlength="50" required ng-model="email"/></div>
+		<div class="featurette-divider3"><span class="input-field">username*:</span><input class="pull-right input-field" type="text" maxlength="50" required ng-model="username"/></div>
+		<div class="featurette-divider3"><span class="input-field">password*:</span><input class="pull-right input-field" type="password" maxlength="50" required ng-model="password"/></div>
+		<div class="featurette-divider3"><span class="input-field">nickname*:</span><input class="pull-right input-field" type="text" maxlength="50" required ng-model="nickname"/></div>
+		<input type='submit' class="btn btn-primary btn-block" value='Submit'/>
+		<div class="featurette-divider3"></div>
+		<a class="btn btn-success" href='login.php'>Login</a>
+	</form>
+</div>

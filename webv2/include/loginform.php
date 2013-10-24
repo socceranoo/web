@@ -1,15 +1,13 @@
-<form id='login' accept-charset='UTF-8' align=left>
-<fieldset >
-<legend>login</legend>
-<input type='hidden' id='loginsubmit' value='1'/>
-<div class='short_explanation'>* required fields</div>
-<span class='error' id='loginerror'></span>
-<label>username*:</label><br/>
-<input type='text' id='lusername' required value='<?php echo $fgmembersite->SafeDisplay('username') ?>' maxlength="50"/><br/>
-<label>password*:</label><br/>
-<input type='password' required id='lpassword' maxlength="50" /><br/>
-<input type='submit' name='lSubmit' value='Log in' />
-<div class='short_explanation'> <a href='javascript:void(0)' onclick="showhideform('resetreq', 'login');">Forgot Password?</a></div>
-<div class='short_explanation'> <a href='javascript:void(0)' onclick="showhideform('register', 'login');">New user?</a></div>
-</fieldset>
-</form>
+<div id=login-div style="display:none" ng-controller="Login">
+	<form id='login-form' accept-charset='UTF-8'>
+	<legend class=text-center>login</legend>
+	<input type='hidden' id='login-submit' value='1'/>
+	<div ng-show=onError class="featurette-divider3"><span class='error'>The username or password you provided does not match our records.</span></div>
+	<div class="featurette-divider3"><span class="input-field">username*:</span><input class=pull-right type="text" maxlength="50" required ng-model="username"/></div>
+	<div class="featurette-divider3"><span class="input-field">password*:</span><input class=pull-right type="password" maxlength="50" required ng-model="password"/></div>
+	<input type='submit' class="btn btn-primary btn-block" value='Log in'/>
+	<div class="featurette-divider3"></div>
+	<a class="btn btn-danger" href='forgot-password.php'>Forgot Password?</a>
+	<a class="btn btn-inverse" href='register.php'>New user?</a>
+	</form>
+</div>

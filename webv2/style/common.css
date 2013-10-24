@@ -1,5 +1,6 @@
 /*
 */
+ /*
 ::-webkit-scrollbar {
     width: 10px;
     height:10px;
@@ -14,28 +15,37 @@
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 1);
 }
+*/
 ::selection {
 	background: #63B7BB;
 	color: #fff;
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
+	/*
 	color:    #777;
 	font-family: 'Quintessential', cursive;
 	opacity : 0.0;
+	*/
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	/*
 	color:    #999;
 	font-size: 10px;
+	*/
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
+	/*
 	font-size: 10px;
 	color:    #999;
+	*/
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
+	/*
 	color:    #999;
 	font-size: 10px;
+	*/
 }
-input[type="submit"], input[type="button"] {
+fieldset input[type="submit"], fieldset input[type="button"] {
 	font-family: 'Titillium Web', sans-serif;
 	margin: 10px 6px 16px 0px;
 	height:29px;
@@ -51,7 +61,7 @@ input[type="submit"], input[type="button"] {
 	line-height: 28px;
 	padding: 0 12px 2px;
 }
-input[type="text"], input[type="email"], input[type="password"]{
+fieldset input[type="text"], fieldset input[type="email"], fieldset input[type="password"]{
 	font-family: 'Titillium Web', sans-serif;
 	color: #333;
 	font-size: 18px;
@@ -71,12 +81,12 @@ input[type="text"], input[type="email"], input[type="password"]{
 	*/
 }
 
-input[type="text"]:focus, input[type="email"]:focus {
+fieldset input[type="text"]:focus, fieldset input[type="email"]:focus {
 	border-radius:10px;
 	background-image: -webkit-linear-gradient(top,#E5E5E5, #EBEBEB);
 	background-image: linear-gradient(to bottom,#E5E5E5,#EBEBEB);
 }
-textarea {
+fieldset textarea {
 	font-family: 'Titillium Web', sans-serif;
 	resize:auto;
 	width: 400px;
@@ -86,7 +96,7 @@ textarea {
 	border: 1px solid #E5E5E5;
 	border-radius:10px;
 }
-textarea:focus {
+fieldset textarea:focus {
 	border-radius:10px;
 	background-image: -webkit-linear-gradient(top,#E5E5E5, #EBEBEB);
 	background-image: linear-gradient(to bottom,#E5E5E5,#EBEBEB);
@@ -123,16 +133,10 @@ fieldset legend{
 }
 
 .topright {
-	display:block;
 	/*set the div in the top right corner*/
-	position:absolute;
-	color:#e0e0e0;
-	top:0px;
-	right:0px;
 	width:100%;
-	font-family: sans-serif;
 	text-align:right;
-	padding-right:10px;
+	font-size:15px;
 	/*give it some background and border
 	background:#000;
 	border:1px solid #eee;*/

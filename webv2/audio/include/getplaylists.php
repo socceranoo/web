@@ -1,5 +1,6 @@
 <?PHP
 	require_once($_SERVER['DOCUMENT_ROOT']."webv2/include/membersite_config.php");
+	require_once($_SERVER['DOCUMENT_ROOT']."webv2/include/global_values.php");
 	$retval = "true";
 	$info = "";
 	$playarr = array();
