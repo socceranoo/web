@@ -1,0 +1,1451 @@
+info it worked if it ends with ok
+verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', '-g', 'less' ]
+info using npm@1.1.4
+info using node@v0.6.19
+verbose config file /home/anoop/.npmrc
+verbose config file /usr/etc/npmrc
+verbose config file /usr/share/npm/npmrc
+silly exec /usr/bin/nodejs "/usr/share/npm/bin/npm-get-uid-gid.js" "nobody" 1000
+silly spawning [ '/usr/bin/nodejs',
+silly spawning   [ '/usr/share/npm/bin/npm-get-uid-gid.js', 'nobody', 1000 ],
+silly spawning   null ]
+silly output from getuid/gid {"uid":65534,"gid":1000}
+silly output from getuid/gid 
+verbose cache add [ 'less', null ]
+silly cache add: name, spec, args [ undefined, 'less', [ 'less', null ] ]
+verbose parsed url { pathname: 'less', path: 'less', href: 'less' }
+verbose addNamed [ 'less', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'less', '', false ]
+verbose raw, before any munging less
+verbose url resolving [ 'https://registry.npmjs.org/', './less' ]
+verbose url resolved https://registry.npmjs.org/less
+verbose etag "2D6CYIT9CSP3KNN0CEEC3DSAP"
+http GET https://registry.npmjs.org/less
+http 304 https://registry.npmjs.org/less
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"2D6CYIT9CSP3KNN0CEEC3DSAP"',
+silly get cb     date: 'Tue, 18 Jun 2013 17:53:03 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag less from cache
+silly name, range, hasData 2 [ 'less', '', true ]
+silly versions [ 'less',
+silly versions   [ '1.0.10',
+silly versions     '1.0.11',
+silly versions     '1.0.14',
+silly versions     '1.0.18',
+silly versions     '1.0.19',
+silly versions     '1.0.21',
+silly versions     '1.0.32',
+silly versions     '1.0.36',
+silly versions     '1.0.5',
+silly versions     '1.0.40',
+silly versions     '1.0.41',
+silly versions     '1.0.44',
+silly versions     '1.1.0',
+silly versions     '1.1.1',
+silly versions     '1.1.2',
+silly versions     '1.1.4',
+silly versions     '1.1.5',
+silly versions     '1.1.6',
+silly versions     '1.2.0',
+silly versions     '1.2.1',
+silly versions     '1.2.2',
+silly versions     '1.3.0',
+silly versions     '1.3.1',
+silly versions     '1.3.2',
+silly versions     '1.3.3',
+silly versions     '1.4.0-b1',
+silly versions     '1.4.0-b2',
+silly versions     '1.4.0-b3',
+silly versions     '1.4.0-b4',
+silly versions     '1.4.0' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.8.0-23-generic',
+verbose bin dist   { shasum: '63e02a0d41ccf4f26b3feb40021d945d6aa48b14',
+verbose bin dist     tarball: 'http://registry.npmjs.org/less/-/less-1.4.0.tgz' } ]
+verbose caching /home/anoop/.npm/less/1.4.0/package/package.json
+verbose loadDefaults less@1.4.0
+silly resolved [ { name: 'less',
+silly resolved     version: '1.4.0',
+silly resolved     description: 'Leaner CSS',
+silly resolved     homepage: 'http://lesscss.org',
+silly resolved     author: { name: 'Alexis Sellier', email: 'self@cloudhead.net' },
+silly resolved     contributors: [ { name: 'The Core Less Team' } ],
+silly resolved     bugs: { url: 'https://github.com/cloudhead/less.js/issues' },
+silly resolved     repository: { type: 'git', url: 'git://github.com/cloudhead/less.js.git' },
+silly resolved     bin: { lessc: './bin/lessc' },
+silly resolved     main: './lib/less/index',
+silly resolved     directories: { test: './test' },
+silly resolved     jam: { main: './dist/less-1.4.0-beta.js' },
+silly resolved     engines: { node: '>=0.4.2' },
+silly resolved     scripts: { test: 'make test' },
+silly resolved     optionalDependencies: 
+silly resolved      { mime: '1.2.x',
+silly resolved        request: '>=2.12.0',
+silly resolved        mkdirp: '~0.3.4',
+silly resolved        ycssmin: '>=1.0.1' },
+silly resolved     devDependencies: { diff: '~1.0' },
+silly resolved     keywords: 
+silly resolved      [ 'compile less',
+silly resolved        'css nesting',
+silly resolved        'css variable',
+silly resolved        'css',
+silly resolved        'gradients css',
+silly resolved        'gradients css3',
+silly resolved        'less compiler',
+silly resolved        'less css',
+silly resolved        'less mixins',
+silly resolved        'less',
+silly resolved        'less.js',
+silly resolved        'lesscss',
+silly resolved        'mixins',
+silly resolved        'nested css',
+silly resolved        'parser',
+silly resolved        'preprocessor',
+silly resolved        'bootstrap css',
+silly resolved        'bootstrap less',
+silly resolved        'style',
+silly resolved        'styles',
+silly resolved        'stylesheet',
+silly resolved        'variables in css',
+silly resolved        'css less' ],
+silly resolved     licenses: 
+silly resolved      [ { type: 'Apache v2',
+silly resolved          url: 'https://github.com/cloudhead/less.js/blob/master/LICENSE' } ],
+silly resolved     _id: 'less@1.4.0',
+silly resolved     dependencies: 
+silly resolved      { mime: '1.2.x',
+silly resolved        request: '>=2.12.0',
+silly resolved        mkdirp: '~0.3.4',
+silly resolved        ycssmin: '>=1.0.1' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'less' } ]
+info into /usr/local/lib less@1.4.0
+info installOne less@1.4.0
+verbose from cache /home/anoop/.npm/less/1.4.0/package/package.json
+info unbuild /usr/local/lib/node_modules/less
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/___less.npm'
+verbose mkdir done: /usr/local/lib/node_modules/___less.npm 755
+verbose unpack_ uid, gid [ 65534, 1000 ]
+verbose unpackTarget /usr/local/lib/node_modules/less
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/.gitattributes
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/LICENSE
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/CHANGELOG.md
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/Makefile
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/README.md
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/package.json
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/.npmignore
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/CONTRIBUTING.md
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/benchmark
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/benchmark/benchmark.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/benchmark/less-benchmark.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/bin
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/bin/lessc
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.3.0.min.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.2.2.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.2.0.min.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.3.0.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-rhino-1.3.2.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.1.1.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.3.3.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-rhino-1.1.3.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.3.3.min.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.1.4.min.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.2.2.min.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.1.2.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.1.3.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.1.5.min.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.1.3.min.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-rhino-1.1.5.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-rhino-1.4.0.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.1.2.min.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.1.5.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-rhino-1.3.3.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.4.0-beta.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.1.6.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.1.4.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.3.2.min.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.2.0.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.4.0-beta.min.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.2.1.min.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.4.0.min.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.3.1.min.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-rhino-1.3.1.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.1.0.min.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.1.6.min.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.1.0.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.2.1.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.1.1.min.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.4.0.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.3.2.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/dist/less-1.3.1.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/join-selector-visitor.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/lessc_helper.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/rhino.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/visitor.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/browser.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/functions.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/import-visitor.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/parser.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/colors.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/index.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/extend-visitor.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/env.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/anonymous.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/unicode-descriptor.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/alpha.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/directive.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/dimension.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/javascript.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/condition.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/call.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/operation.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/element.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/variable.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/quoted.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/import.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/ruleset.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/assignment.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/extend.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/color.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/media.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/rule.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/mixin.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/negative.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/value.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/paren.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/expression.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/url.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/comment.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/selector.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/lib/less/tree/keyword.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less-test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser-test-prepare.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/data
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/data/page.html
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/data/data-uri-fail.png
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/data/image.jpg
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/scope.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/comments.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/selectors.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/charsets.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/functions.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/parens.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/import-interpolation.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/mixins-closure.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/strings.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/media.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/css-3.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/extend-exact.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/javascript.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/ie-filters.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/extend-chaining.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/import.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/css-escapes.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/mixins-args.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/mixins-important.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/css.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/colors.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/mixins-pattern.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/import-once.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/extend-media.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/mixins-nested.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/operations.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/variables.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/urls.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/extend-nest.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/extend-clearfix.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/mixins-named-args.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/extend.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/whitespace.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/mixins.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/lazy-eval.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/mixins-guards.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/rulesets.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/extend-selector.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/legacy
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/legacy/legacy.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/debug
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/debug/linenumbers-all.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/debug/linenumbers-mediaquery.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/debug/linenumbers-comments.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/compression
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/compression/compression.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/static-urls
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/css/static-urls/urls.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/runner-rootpath-relative.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/jasmine.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/runner-errors.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/common.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/jasmine.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/jasmine-html.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/runner-rootpath.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/runner-main.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/runner-browser.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/phantom-runner.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/runner-relative-urls.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/template.htm
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/runner-legacy.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/runner-production.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/css/urls.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/css/rootpath-relative
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/css/rootpath-relative/urls.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/css/rootpath
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/css/rootpath/urls.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/css/relative-urls
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/css/relative-urls/urls.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/less/urls.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/less/imports
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/less/imports/urls.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/less/imports/urls2.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/less/rootpath-relative
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/less/rootpath-relative/urls.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/less/rootpath
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/less/rootpath/urls.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/less/relative-urls
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/browser/less/relative-urls/urls.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import-once.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/whitespace.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/operations.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/functions.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/extend-chaining.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/ie-filters.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/colors.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/javascript.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/mixins.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/strings.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/selectors.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/mixins-closure.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/css-escapes.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/urls.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/css-3.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/comments.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/extend.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/scope.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/rulesets.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/extend-exact.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/mixins-nested.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/charsets.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/extend-selector.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import-interpolation.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/extend-clearfix.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/media.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/css.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/mixins-pattern.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/mixins-important.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/extend-nest.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/extend-media.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/mixins-guards.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/mixins-args.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/lazy-eval.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/parens.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/mixins-named-args.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/variables.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/legacy
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/legacy/legacy.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/compression
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/compression/compression.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/static-urls
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/static-urls/urls.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/debug
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/debug/linenumbers.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/debug/import
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/debug/import/test.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import/import-once-test-c.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import/import-and-relative-paths-test.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import/import-test-d.css
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import/urls.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import/import-interpolation2.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import/import-charset-test.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import/import-interpolation.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import/import-test-b.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import/import-test-a.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import/import-test-e.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import/import-test-c.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import/deeper
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import/deeper/import-once-test-a.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import/imports
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import/imports/font.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/import/imports/logo.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/property-in-root.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/color-operation-error.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/parse-error-curly-bracket.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/property-in-root.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/mixin-not-defined.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/parens-error-2.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/parens-error-3.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/javascript-error.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/extend-no-selector.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/import-no-semi.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/add-mixed-units.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/parse-error-curly-bracket.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/divide-mixed-units.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/parse-error-missing-bracket.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/mixin-not-defined.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/mixed-mixin-definition-args-2.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/mixin-not-matched.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/multiply-mixed-units.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/import-missing.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/comment-in-selector.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/mixin-not-matched.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/multiply-mixed-units.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/import-subfolder1.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/extend-not-at-end.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/parens-error-3.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/property-ie5-hack.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/recursive-variable.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/extend-not-at-end.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/import-missing.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/recursive-variable.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/color-operation-error.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/mixin-not-matched2.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/property-ie5-hack.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/parens-error-1.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/add-mixed-units.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/import-no-semi.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/property-in-root2.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/mixin-not-matched2.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/divide-mixed-units.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/parse-error-with-import.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/mixed-mixin-definition-args-1.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/javascript-error.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/property-in-root2.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/extend-no-selector.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/parse-error-with-import.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/import-subfolder2.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/add-mixed-units2.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/import-subfolder2.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/bad-variable-declaration1.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/parens-error-2.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/property-in-root3.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/bad-variable-declaration1.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/parens-error-1.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/add-mixed-units2.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/import-subfolder1.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/property-in-root3.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/mixed-mixin-definition-args-1.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/mixed-mixin-definition-args-2.txt
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/parse-error-missing-bracket.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/comment-in-selector.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/imports
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/imports/import-test.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/imports/import-subfolder1.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/imports/import-subfolder2.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/imports/subfolder
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/imports/subfolder/parse-error-curly-bracket.less
+silly asyncMap in gTP /usr/local/lib/node_modules/___less.npm/package/test/less/errors/imports/subfolder/mixin-not-defined.less
+verbose gunzed /usr/local/lib/node_modules/___less.npm/package
+verbose rm'ed /usr/local/lib/node_modules/less
+verbose renamed [ '/usr/local/lib/node_modules/___less.npm/package',
+verbose renamed   '/usr/local/lib/node_modules/less' ]
+verbose caching /usr/local/lib/node_modules/less/package.json
+verbose loadDefaults less@1.4.0
+info preinstall less@1.4.0
+verbose from cache /usr/local/lib/node_modules/less/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /usr/local/lib/node_modules/less/package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'mime@1.2.x', null ]
+silly cache add: name, spec, args [ undefined, 'mime@1.2.x', [ 'mime@1.2.x', null ] ]
+verbose parsed url { pathname: 'mime@1.2.x',
+verbose parsed url   path: 'mime@1.2.x',
+verbose parsed url   href: 'mime@1.2.x' }
+silly cache add: name, spec, args [ 'mime', '1.2.x', [ 'mime', '1.2.x' ] ]
+verbose parsed url { pathname: '1.2.x', path: '1.2.x', href: '1.2.x' }
+verbose addNamed [ 'mime', '1.2.x' ]
+verbose addNamed [ null, '>=1.2.0- <1.3.0-' ]
+silly name, range, hasData [ 'mime', '>=1.2.0- <1.3.0-', false ]
+verbose cache add [ 'request@>=2.12.0', null ]
+silly cache add: name, spec, args [ undefined, 'request@>=2.12.0', [ 'request@>=2.12.0', null ] ]
+verbose parsed url { pathname: 'request@', path: 'request@', href: 'request@' }
+silly cache add: name, spec, args [ 'request', '>=2.12.0', [ 'request', '>=2.12.0' ] ]
+verbose parsed url { pathname: '=2.12.0', path: '=2.12.0', href: '=2.12.0' }
+verbose addNamed [ 'request', '>=2.12.0' ]
+verbose addNamed [ null, '>=2.12.0' ]
+silly name, range, hasData [ 'request', '>=2.12.0', false ]
+verbose cache add [ 'mkdirp@~0.3.4', null ]
+silly cache add: name, spec, args [ undefined, 'mkdirp@~0.3.4', [ 'mkdirp@~0.3.4', null ] ]
+verbose parsed url { pathname: 'mkdirp@~0.3.4',
+verbose parsed url   path: 'mkdirp@~0.3.4',
+verbose parsed url   href: 'mkdirp@~0.3.4' }
+silly cache add: name, spec, args [ 'mkdirp', '~0.3.4', [ 'mkdirp', '~0.3.4' ] ]
+verbose parsed url { pathname: '~0.3.4', path: '~0.3.4', href: '~0.3.4' }
+verbose addNamed [ 'mkdirp', '~0.3.4' ]
+verbose addNamed [ null, '>=0.3.4- <0.4.0-' ]
+silly name, range, hasData [ 'mkdirp', '>=0.3.4- <0.4.0-', false ]
+verbose raw, before any munging mime
+verbose url resolving [ 'https://registry.npmjs.org/', './mime' ]
+verbose url resolved https://registry.npmjs.org/mime
+http GET https://registry.npmjs.org/mime
+verbose raw, before any munging request
+verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
+verbose url resolved https://registry.npmjs.org/request
+http GET https://registry.npmjs.org/request
+verbose raw, before any munging mkdirp
+verbose url resolving [ 'https://registry.npmjs.org/', './mkdirp' ]
+verbose url resolved https://registry.npmjs.org/mkdirp
+http GET https://registry.npmjs.org/mkdirp
+verbose cache add [ 'ycssmin@>=1.0.1', null ]
+silly cache add: name, spec, args [ undefined, 'ycssmin@>=1.0.1', [ 'ycssmin@>=1.0.1', null ] ]
+verbose parsed url { pathname: 'ycssmin@', path: 'ycssmin@', href: 'ycssmin@' }
+silly cache add: name, spec, args [ 'ycssmin', '>=1.0.1', [ 'ycssmin', '>=1.0.1' ] ]
+verbose parsed url { pathname: '=1.0.1', path: '=1.0.1', href: '=1.0.1' }
+verbose addNamed [ 'ycssmin', '>=1.0.1' ]
+verbose addNamed [ null, '>=1.0.1' ]
+silly name, range, hasData [ 'ycssmin', '>=1.0.1', false ]
+verbose raw, before any munging ycssmin
+verbose url resolving [ 'https://registry.npmjs.org/', './ycssmin' ]
+verbose url resolved https://registry.npmjs.org/ycssmin
+http GET https://registry.npmjs.org/ycssmin
+http 200 https://registry.npmjs.org/mime
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"4AV5925YIV25RT7Y7B6Y7IEVQ"',
+silly get cb     date: 'Tue, 18 Jun 2013 17:53:05 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '19538' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/anoop/.npm/mime'
+verbose mkdir done: /home/anoop/.npm/mime 755
+silly name, range, hasData 2 [ 'mime', '>=1.2.0- <1.3.0-', true ]
+silly versions [ 'mime',
+silly versions   [ '1.0.0',
+silly versions     '1.1.0',
+silly versions     '1.2.1',
+silly versions     '1.2.2',
+silly versions     '1.2.3',
+silly versions     '1.2.4',
+silly versions     '1.2.5',
+silly versions     '1.2.6',
+silly versions     '1.2.7',
+silly versions     '1.2.8',
+silly versions     '1.2.9' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.8.0-23-generic',
+verbose bin dist   { shasum: '009cd40867bd35de521b3b966f04e2f8d4d13d09',
+verbose bin dist     tarball: 'http://registry.npmjs.org/mime/-/mime-1.2.9.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/mime/-/mime-1.2.9.tgz',
+verbose addRemoteTarball   '009cd40867bd35de521b3b966f04e2f8d4d13d09' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1371577994896'
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1371577994896/1371577994896-0.6539573930203915'
+verbose mkdir done: /tmp/npm-1371577994896/1371577994896-0.6539573930203915 755
+verbose fetch to /tmp/npm-1371577994896/1371577994896-0.6539573930203915/tmp.tgz
+http GET https://registry.npmjs.org/mime/-/mime-1.2.9.tgz
+http 200 https://registry.npmjs.org/request
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"8448TI6BZZICFGCHN4MNQTBQM"',
+silly get cb     date: 'Tue, 18 Jun 2013 17:53:05 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '331288' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/anoop/.npm/request'
+verbose mkdir done: /home/anoop/.npm/request 755
+silly name, range, hasData 2 [ 'request', '>=2.12.0', true ]
+silly versions [ 'request',
+silly versions   [ '0.10.0',
+silly versions     '0.8.3',
+silly versions     '0.9.0',
+silly versions     '0.9.1',
+silly versions     '0.9.5',
+silly versions     '1.0.0',
+silly versions     '1.1.0',
+silly versions     '1.1.1',
+silly versions     '1.2.0',
+silly versions     '1.9.0',
+silly versions     '1.9.1',
+silly versions     '1.9.2',
+silly versions     '1.9.3',
+silly versions     '1.9.5',
+silly versions     '1.9.7',
+silly versions     '1.9.8',
+silly versions     '1.9.9',
+silly versions     '2.0.0',
+silly versions     '2.0.1',
+silly versions     '2.0.2',
+silly versions     '2.0.3',
+silly versions     '2.0.4',
+silly versions     '2.0.5',
+silly versions     '2.1.0',
+silly versions     '2.1.1',
+silly versions     '2.2.0',
+silly versions     '2.2.5',
+silly versions     '2.2.6',
+silly versions     '2.2.9',
+silly versions     '2.9.0',
+silly versions     '2.9.1',
+silly versions     '2.9.2',
+silly versions     '2.9.3',
+silly versions     '2.9.100',
+silly versions     '2.9.150',
+silly versions     '2.9.151',
+silly versions     '2.9.152',
+silly versions     '2.9.153',
+silly versions     '2.9.200',
+silly versions     '2.9.201',
+silly versions     '2.9.202',
+silly versions     '2.9.203',
+silly versions     '2.10.0',
+silly versions     '2.11.0',
+silly versions     '2.11.1',
+silly versions     '2.11.2',
+silly versions     '2.11.3',
+silly versions     '2.11.4',
+silly versions     '2.12.0',
+silly versions     '2.14.0',
+silly versions     '2.16.0',
+silly versions     '2.16.2',
+silly versions     '2.16.4',
+silly versions     '2.16.6',
+silly versions     '2.18.0',
+silly versions     '2.19.0',
+silly versions     '2.20.0',
+silly versions     '2.21.0' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.8.0-23-generic',
+verbose bin dist   { shasum: '5728ab9c45e5a87c99daccd530298b6673a868d7',
+verbose bin dist     tarball: 'http://registry.npmjs.org/request/-/request-2.21.0.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/request/-/request-2.21.0.tgz',
+verbose addRemoteTarball   '5728ab9c45e5a87c99daccd530298b6673a868d7' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1371577994896/1371577995190-0.05858532153069973'
+verbose mkdir done: /tmp/npm-1371577994896/1371577995190-0.05858532153069973 755
+verbose fetch to /tmp/npm-1371577994896/1371577995190-0.05858532153069973/tmp.tgz
+http GET https://registry.npmjs.org/request/-/request-2.21.0.tgz
+http 200 https://registry.npmjs.org/mime/-/mime-1.2.9.tgz
+silly updated sha bytes 19614
+info shasum 009cd40867bd35de521b3b966f04e2f8d4d13d09
+info shasum /tmp/npm-1371577994896/1371577994896-0.6539573930203915/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1371577994896/1371577994896-0.6539573930203915/___package.npm'
+verbose mkdir done: /tmp/npm-1371577994896/1371577994896-0.6539573930203915/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1371577994896/1371577994896-0.6539573930203915/package
+silly gunzTarPerm modes [ '755', '644' ]
+http 200 https://registry.npmjs.org/request/-/request-2.21.0.tgz
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577994896-0.6539573930203915/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577994896-0.6539573930203915/___package.npm/package/LICENSE
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577994896-0.6539573930203915/___package.npm/package/README.md
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577994896-0.6539573930203915/___package.npm/package/mime.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577994896-0.6539573930203915/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577994896-0.6539573930203915/___package.npm/package/test.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577994896-0.6539573930203915/___package.npm/package/types
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577994896-0.6539573930203915/___package.npm/package/types/mime.types
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577994896-0.6539573930203915/___package.npm/package/types/node.types
+verbose gunzed /tmp/npm-1371577994896/1371577994896-0.6539573930203915/___package.npm/package
+verbose rm'ed /tmp/npm-1371577994896/1371577994896-0.6539573930203915/package
+verbose renamed [ '/tmp/npm-1371577994896/1371577994896-0.6539573930203915/___package.npm/package',
+verbose renamed   '/tmp/npm-1371577994896/1371577994896-0.6539573930203915/package' ]
+verbose caching /tmp/npm-1371577994896/1371577994896-0.6539573930203915/package/package.json
+verbose loadDefaults mime@1.2.9
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1371577994896/1371577994896-0.6539573930203915/package/package.json
+verbose pack /tmp/npm-1371577994896/1371577994896-0.6539573930203915/package
+verbose pack /tmp/npm-1371577994896/1371577994896-0.6539573930203915/package /home/anoop/.npm/mime/1.2.9/package.tgz
+silly makeList /tmp/npm-1371577994896/1371577994896-0.6539573930203915/package
+silly dir, dirLen [ '/tmp/npm-1371577994896/1371577994896-0.6539573930203915/package',
+silly dir, dirLen   64 ]
+verbose tarball /home/anoop/.npm/mime/1.2.9/package.tgz
+verbose parent /tmp/npm-1371577994896/1371577994896-0.6539573930203915/package
+verbose mkdir (expected) error ENOENT, stat '/home/anoop/.npm/mime/1.2.9/___package.npm'
+verbose mkdir done: /home/anoop/.npm/mime/1.2.9/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/anoop/.npm/mime/1.2.9/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/anoop/.npm/mime/1.2.9/___package.npm/package
+silly asyncMap in gTP /home/anoop/.npm/mime/1.2.9/___package.npm/package/LICENSE
+silly asyncMap in gTP /home/anoop/.npm/mime/1.2.9/___package.npm/package/README.md
+silly asyncMap in gTP /home/anoop/.npm/mime/1.2.9/___package.npm/package/mime.js
+silly asyncMap in gTP /home/anoop/.npm/mime/1.2.9/___package.npm/package/package.json
+silly asyncMap in gTP /home/anoop/.npm/mime/1.2.9/___package.npm/package/test.js
+silly asyncMap in gTP /home/anoop/.npm/mime/1.2.9/___package.npm/package/types
+silly asyncMap in gTP /home/anoop/.npm/mime/1.2.9/___package.npm/package/types/mime.types
+silly asyncMap in gTP /home/anoop/.npm/mime/1.2.9/___package.npm/package/types/node.types
+verbose gunzed /home/anoop/.npm/mime/1.2.9/___package.npm/package
+verbose rm'ed /home/anoop/.npm/mime/1.2.9/package
+verbose renamed [ '/home/anoop/.npm/mime/1.2.9/___package.npm/package',
+verbose renamed   '/home/anoop/.npm/mime/1.2.9/package' ]
+verbose caching /home/anoop/.npm/mime/1.2.9/package/package.json
+verbose loadDefaults mime@1.2.9
+silly updated sha bytes 18504
+info shasum b972151aeff265769157823890afe0ef0106d6d3
+info shasum /home/anoop/.npm/mime/1.2.9/package.tgz
+verbose from cache /home/anoop/.npm/mime/1.2.9/package/package.json
+verbose chmod /home/anoop/.npm/mime/1.2.9/package.tgz 644
+verbose chown [ '/home/anoop/.npm/mime/1.2.9/package.tgz', 1000, 1000 ]
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 18574
+info shasum 5728ab9c45e5a87c99daccd530298b6673a868d7
+info shasum /tmp/npm-1371577994896/1371577995190-0.05858532153069973/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm'
+verbose mkdir done: /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1371577994896/1371577995190-0.05858532153069973/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/LICENSE
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/README.md
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/index.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-toJSON.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-localAddress.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-redirect.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-timeout.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-basic-auth.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-params.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-tunnel.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-https.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-digest-auth.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-s3.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-errors.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-defaults.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-hawk.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-form.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/server.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-pool.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/googledoodle.jpg
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-piped-redirect.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-protocol-changing-redirect.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-oauth.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-follow-all.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-headers.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/unicycle.jpg
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-pipes.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-http-signature.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-https-strict.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-proxy.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/squid.conf
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-httpModule.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/run.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-follow-all-303.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-body.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-onelineproxy.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-emptyBody.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/test-qs.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/ssl
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/ssl/test.key
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/ssl/test.crt
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/ssl/npm-ca.crt
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/ssl/ca
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/ssl/ca/ca.crt
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/ssl/ca/ca.key
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/ssl/ca/server.cnf
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/ssl/ca/server.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/ssl/ca/server.key
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/ssl/ca/ca.cnf
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/ssl/ca/ca.crl
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/ssl/ca/server.crt
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/ssl/ca/ca.csr
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/ssl/ca/server.csr
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package/tests/ssl/ca/ca.srl
+verbose gunzed /tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package
+verbose rm'ed /tmp/npm-1371577994896/1371577995190-0.05858532153069973/package
+verbose renamed [ '/tmp/npm-1371577994896/1371577995190-0.05858532153069973/___package.npm/package',
+verbose renamed   '/tmp/npm-1371577994896/1371577995190-0.05858532153069973/package' ]
+verbose caching /tmp/npm-1371577994896/1371577995190-0.05858532153069973/package/package.json
+verbose loadDefaults request@2.21.0
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1371577994896/1371577995190-0.05858532153069973/package/package.json
+verbose pack /tmp/npm-1371577994896/1371577995190-0.05858532153069973/package
+verbose pack /tmp/npm-1371577994896/1371577995190-0.05858532153069973/package /home/anoop/.npm/request/2.21.0/package.tgz
+silly makeList /tmp/npm-1371577994896/1371577995190-0.05858532153069973/package
+silly dir, dirLen [ '/tmp/npm-1371577994896/1371577995190-0.05858532153069973/package',
+silly dir, dirLen   65 ]
+verbose tarball /home/anoop/.npm/request/2.21.0/package.tgz
+verbose parent /tmp/npm-1371577994896/1371577995190-0.05858532153069973/package
+verbose mkdir (expected) error ENOENT, stat '/home/anoop/.npm/request/2.21.0/___package.npm'
+verbose mkdir done: /home/anoop/.npm/request/2.21.0/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/anoop/.npm/request/2.21.0/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/LICENSE
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/README.md
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/index.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/package.json
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-toJSON.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-localAddress.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-redirect.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-timeout.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-basic-auth.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-params.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-tunnel.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-https.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-digest-auth.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-s3.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-errors.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-defaults.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-hawk.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-form.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/server.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-pool.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/googledoodle.jpg
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-piped-redirect.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-protocol-changing-redirect.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-oauth.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-follow-all.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-headers.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/unicycle.jpg
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-pipes.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-http-signature.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-https-strict.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-proxy.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/squid.conf
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-httpModule.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/run.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-follow-all-303.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-body.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-onelineproxy.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-emptyBody.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/test-qs.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/ssl
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/ssl/test.key
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/ssl/test.crt
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/ssl/npm-ca.crt
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/ssl/ca
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/ssl/ca/ca.crt
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/ssl/ca/ca.key
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/ssl/ca/server.cnf
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/ssl/ca/server.js
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/ssl/ca/server.key
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/ssl/ca/ca.cnf
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/ssl/ca/ca.crl
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/ssl/ca/server.crt
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/ssl/ca/ca.csr
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/ssl/ca/server.csr
+silly asyncMap in gTP /home/anoop/.npm/request/2.21.0/___package.npm/package/tests/ssl/ca/ca.srl
+verbose gunzed /home/anoop/.npm/request/2.21.0/___package.npm/package
+verbose rm'ed /home/anoop/.npm/request/2.21.0/package
+verbose renamed [ '/home/anoop/.npm/request/2.21.0/___package.npm/package',
+verbose renamed   '/home/anoop/.npm/request/2.21.0/package' ]
+verbose caching /home/anoop/.npm/request/2.21.0/package/package.json
+verbose loadDefaults request@2.21.0
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 20665
+info shasum f0a50670bc5d7ec17dfe09a736fc240bd9ee9815
+info shasum /home/anoop/.npm/request/2.21.0/package.tgz
+verbose from cache /home/anoop/.npm/request/2.21.0/package/package.json
+verbose chmod /home/anoop/.npm/request/2.21.0/package.tgz 644
+verbose chown [ '/home/anoop/.npm/request/2.21.0/package.tgz', 1000, 1000 ]
+http 200 https://registry.npmjs.org/mkdirp
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"4YRFRSP5423CX4R4FU0JZ3JNG"',
+silly get cb     date: 'Tue, 18 Jun 2013 17:53:10 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '17897' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/anoop/.npm/mkdirp'
+verbose mkdir done: /home/anoop/.npm/mkdirp 755
+silly name, range, hasData 2 [ 'mkdirp', '>=0.3.4- <0.4.0-', true ]
+silly versions [ 'mkdirp',
+silly versions   [ '0.0.1',
+silly versions     '0.0.2',
+silly versions     '0.0.3',
+silly versions     '0.0.4',
+silly versions     '0.0.5',
+silly versions     '0.0.6',
+silly versions     '0.0.7',
+silly versions     '0.1.0',
+silly versions     '0.2.0',
+silly versions     '0.2.1',
+silly versions     '0.2.2',
+silly versions     '0.3.0',
+silly versions     '0.3.1',
+silly versions     '0.3.2',
+silly versions     '0.3.3',
+silly versions     '0.3.4',
+silly versions     '0.3.5' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.8.0-23-generic',
+verbose bin dist   { shasum: 'de3e5f8961c88c787ee1368df849ac4413eca8d7',
+verbose bin dist     tarball: 'http://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz',
+verbose addRemoteTarball   'de3e5f8961c88c787ee1368df849ac4413eca8d7' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1371577994896/1371577999957-0.7107468033209443'
+verbose mkdir done: /tmp/npm-1371577994896/1371577999957-0.7107468033209443 755
+verbose fetch to /tmp/npm-1371577994896/1371577999957-0.7107468033209443/tmp.tgz
+http GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz
+http 200 https://registry.npmjs.org/ycssmin
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+silly get cb     etag: '"EN8ECZTUXB4SCUVPGCIQZNGS2"',
+silly get cb     date: 'Tue, 18 Jun 2013 17:53:10 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '12720' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/anoop/.npm/ycssmin'
+verbose mkdir done: /home/anoop/.npm/ycssmin 755
+silly name, range, hasData 2 [ 'ycssmin', '>=1.0.1', true ]
+silly versions [ 'ycssmin', [ '1.0.0', '1.0.1' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.8.0-23-generic',
+verbose bin dist   { shasum: '7cdde8db78cfab00d2901c3b2301e304faf4df16',
+verbose bin dist     tarball: 'http://registry.npmjs.org/ycssmin/-/ycssmin-1.0.1.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/ycssmin/-/ycssmin-1.0.1.tgz',
+verbose addRemoteTarball   '7cdde8db78cfab00d2901c3b2301e304faf4df16' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1371577994896/1371577999975-0.7765429513528943'
+verbose mkdir done: /tmp/npm-1371577994896/1371577999975-0.7765429513528943 755
+verbose fetch to /tmp/npm-1371577994896/1371577999975-0.7765429513528943/tmp.tgz
+http GET https://registry.npmjs.org/ycssmin/-/ycssmin-1.0.1.tgz
+http 200 https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz
+http 200 https://registry.npmjs.org/ycssmin/-/ycssmin-1.0.1.tgz
+silly updated sha bytes 4162
+info shasum de3e5f8961c88c787ee1368df849ac4413eca8d7
+info shasum /tmp/npm-1371577994896/1371577999957-0.7107468033209443/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm'
+verbose mkdir done: /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1371577994896/1371577999957-0.7107468033209443/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/LICENSE
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/readme.markdown
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/index.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/.travis.yml
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/.npmignore
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/examples
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/examples/pow.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/test
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/test/mkdirp.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/test/race.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/test/umask.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/test/root.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/test/clobber.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/test/perm.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/test/perm_sync.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/test/chmod.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/test/rel.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/test/umask_sync.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/test/return.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/test/return_sync.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package/test/sync.js
+verbose gunzed /tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package
+verbose rm'ed /tmp/npm-1371577994896/1371577999957-0.7107468033209443/package
+verbose renamed [ '/tmp/npm-1371577994896/1371577999957-0.7107468033209443/___package.npm/package',
+verbose renamed   '/tmp/npm-1371577994896/1371577999957-0.7107468033209443/package' ]
+verbose caching /tmp/npm-1371577994896/1371577999957-0.7107468033209443/package/package.json
+verbose loadDefaults mkdirp@0.3.5
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1371577994896/1371577999957-0.7107468033209443/package/package.json
+verbose pack /tmp/npm-1371577994896/1371577999957-0.7107468033209443/package
+verbose pack /tmp/npm-1371577994896/1371577999957-0.7107468033209443/package /home/anoop/.npm/mkdirp/0.3.5/package.tgz
+silly makeList /tmp/npm-1371577994896/1371577999957-0.7107468033209443/package
+silly dir, dirLen [ '/tmp/npm-1371577994896/1371577999957-0.7107468033209443/package',
+silly dir, dirLen   64 ]
+verbose tarball /home/anoop/.npm/mkdirp/0.3.5/package.tgz
+verbose parent /tmp/npm-1371577994896/1371577999957-0.7107468033209443/package
+verbose mkdir (expected) error ENOENT, stat '/home/anoop/.npm/mkdirp/0.3.5/___package.npm'
+verbose mkdir done: /home/anoop/.npm/mkdirp/0.3.5/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/anoop/.npm/mkdirp/0.3.5/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/LICENSE
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/readme.markdown
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/index.js
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/.travis.yml
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/package.json
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/.npmignore
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/examples
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/examples/pow.js
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/test
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/test/mkdirp.js
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/test/race.js
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/test/umask.js
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/test/root.js
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/test/clobber.js
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/test/perm.js
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/test/perm_sync.js
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/test/chmod.js
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/test/rel.js
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/test/umask_sync.js
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/test/return.js
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/test/return_sync.js
+silly asyncMap in gTP /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package/test/sync.js
+verbose gunzed /home/anoop/.npm/mkdirp/0.3.5/___package.npm/package
+verbose rm'ed /home/anoop/.npm/mkdirp/0.3.5/package
+verbose renamed [ '/home/anoop/.npm/mkdirp/0.3.5/___package.npm/package',
+verbose renamed   '/home/anoop/.npm/mkdirp/0.3.5/package' ]
+verbose caching /home/anoop/.npm/mkdirp/0.3.5/package/package.json
+verbose loadDefaults mkdirp@0.3.5
+silly updated sha bytes 4201
+info shasum cb42a52e481a90a3d16676a3a122c02ca10bae72
+info shasum /home/anoop/.npm/mkdirp/0.3.5/package.tgz
+verbose from cache /home/anoop/.npm/mkdirp/0.3.5/package/package.json
+verbose chmod /home/anoop/.npm/mkdirp/0.3.5/package.tgz 644
+verbose chown [ '/home/anoop/.npm/mkdirp/0.3.5/package.tgz', 1000, 1000 ]
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 225
+info shasum 7cdde8db78cfab00d2901c3b2301e304faf4df16
+info shasum /tmp/npm-1371577994896/1371577999975-0.7765429513528943/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm'
+verbose mkdir done: /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1371577994896/1371577999975-0.7765429513528943/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/LICENSE
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/Makefile
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/cssmin.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/README.md
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/.travis.yml
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/.npmignore
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/bin
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/bin/cssmin
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/tests.js
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/color.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/opacity-filter.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/preserve-case.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/concat-charset.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-base64-eof.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-realdata-singlequotes.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-base64-doublequotes.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/background-position.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/special-comments.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/media-multi.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/color-simple.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/border-none.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/media-empty-class.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-nonbase64-doublequotes.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/zeros.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-base64-linebreakindata.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-realdata-doublequotes.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/bug2527991.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/webkit-transform.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-realdata-yuiapp.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/webkit-transform.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/pseudo.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-nonbase64-doublequotes.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-noquote-multiline-font.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-base64-linebreakindata.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/bug2528034.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/comment.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/bug2527998.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-noquote-multiline-font.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/charset-media.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/font-face.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/star-underscore-hacks.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/preserve-new-line.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-nonbase64-singlequotes.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/bug2527974.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/zeros.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/bug2528034.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/media-test.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-nonbase64-noquotes.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-base64-singlequotes.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/background-position.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/box-model-hack.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-realdata-singlequotes.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/string-in-comment.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/bug2527998.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-realdata-yuiapp.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-base64-noquotes.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-singlequote-font.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-singlequote-font.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/concat-charset.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-dbquote-font.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/border-none.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/comment.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-nonbase64-singlequotes.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/preserve-new-line.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/charset-media.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/decimals.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/preserve-case.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/media-test.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/special-comments.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-base64-twourls.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-realdata-noquotes.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-realdata-noquotes.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/media-empty-class.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/bug2527991.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/media-multi.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/bug2527974.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-base64-singlequotes.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/box-model-hack.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/pseudo.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/color.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dollar-header.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/opacity-filter.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-base64-noquotes.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/ie5mac.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/ie5mac.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-base64-doublequotes.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/preserve-strings.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/decimals.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/preserve-strings.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-nonbase64-noquotes.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dollar-header.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/pseudo-first.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-dbquote-font.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-base64-eof.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/color-simple.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/pseudo-first.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/star-underscore-hacks.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/font-face.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/string-in-comment.css
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-realdata-doublequotes.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/dataurl-base64-twourls.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/special
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/special/linebreakpos.css.min
+silly asyncMap in gTP /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package/tests/files/special/linebreakpos.css
+verbose gunzed /tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package
+verbose rm'ed /tmp/npm-1371577994896/1371577999975-0.7765429513528943/package
+verbose renamed [ '/tmp/npm-1371577994896/1371577999975-0.7765429513528943/___package.npm/package',
+verbose renamed   '/tmp/npm-1371577994896/1371577999975-0.7765429513528943/package' ]
+verbose caching /tmp/npm-1371577994896/1371577999975-0.7765429513528943/package/package.json
+verbose loadDefaults ycssmin@1.0.1
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1371577994896/1371577999975-0.7765429513528943/package/package.json
+verbose pack /tmp/npm-1371577994896/1371577999975-0.7765429513528943/package
+verbose pack /tmp/npm-1371577994896/1371577999975-0.7765429513528943/package /home/anoop/.npm/ycssmin/1.0.1/package.tgz
+silly makeList /tmp/npm-1371577994896/1371577999975-0.7765429513528943/package
+silly dir, dirLen [ '/tmp/npm-1371577994896/1371577999975-0.7765429513528943/package',
+silly dir, dirLen   64 ]
+verbose tarball /home/anoop/.npm/ycssmin/1.0.1/package.tgz
+verbose parent /tmp/npm-1371577994896/1371577999975-0.7765429513528943/package
+verbose mkdir (expected) error ENOENT, stat '/home/anoop/.npm/ycssmin/1.0.1/___package.npm'
+verbose mkdir done: /home/anoop/.npm/ycssmin/1.0.1/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/anoop/.npm/ycssmin/1.0.1/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/LICENSE
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/Makefile
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/cssmin.js
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/README.md
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/.travis.yml
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/package.json
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/.npmignore
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/bin
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/bin/cssmin
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/tests.js
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/color.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/opacity-filter.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/preserve-case.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/concat-charset.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-base64-eof.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-realdata-singlequotes.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-base64-doublequotes.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/background-position.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/special-comments.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/media-multi.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/color-simple.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/border-none.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/media-empty-class.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-nonbase64-doublequotes.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/zeros.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-base64-linebreakindata.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-realdata-doublequotes.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/bug2527991.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/webkit-transform.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-realdata-yuiapp.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/webkit-transform.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/pseudo.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-nonbase64-doublequotes.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-noquote-multiline-font.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-base64-linebreakindata.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/bug2528034.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/comment.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/bug2527998.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-noquote-multiline-font.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/charset-media.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/font-face.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/star-underscore-hacks.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/preserve-new-line.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-nonbase64-singlequotes.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/bug2527974.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/zeros.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/bug2528034.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/media-test.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-nonbase64-noquotes.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-base64-singlequotes.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/background-position.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/box-model-hack.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-realdata-singlequotes.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/string-in-comment.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/bug2527998.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-realdata-yuiapp.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-base64-noquotes.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-singlequote-font.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-singlequote-font.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/concat-charset.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-dbquote-font.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/border-none.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/comment.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-nonbase64-singlequotes.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/preserve-new-line.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/charset-media.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/decimals.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/preserve-case.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/media-test.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/special-comments.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-base64-twourls.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-realdata-noquotes.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-realdata-noquotes.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/media-empty-class.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/bug2527991.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/media-multi.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/bug2527974.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-base64-singlequotes.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/box-model-hack.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/pseudo.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/color.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dollar-header.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/opacity-filter.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-base64-noquotes.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/ie5mac.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/ie5mac.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-base64-doublequotes.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/preserve-strings.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/decimals.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/preserve-strings.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-nonbase64-noquotes.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dollar-header.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/pseudo-first.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-dbquote-font.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-base64-eof.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/color-simple.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/pseudo-first.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/star-underscore-hacks.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/font-face.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/string-in-comment.css
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-realdata-doublequotes.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/dataurl-base64-twourls.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/special
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/special/linebreakpos.css.min
+silly asyncMap in gTP /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package/tests/files/special/linebreakpos.css
+verbose gunzed /home/anoop/.npm/ycssmin/1.0.1/___package.npm/package
+verbose rm'ed /home/anoop/.npm/ycssmin/1.0.1/package
+verbose renamed [ '/home/anoop/.npm/ycssmin/1.0.1/___package.npm/package',
+verbose renamed   '/home/anoop/.npm/ycssmin/1.0.1/package' ]
+verbose caching /home/anoop/.npm/ycssmin/1.0.1/package/package.json
+verbose loadDefaults ycssmin@1.0.1
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40835
+info shasum 3fa7399368a6bb34d2725a30865eca71161c68ca
+info shasum /home/anoop/.npm/ycssmin/1.0.1/package.tgz
+verbose from cache /home/anoop/.npm/ycssmin/1.0.1/package/package.json
+verbose chmod /home/anoop/.npm/ycssmin/1.0.1/package.tgz 644
+verbose chown [ '/home/anoop/.npm/ycssmin/1.0.1/package.tgz', 1000, 1000 ]
+silly resolved [ { author: 
+silly resolved      { name: 'Robert Kieffer',
+silly resolved        email: 'robert@broofa.com',
+silly resolved        url: 'http://github.com/broofa' },
+silly resolved     contributors: 
+silly resolved      [ { name: 'Benjamin Thomas',
+silly resolved          email: 'benjamin@benjaminthomas.org',
+silly resolved          url: 'http://github.com/bentomas' } ],
+silly resolved     dependencies: {},
+silly resolved     description: 'A comprehensive library for mime-type mapping',
+silly resolved     devDependencies: {},
+silly resolved     keywords: [ 'util', 'mime' ],
+silly resolved     main: 'mime.js',
+silly resolved     name: 'mime',
+silly resolved     repository: { url: 'git://github.com/broofa/node-mime.git', type: 'git' },
+silly resolved     version: '1.2.9',
+silly resolved     _id: 'mime@1.2.9',
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: 'b972151aeff265769157823890afe0ef0106d6d3' },
+silly resolved     _from: 'mime@1.2.x' },
+silly resolved   { name: 'request',
+silly resolved     description: 'Simplified HTTP request client.',
+silly resolved     tags: [ 'http', 'simple', 'util', 'utility' ],
+silly resolved     version: '2.21.0',
+silly resolved     author: { name: 'Mikeal Rogers', email: 'mikeal.rogers@gmail.com' },
+silly resolved     repository: { type: 'git', url: 'git://github.com/mikeal/request.git' },
+silly resolved     bugs: { url: 'http://github.com/mikeal/request/issues' },
+silly resolved     engines: [ 'node >= 0.8.0', node: ' >= 0.8.0' ],
+silly resolved     main: 'index.js',
+silly resolved     dependencies: 
+silly resolved      { qs: '~0.6.0',
+silly resolved        'json-stringify-safe': '~4.0.0',
+silly resolved        'forever-agent': '~0.5.0',
+silly resolved        'tunnel-agent': '~0.3.0',
+silly resolved        'http-signature': '~0.9.11',
+silly resolved        hawk: '~0.13.0',
+silly resolved        'aws-sign': '~0.3.0',
+silly resolved        'oauth-sign': '~0.3.0',
+silly resolved        'cookie-jar': '~0.3.0',
+silly resolved        'node-uuid': '~1.4.0',
+silly resolved        mime: '~1.2.9',
+silly resolved        'form-data': '0.0.8' },
+silly resolved     scripts: { test: 'node tests/run.js' },
+silly resolved     _id: 'request@2.21.0',
+silly resolved     devDependencies: {},
+silly resolved     optionalDependencies: {},
+silly resolved     _engineSupported: false,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: 'f0a50670bc5d7ec17dfe09a736fc240bd9ee9815' },
+silly resolved     _from: 'request@>=2.12.0' },
+silly resolved   { name: 'mkdirp',
+silly resolved     description: 'Recursively mkdir, like `mkdir -p`',
+silly resolved     version: '0.3.5',
+silly resolved     author: 
+silly resolved      { name: 'James Halliday',
+silly resolved        email: 'mail@substack.net',
+silly resolved        url: 'http://substack.net' },
+silly resolved     main: './index',
+silly resolved     keywords: [ 'mkdir', 'directory' ],
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/substack/node-mkdirp.git' },
+silly resolved     scripts: { test: 'tap test/*.js' },
+silly resolved     devDependencies: { tap: '~0.4.0' },
+silly resolved     license: 'MIT',
+silly resolved     _id: 'mkdirp@0.3.5',
+silly resolved     dependencies: {},
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: 'cb42a52e481a90a3d16676a3a122c02ca10bae72' },
+silly resolved     _from: 'mkdirp@~0.3.4' },
+silly resolved   { name: 'ycssmin',
+silly resolved     version: '1.0.1',
+silly resolved     description: 'CSS Minification from YUICompressor',
+silly resolved     main: './cssmin',
+silly resolved     bin: { ycssmin: './bin/cssmin' },
+silly resolved     devDependencies: 
+silly resolved      { 'yui-lint': '~0.1.1',
+silly resolved        jshint: '~0.9.0',
+silly resolved        istanbul: '~0.1.8',
+silly resolved        vows: '*' },
+silly resolved     author: { name: 'Dav Glass', email: 'davglass@gmail.com' },
+silly resolved     contributors: 
+silly resolved      [ { name: 'Johan Bleuzen', url: 'http://blog.johanbleuzen.fr' },
+silly resolved        { name: 'Dav Glass', email: 'davglass@gmail.com' },
+silly resolved        { name: 'Isaac Z. Schlueter',
+silly resolved          email: 'i@izs.me',
+silly resolved          url: 'http://blog.izs.me/' } ],
+silly resolved     keywords: [ 'minify', 'cssmin', 'compressor', 'yuicompressor' ],
+silly resolved     scripts: 
+silly resolved      { pretest: 'jshint --config ./node_modules/yui-lint/jshint.json cssmin.js package.json',
+silly resolved        test: 'istanbul cover --print both -- vows --spec ./tests/*.js' },
+silly resolved     repository: { type: 'git', url: 'git://github.com/yui/ycssmin.git' },
+silly resolved     preferGlobal: 'true',
+silly resolved     bugs: { url: 'http://github.com/yui/ycssmin/issues' },
+silly resolved     licenses: 
+silly resolved      [ { type: 'BSD',
+silly resolved          url: 'https://github.com/yui/ycssmin/blob/master/LICENSE' } ],
+silly resolved     _id: 'ycssmin@1.0.1',
+silly resolved     dependencies: {},
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: '3fa7399368a6bb34d2725a30865eca71161c68ca' },
+silly resolved     _from: 'ycssmin@>=1.0.1' } ]
+info into /usr/local/lib/node_modules/less mime@1.2.9
+info into /usr/local/lib/node_modules/less request@2.21.0
+info into /usr/local/lib/node_modules/less mkdirp@0.3.5
+info into /usr/local/lib/node_modules/less ycssmin@1.0.1
+info installOne mime@1.2.9
+info installOne request@2.21.0
+verbose installOne cb request@2.21.0
+verbose about to build /usr/local/lib/node_modules/less
+ERR! error installing less@1.4.0
+info unbuild /usr/local/lib/node_modules/less
+verbose from cache /usr/local/lib/node_modules/less/package.json
+info preuninstall less@1.4.0
+info installOne mkdirp@0.3.5
+info installOne ycssmin@1.0.1
+verbose from cache /home/anoop/.npm/mime/1.2.9/package/package.json
+info unbuild /usr/local/lib/node_modules/less/node_modules/mime
+verbose from cache /home/anoop/.npm/mkdirp/0.3.5/package/package.json
+info unbuild /usr/local/lib/node_modules/less/node_modules/mkdirp
+verbose from cache /home/anoop/.npm/ycssmin/1.0.1/package/package.json
+info unbuild /usr/local/lib/node_modules/less/node_modules/ycssmin
+info uninstall less@1.4.0
+verbose unbuild less@1.4.0 [ true,
+verbose unbuild less@1.4.0   '/usr/local/lib/node_modules',
+verbose unbuild less@1.4.0   '/usr/local/lib/node_modules' ]
+verbose binRoot [ '/usr/local/bin', { lessc: './bin/lessc' } ]
+info postuninstall less@1.4.0
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/less/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/less/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/less/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/less/node_modules/___mime.npm'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/less/node_modules/___mkdirp.npm'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/less/node_modules/___ycssmin.npm'
+verbose mkdir done: /usr/local/lib/node_modules/less/node_modules/___mime.npm 755
+verbose mkdir done: /usr/local/lib/node_modules/less/node_modules/___mkdirp.npm 755
+verbose mkdir done: /usr/local/lib/node_modules/less/node_modules/___ycssmin.npm 755
+verbose unpack_ uid, gid [ 65534, 1000 ]
+verbose unpackTarget /usr/local/lib/node_modules/less/node_modules/mime
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ 65534, 1000 ]
+verbose unpackTarget /usr/local/lib/node_modules/less/node_modules/mkdirp
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ 65534, 1000 ]
+verbose unpackTarget /usr/local/lib/node_modules/less/node_modules/ycssmin
+silly gunzTarPerm modes [ '755', '644' ]
+ERR! error rolling back less@1.4.0 Error: ENOTEMPTY, rmdir '/usr/local/lib/node_modules/less'
+verbose installOne cb less@1.4.0
+ERR! Unsupported
+ERR! Not compatible with your version of node/npm: request@2.21.0
+ERR! Required: ["node >= 0.8.0"]
+ERR! Actual:   {"npm":"1.1.4","node":"0.6.19"}
+ERR! 
+ERR! System Linux 3.8.0-23-generic
+ERR! command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "less"
+ERR! cwd /home/anoop/webanup/webv2/portfolio
+ERR! node -v v0.6.19
+ERR! npm -v 1.1.4
+ERR! code ENOTSUP
+ERR! message Unsupported
+ERR! errno {}
+verbose exit [ 1, true ]

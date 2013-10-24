@@ -1,0 +1,73 @@
+#emblem {
+	width: 350px;
+	height: 410px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-175px;
+	margin-top:-205px;
+	background: url(../images/emblem_wo_icons.png);
+	background-size: 100% 100%;
+	z-index:200;
+	visibility:hidden;
+}
+
+#moving-div {
+	position:absolute;
+	/*
+	left:0%;
+	top:0%;
+	*/
+	z-index:200;
+	display:none;
+}
+
+.anim-click {
+	cursor:pointer;
+	border: 0px solid #000;
+	position: absolute;
+	-webkit-transition: text-shadow 1s linear;
+	-moz-transition: text-shadow 1s linear;
+	-ms-transition: text-shadow 1s linear;
+	-o-transition: text-shadow 1s linear;
+	transition: text-shadow 1s linear;
+}
+.anim-click:hover{
+	text-shadow: 0 0 10px red;
+}
+#gator-click {
+	width: 142px;
+	height: 108px;
+	left: 23px;
+	top: 55px;
+	background: url(../images/gator.png);
+	/*
+	*/
+}
+#ubuntu-click {
+	width: 124px;
+	height: 114px;
+	left: 196px;
+	top: 56px;
+	background: url(../images/ubuntu.png);
+	/*
+	*/
+}
+#html-click {
+	width: 128px;
+	height: 150px;
+	left: 25px;
+	top: 225px;
+	background: url(../images/html.png);
+	/*
+	*/
+}
+#ball-click {
+	width: 103px;
+	height: 103px;
+	left: 201px;
+	top: 245px;
+	background: url(../images/ball.png);
+	/*
+	*/
+}

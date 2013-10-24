@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<blog>
+	<article id="article2" dateposted="May 15 2013">
+		<title>JavaScript scoping</title>
+		<desc>
+			<para>It is imperative that we understand how variable scope and variable hoisting work in JavaScript. These concepts might seem straightforward, but they are not. There are some important subtleties that we must understand, if we want to succeed in JavaScript development.  Variable Scope A variable’s scope is the context in which the variable exists. It specifies from where you can access a variable and whether you have access to the variable in that context. Variables have either a local scope or a global scope.</para>
+		</desc>
+	</article>
+</blog>

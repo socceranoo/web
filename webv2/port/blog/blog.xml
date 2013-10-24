@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<blog>
+	<article dateposted="May 20 2013">
+		<title>JavaScript Closures</title>
+		<desc>
+			<para>A closure is an inner function that has access to the outer (enclosing) function&#x2019;s variables&#x2014;scope chain. The closure has three scope chains: it has access to its own scope (variables defined between its curly brackets), it has access to the outer function&#x2019;s variables, and it has access to the global variables.</para>
+			<para>The inner function has access not only to the outer function&#x2019;s variables, but also to the outer function&#x2019;s parameters. Note that the inner function cannot call the outer function&#x2019;s arguments object, however, even though it can call the outer function&#x2019;s parameters directly.</para>
+		</desc>
+		<code>
+			<line>function showName (firstName, lastName) {</line>
+			<line>var nameIntro = "Your name is ";</line>
+			<line>// this inner function has access to the outer function's variables, including the parameter</line>
+			<line>function makeFullName () {</line>
+			<line>return nameIntro + firstName + " " + lastName;</line>
+			<line>}</line>
+			<line/>
+			<line>return makeFullName ();</line>
+			<line>}</line>
+			<line>showName ("Michael", "Jackson"); // Your name is Michael Jackson</line>
+		</code>
+	</article>
+</blog>
