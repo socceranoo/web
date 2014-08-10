@@ -5,8 +5,8 @@
 		// ADD THE TRANSACTION UPDATE THE TRANSACTION TABLES
 		$paidarr = objectToArray($paid);
 		$partarr = objectToArray($part);
-		$paidString = serialize($paidarr);
-		$participantString = serialize($partarr);
+		$paidString = json_encode($paidarr);
+		$participantString = json_encode($partarr);
 		$qry = "INSERT INTO $moneytable (event, description, date, paid, participants, amount) ".
 		"VALUES('$event','$desc','$date','$paidString', '$participantString', '$amount')";
 		$id = $fgmembersite->RunQuery($qry, true);
@@ -22,15 +22,15 @@
 		$result = $fgmembersite->RunQuery($qry);
 		$row = mysql_fetch_array($result);
 		$old_amount = $row['amount'];
-		$old_paid = unserialize($row['paid']);
-		$old_participant = unserialize($row['participants']);
+		$old_paid = json_decode($row['paid']);
+		$old_participant = json_decode($row['participants']);
 		update_on_add_or_del($old_amount, $old_paid, $old_participant, "del");
 
 		// ADD THE NEW TRANSACTION UPDATE THE USER TABLES
 		$paidarr = objectToArray($paid);
 		$partarr = objectToArray($part);
-		$paidString = serialize($paidarr);
-		$participantString = serialize($partarr);
+		$paidString = json_encode($paidarr);
+		$participantString = json_encode($partarr);
 		$qry = "UPDATE $moneytable SET event='$event', description='$desc', date='$date', paid='$paidString', participants='$participantString', amount='$amount'".
 		"WHERE id=$id";
 		$fgmembersite->RunQuery($qry);
@@ -44,8 +44,8 @@
 		$result = $fgmembersite->RunQuery($qry);
 		$row = mysql_fetch_array($result);
 		$amount = $row['amount'];
-		$paid = unserialize($row['paid']);
-		$participant = unserialize($row['participants']);
+		$paid = json_decode($row['paid']);
+		$participant = json_decode($row['participants']);
 		update_on_add_or_del($amount, $paid, $participant, "del");
 
 		// DELETE THE TRANSACTION UPDATE THE TRANSACTION TABLES
@@ -72,8 +72,8 @@
 		$result = $fgmembersite->RunQuery($qry);
 		$row = mysql_fetch_array($result);
 		$amount = $row['amount'];
-		$paid = unserialize($row['paid']);
-		$participant = unserialize($row['participants']);
+		$paid = json_decode($row['paid']);
+		$participant = json_decode($row['participants']);
 		update_on_add_or_del($amount, $paid, $participant, "add");
 
 		// REVIVE THE TRANSACTION UPDATE THE TRANSACTION TABLES
@@ -173,9 +173,9 @@
 		$flag="new";
 		$sel="";
 		if ($option == 0)
-			$array=unserialize($values['paid']);
+			$array=json_decode($values['paid']);
 		else if($option == 1)
-			$array=unserialize($values['participants']);
+			$array=json_decode($values['participants']);
 
 		$sel ="selected=\"selected\"";
 		echo "<option $sel value=default>";

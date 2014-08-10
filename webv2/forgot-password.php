@@ -11,10 +11,10 @@
 		<?require_once("include/headers.php");?>
 		<?require_once("include/loginheaders.php");?>
 	</head>
-	<body class='background-cloud login'>
+	<body class='background-clouds'>
 		<div class=container>
 			<div class="featurette-divider4"></div>
-			<h3 class="text-right website-heading" style="font-size:50px;">GATORAZE.COM</h3>
+			<h3 class="website-heading">gatoraze.com</h3>
 			<hr class="featurette-divider4">
 			<div class=row>
 				<div class=span4>

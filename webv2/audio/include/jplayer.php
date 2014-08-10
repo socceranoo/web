@@ -12,7 +12,7 @@
 						<ul id=jp_playlist_1_ul></ul>
 					</div>
 					<div id="jquery_jplayer_1" class="jp-jplayer"></div>
-					<div id="jp_interface_1" class="jp-interface background-emerald">
+					<div id="jp_interface_1" class="jp-interface">
 						<ul class="jp-controls">
 							<li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
 							<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
