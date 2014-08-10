@@ -91,6 +91,9 @@
 .background-transparent {
   background: transparent !important ;
 }
+.full {
+  height: 100%;
+}
 body {
   font-family: "proxima-nova-light", sans-serif;
   font-size: 17px;
@@ -104,6 +107,31 @@ body.login {
   background: #3498db;
   background-image: url('../images/plain.jpg');
   background-size: cover;
+}
+body.full {
+  /*
+		*/
+
+  background: #fff;
+  background-size: cover;
+}
+.topfixed {
+  width: inherit;
+  position: fixed;
+  top: 0%;
+}
+#item-selector {
+  position: fixed;
+  top: 35%;
+  left: 10%;
+}
+#item-selector li {
+  height: 15px;
+  width: 15px;
+  border-radius: 8px;
+  float: none;
+  margin: 5px 0px 15px 0px;
+  cursor: pointer;
 }
 .border-opposite-left {
   -webkit-border-top-left-radius: 100px;
@@ -123,6 +151,8 @@ body.login {
 }
 .website-heading {
   font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  text-align: left;
 }
 .family-rouge {
   font-family: 'Rouge Script', cursive;
@@ -259,13 +289,30 @@ body.login {
 
 }
 .featurette-divider4 {
+  height: 1px;
   margin: 20px 0px 20px 0px;
+  /* Space out the Bootstrap <hr> more */
+
+}
+.featurette-divider5 {
+  height: 100px;
+  margin: 50px 0px 50px 0px;
   /* Space out the Bootstrap <hr> more */
 
 }
 .container .row .section {
   min-height: 45%;
   max-height: 45%;
+}
+.lead {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 30px;
+  text-align: justify;
+}
+.muted {
+  font-size: 18px;
 }
 .lead1 {
   margin-bottom: 20px;

@@ -22,7 +22,7 @@
 				$id= $row['blog_id'];
 				$bg_str =$backgrounds[$i];
 				$title=ucwords(strtolower($title));
-				echo "<div id=entry$id class='blog-entry span12 text-center well $bg_str' name=$tags>";
+				echo "<div id=entry$id class='blog-entry span3 text-center well $bg_str' name=$tags>";
 					echo "<img class='pull-left img-rounded img-polaroid' src='images/blog/$tags.jpg' alt=''/>";
 					echo "<h3>";
 					echo "<a href=$link target='_blank'>$title</a>";

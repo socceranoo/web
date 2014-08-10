@@ -9,15 +9,15 @@
 		<?require_once("include/headers.php");?>
 		<?require_once("include/loginheaders.php");?>
 	</head>
-	<body class='background-cloud login'>
+	<body class='background-clouds'>
 		<div class=container>
 			<div class="featurette-divider4"></div>
-			<h3 class=text-right style="font-size:50px;"><i class=family-rouge></i>gatoraze.com</h3>
+			<h3 class=website-heading>gatoraze.com</h3>
 			<hr class="featurette-divider4">
 			<div class=row>
 				<div class=span4>
-					<h2>You have logged out successfully</h2>
-					<a class="btn btn-success" href='login.php'>Login</a>
+					<h4>You have logged out successfully</h4>
+					<a class="btn btn-custom4 btn-success" href='login.php'>Login</a>
 				</div>
 			</div>
 		</div>

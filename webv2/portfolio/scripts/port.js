@@ -6,13 +6,13 @@ $(document).ready(function() {
 	/*
 	$('#stick').waypoint('sticky');
 	*/
-	if ($("#snowkick-holder").length != 0) {
+	if ($("#snowkick-holder").length !== 0) {
 		snowkick();
 	}
 	$('#myCarousel').carousel({
 		interval:false
 	});
-	if ($("#about-container").length != 0) {
+	if ($("#about-container").length !== 0) {
 		about_graph1();
 		//waypoint_do_something("#back-end-skills", about_graph1, "70%");
 		waypoint_do_something("#general-skills", about_graph2, "70%");
@@ -68,7 +68,7 @@ function waypoint_appear(mainclass, second_function, offset1) {
 		}else {
 			$(this).css({'visibility':'visible'}).stop().delay(delay).animate({'opacity':1}, total_time);
 		}
-		if (second_function != null) {
+		if (second_function !== null) {
 			second_function();
 		}
 	}, { offset: offset1 , triggerOnce : true }
@@ -94,7 +94,7 @@ function waypoint_multiple_appear(mainclass, subclass, second_function, offset1)
 			}
 			delay = delay + delay_interval;
 		});
-		if (second_function != null) {
+		if (second_function !== null) {
 			second_function();
 		}
 	}, { offset: offset1 , triggerOnce : true }

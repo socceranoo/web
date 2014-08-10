@@ -40,3 +40,54 @@ var __clouds = "#ecf0f1";
 var __silver = "#bdc3c7";
 var __concrete = "#95a5a6";
 var __asbestos = "#7f8c8d";
+var __well = "#f5f5f5";
+
+var master_color_array = [
+	/*
+	__black,
+	__white,
+	__grayDarker,
+	__grayDark,
+	__grayLight,
+	__grayLighter,
+	__gray,
+	__silver,
+	__clouds,
+	__purple,
+   */
+	__blue,
+	__blueDark,
+	__green,
+	__red,
+	__yellow,
+	__orange,
+	__pink,
+	__turquoise,
+	__greenSea,
+	__emerald,
+	__nephritis,
+	__peterRiver,
+	__belizeHole,
+	__amethyst,
+	__wisteria,
+	__wetAsphalt,
+	__midnightBlue,
+	__sunFlower,
+	__carrot,
+	__pumpkin,
+	__alizarin,
+	__pomegranate,
+	__concrete,
+	__asbestos,
+];
+
+function get_random_colors(arr, size){
+	var shuffled = arr.slice(0), i = arr.length, temp, index;
+	while (i--) {
+		index = Math.floor(i * Math.random());
+		temp = shuffled[index];
+		shuffled[index] = shuffled[i];
+		shuffled[i] = temp;
+	}
+	return shuffled.slice(0, size);
+}

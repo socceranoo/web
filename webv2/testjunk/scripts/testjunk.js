@@ -1,21 +1,21 @@
 $(document).ready(function() {
 	var inprogress = false;
-	 $(".box").waypoint(function(direction) {
+	$(".box").waypoint(function(direction) {
 		if (direction === 'down' && inprogress === false) {
 			var index = $(".box").index(this);
 			move(index);
 		}
-	 }, { offset: '95%' , triggerOnce : false }
-	 );
-	 $(".box").waypoint(function(direction) {
+	}, { offset: '95%' , triggerOnce : false }
+	);
+	$(".box").waypoint(function(direction) {
 		if (direction === 'up' && inprogress === false) {
 			var index = $(".box").index(this);
 			move(index);
 		}
-	 }, { offset: '-95%' , triggerOnce : false }
-	 );
+	}, { offset: '-95%' , triggerOnce : false }
+	);
 	/*
-	 alert($(".box:eq(1)").attr('class'));
+	alert($(".box:eq(1)").attr('class'));
 	*/
 	$("#item-selector li").click(function () {
 		var val = $(this).data('target');
