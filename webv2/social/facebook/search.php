@@ -18,7 +18,7 @@
 
 require_once('src/facebook.php');
 // Create our Application instance (replace this with your appId and secret).
-$facebook = new Facebook(array('appId'=>'198065340365247','secret'=>'b3be758fb439cae164c4899dd940ef0e'));
+$facebook = new Facebook(array('appId'=>'198065340365247','secret'=>'qwjeqwiuejhwqdquwdhaqdqwueqwqqwq'));
 $query = "sachin tendulkar";
 if (isset($_POST['query'])) {
 	$query = $_POST['query'];
